@@ -84,7 +84,7 @@
 
   راه C — گرفتن دستی برای بیلد جدید (اگر A و B جواب نداد):
     1. dump جدید libunity.so (روش قبلی: 400023000000_libunity.so)
-    2. اجرای codm-dumper-src روی dump → script.json جدید
+    2. اجرای ابزار استخراج IL2CPP روی dump → script.json جدید
     3. اسلات typeinfo = آدرس یک pointer-to-klass در data/bss. برای پیداکردن
        هر کلاس: در IDA کد استفاده‌کننده را پیدا کن (مثلاً زنجیره دوربین =
        توابع get_* دوربین در GameEngine.GamePlay) و ADRP+LDR اول زنجیره را

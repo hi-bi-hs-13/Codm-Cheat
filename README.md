@@ -75,13 +75,6 @@ how-to (Unicorn unpacking, forward-MITM captures, offline HMAC brute-force,
 memtap, adb-root live memory analysis), then read the reports in the order
 above.
 
-## Related work by the same researcher
-
-IL2CPP dumper for CODM (`script.json`, 451K methods), ARM64 function
-classification pipeline, kernel-memory reader — separate repository.
-
----
-
 *Persian summary (خلاصه فارسی): این مخزن آرشیو تحقیقاتیِ کامل یک چیت تجاری
 CODM است — آنپک کامل VMProtect، کرک کامل پروتکل لایسنس (فرمول امضای HMAC)،
 ریشه‌یابی کرش، ساختار TypeInfo سفارشی بازی، و تمام متدولوژی. نمونه‌ها فقط
