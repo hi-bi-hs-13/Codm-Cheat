@@ -1,14 +1,12 @@
 # BestCheatIR CODM Cheat — Full Reverse-Engineering Package
 
 > **Research / educational archive.** Complete binary analysis of a commercial
-> Call of Duty: Mobile cheat ("CODM LOADER" by BestCheatIR), including the
+> Call of Duty: Mobile cheat ("CODM LOADER"), including the
 > packed sample, fully unpacked images, license-protocol crack, anti-cheat
-> bypass documentation, and every methodology used — published because the
-> vendor's Telegram channels are repeatedly banned (~weekly) and their mirror
-> sites go offline, which would make this sample permanently unavailable to
-> future binary-analysis researchers.
+> bypass documentation, and every methodology used — published so the sample
+> remains available to future binary-analysis researchers.
 
-- Vendor Telegram (as advertised by the product itself): [t.me/anogs](https://t.me/anogs) · [t.me/pouria_cheat](https://t.me/pouria_cheat)
+- Vendor Telegram: [t.me/anogs](https://t.me/anogs) · [t.me/pouria_cheat](https://t.me/pouria_cheat)
 - Product: "CONTROL CENTER — CODM cheat", compatible with CODM v1.0.57, VMProtect 3.x packed, signed with a **misused Sectigo certificate belonging to MB Oyun Yazilim A.S. (Istanbul, TR)** — reportable to Sectigo.
 
 ---
