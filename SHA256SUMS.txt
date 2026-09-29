@@ -1,0 +1,17 @@
+# SHA256 manifest of all distributed binaries (research samples)
+# DO NOT RUN any of these outside an isolated analysis VM.
+
+4548ea78979b96bd105c715896f7d26f31a494c8e61cf36adf7b27f062dd4dae      11772208  02_samples/test.bin
+d6c3b96bb9c1bca0ea94600cdefba3358f99fdf0014688ac0e108fbdc52cba2e       6019072  03_dumps_loader/embedded_dll_rdata_0x166b0.bin
+9463f5ae2aef8a68b0dc8fd497f77c6f1f66aa19be702512653dbf881bd77ab6       3709637  03_dumps_loader/section_vmp0_decrypted.bin
+560ec5875a1aa3527c141a492e1b9b9473e29f63fcb9ece27d29e65cbc4767bc      22732800  03_dumps_loader/unpacked_full_memory_image.bin
+c83b4691e02312b7aa10cb02e4ad68a6945edc7a3b6abccae2f567eb75d9dfb8       6217128  03_dumps_loader/unpacked_rdata_98pct.bin
+debd54a8893bd77ed9df692e2a0cd921be9d9bec7ff9faaf8679b8805f9e8225        958903  03_dumps_loader/unpacked_text_85pct.bin
+a3cd47d08fbd49a24f2f218ad0b4664eb92e0a53c12354862b1eb88a56126c71      10670080  04_dumps_dll_layer2/final_FULLIMAGE.bin
+df4d43bf009bafa090d4091904dc23fa746c2a36fcfdf62e82f6cffb40dffd02         35584  04_dumps_dll_layer2/final_data.bin
+ce0a433afbee568b8f8b3835c51a1088fd2c5b6617a2c933c3b3f4b0e0b515fa        150832  04_dumps_dll_layer2/final_rdata.bin
+e72a1ba8187faa420f0b2b9aa1c4f9990936f78b835dda43a3191f85ca230453        700455  04_dumps_dll_layer2/final_text.bin
+23e7410d532eca90b4dfef2d0b167c8e6fc82ce1e3138437c530926b60918bc7       3712062  04_dumps_dll_layer2/final_vmp0.bin
+a743ab77ee25dcbe6d8b5519aaca895d06d415ca8d602ae01f926160b2cb823f       6016748  04_dumps_dll_layer2/final_vmp1.bin
+d6c3b96bb9c1bca0ea94600cdefba3358f99fdf0014688ac0e108fbdc52cba2e       6019072  05_live_dll/ext_dropped.dll
+444257528517a04c0283ce2f9077734c334975d17f522290ad8fa01e2a971485      10670080  05_live_dll/ext_mem_20260923_130131.dll

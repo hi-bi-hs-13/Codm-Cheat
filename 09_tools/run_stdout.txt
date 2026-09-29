@@ -1,0 +1,1144 @@
+IAT setup: import dir RVA 0x13afb58
+synth DLL built: crypt32.dll @ 0x100100000 (224 exports)
+  imports: CRYPT32.dll (1 funcs)
+synth DLL built: ws2_32.dll @ 0x100200000 (155 exports)
+  imports: WS2_32.dll (1 funcs)
+synth DLL built: kernel32.dll @ 0x100300000 (834 exports)
+  imports: KERNEL32.dll (1 funcs)
+synth DLL built: user32.dll @ 0x100400000 (601 exports)
+  imports: USER32.dll (1 funcs)
+synth DLL built: advapi32.dll @ 0x100500000 (377 exports)
+  imports: ADVAPI32.dll (1 funcs)
+synth DLL built: msvcp140.dll @ 0x100600000 (617 exports)
+  imports: MSVCP140.dll (1 funcs)
+synth DLL built: imm32.dll @ 0x100700000 (76 exports)
+  imports: IMM32.dll (1 funcs)
+synth DLL built: dwmapi.dll @ 0x100800000 (18 exports)
+  imports: dwmapi.dll (1 funcs)
+synth DLL built: bcrypt.dll @ 0x100900000 (37 exports)
+  imports: bcrypt.dll (1 funcs)
+synth DLL built: d3d9.dll @ 0x100a00000 (2 exports)
+  imports: d3d9.dll (1 funcs)
+synth DLL built: wintrust.dll @ 0x100b00000 (60 exports)
+  imports: WINTRUST.dll (1 funcs)
+synth DLL built: vcruntime140_1.dll @ 0x100c00000 (1 exports)
+  imports: VCRUNTIME140_1.dll (1 funcs)
+synth DLL built: vcruntime140.dll @ 0x100d00000 (70 exports)
+  imports: VCRUNTIME140.dll (1 funcs)
+synth DLL built: api-ms-win-crt-runtime-l1-1-0.dll @ 0x100e00000 (773 exports)
+  imports: api-ms-win-crt-runtime-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-math-l1-1-0.dll @ 0x100f00000 (773 exports)
+  imports: api-ms-win-crt-math-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-stdio-l1-1-0.dll @ 0x101000000 (773 exports)
+  imports: api-ms-win-crt-stdio-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-string-l1-1-0.dll @ 0x101100000 (773 exports)
+  imports: api-ms-win-crt-string-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-utility-l1-1-0.dll @ 0x101200000 (773 exports)
+  imports: api-ms-win-crt-utility-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-heap-l1-1-0.dll @ 0x101300000 (773 exports)
+  imports: api-ms-win-crt-heap-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-convert-l1-1-0.dll @ 0x101400000 (773 exports)
+  imports: api-ms-win-crt-convert-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-filesystem-l1-1-0.dll @ 0x101500000 (773 exports)
+  imports: api-ms-win-crt-filesystem-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-time-l1-1-0.dll @ 0x101600000 (773 exports)
+  imports: api-ms-win-crt-time-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-environment-l1-1-0.dll @ 0x101700000 (773 exports)
+  imports: api-ms-win-crt-environment-l1-1-0.dll (1 funcs)
+synth DLL built: api-ms-win-crt-locale-l1-1-0.dll @ 0x101800000 (773 exports)
+  imports: api-ms-win-crt-locale-l1-1-0.dll (1 funcs)
+synth DLL built: normaliz.dll @ 0x101900000 (4 exports)
+  imports: Normaliz.dll (1 funcs)
+synth DLL built: wldap32.dll @ 0x101a00000 (95 exports)
+  imports: WLDAP32.dll (1 funcs)
+synth DLL built: wtsapi32.dll @ 0x101b00000 (67 exports)
+  imports: WTSAPI32.dll (1 funcs)
+  imports: KERNEL32.dll (1 funcs)
+  imports: USER32.dll (1 funcs)
+  imports: KERNEL32.dll (12 funcs)
+  imports: USER32.dll (2 funcs)
+IAT filled. total APIs registered: 11811
+synth DLL built: ntdll.dll @ 0x101c00000 (417 exports)
+
+======================================================================
+Starting emulation: EP=0x140a9f653, image 0x140000000+0x15ae000
+RDTSC candidate sites pre-scanned: 338
+SITES MODE: no executed-site file — falling back to all .vmp1 sites (SLOW)
+SITES MODE: 338 per-site rdtsc hooks armed
+    rdtsc #1 @ 0x1414b5547 tsc=0x100000853 d=2131
+    rdtsc #2 @ 0x1414e67d1 tsc=0x100001129 d=2262
+    rdtsc #3 @ 0x1414e67e3 tsc=0x10000115f d=54
+    rdtsc #4 @ 0x141550c75 tsc=0x100001b3b d=2524
+    rdtsc #5 @ 0x14158a252 tsc=0x10000259a d=2655
+    rdtsc #6 @ 0x1414d601f tsc=0x10000307c d=2786
+    rdtsc #7 @ 0x1414b5547 tsc=0x100003be1 d=2917
+    rdtsc #8 @ 0x1414e67d1 tsc=0x1000047c9 d=3048
+    rdtsc #9 @ 0x1414e67e3 tsc=0x100004801 d=56
+    rdtsc #10 @ 0x141550c75 tsc=0x1000054ef d=3310
+    rdtsc #11 @ 0x14158a252 tsc=0x100006260 d=3441
+    rdtsc #12 @ 0x1414d601f tsc=0x100007054 d=3572
+    rdtsc #13 @ 0x1414b5547 tsc=0x100007ecb d=3703
+    rdtsc #14 @ 0x1414e67d1 tsc=0x100008dc5 d=3834
+    rdtsc #15 @ 0x1414e67e3 tsc=0x100008dff d=58
+    rdtsc #16 @ 0x141550c75 tsc=0x100009dff d=4096
+    rdtsc #17 @ 0x14158a252 tsc=0x10000ae82 d=4227
+    rdtsc #18 @ 0x1414d601f tsc=0x10000bf88 d=4358
+    rdtsc #19 @ 0x1414b5547 tsc=0x10000d111 d=4489
+    rdtsc #20 @ 0x1414e67d1 tsc=0x10000e31d d=4620
+    rdtsc #21 @ 0x1414e67e3 tsc=0x10000e359 d=60
+    rdtsc #22 @ 0x141550c75 tsc=0x10000f66b d=4882
+    rdtsc #23 @ 0x14158a252 tsc=0x100010a00 d=5013
+    rdtsc #24 @ 0x1414d601f tsc=0x100011e18 d=5144
+    rdtsc #25 @ 0x1414b5547 tsc=0x1000132b3 d=5275
+    rdtsc #26 @ 0x1414e67d1 tsc=0x1000147d1 d=5406
+    rdtsc #27 @ 0x1414e67e3 tsc=0x10001480f d=62
+    rdtsc #28 @ 0x141550c75 tsc=0x100015e33 d=5668
+    rdtsc #29 @ 0x14158a252 tsc=0x1000174da d=5799
+    rdtsc #30 @ 0x1414d601f tsc=0x100018c04 d=5930
+    rdtsc #31 @ 0x1414b5547 tsc=0x10001a3b1 d=6061
+    rdtsc #32 @ 0x1414e67d1 tsc=0x10001bbe1 d=6192
+    rdtsc #33 @ 0x1414e67e3 tsc=0x10001bc21 d=64
+    rdtsc #34 @ 0x141550c75 tsc=0x10001d557 d=6454
+    rdtsc #35 @ 0x14158a252 tsc=0x10001ef10 d=6585
+    rdtsc #36 @ 0x1414d601f tsc=0x10002094c d=6716
+    rdtsc #37 @ 0x1414b5547 tsc=0x10002240b d=6847
+    rdtsc #38 @ 0x1414e67d1 tsc=0x100023f4d d=6978
+    rdtsc #39 @ 0x1414e67e3 tsc=0x100023f8f d=66
+    rdtsc #40 @ 0x141550c75 tsc=0x100025bd7 d=7240
+    rdtsc #41 @ 0x14158a252 tsc=0x1000278a2 d=7371
+    rdtsc #42 @ 0x1414d601f tsc=0x1000295f0 d=7502
+    rdtsc #43 @ 0x1414b5547 tsc=0x10002b3c1 d=7633
+    rdtsc #44 @ 0x1414e67d1 tsc=0x10002d215 d=7764
+    rdtsc #45 @ 0x1414e67e3 tsc=0x10002d259 d=68
+    rdtsc #46 @ 0x141550c75 tsc=0x10002f1b3 d=8026
+    rdtsc #47 @ 0x14158a252 tsc=0x100031190 d=8157
+    rdtsc #48 @ 0x1414d601f tsc=0x1000331f0 d=8288
+    rdtsc #49 @ 0x1414b5547 tsc=0x1000352d3 d=8419
+    rdtsc #50 @ 0x1414e67d1 tsc=0x100037439 d=8550
+    rdtsc #51 @ 0x1414e67e3 tsc=0x10003747f d=70
+    rdtsc #52 @ 0x141550c75 tsc=0x1000396eb d=8812
+    rdtsc #53 @ 0x14158a252 tsc=0x10003b9da d=8943
+    rdtsc #54 @ 0x1414b3754 tsc=0x10003dd4c d=9074
+API getmodulehandlea('kernel32.dll') -> 0x100300000
+    rdtsc #55 @ 0x141597c01 tsc=0x100040141 d=9205
+API getmodulehandlea('ntdll.dll') -> 0x101c00000
+    rdtsc #56 @ 0x14154ed64 tsc=0x1000425b9 d=9336
+    rdtsc #57 @ 0x141459880 tsc=0x100044ab4 d=9467
+    rdtsc #58 @ 0x1414b5547 tsc=0x100047032 d=9598
+    rdtsc #59 @ 0x1414e67d1 tsc=0x100049633 d=9729
+    rdtsc #60 @ 0x1414e67e3 tsc=0x100049656 d=35
+    rdtsc #61 @ 0x141550c75 tsc=0x10004bd5d d=9991
+    rdtsc #62 @ 0x14158a252 tsc=0x10004e4e7 d=10122
+    rdtsc #63 @ 0x1414d601f tsc=0x100050cf4 d=10253
+    rdtsc #64 @ 0x1414b5547 tsc=0x100053584 d=10384
+    rdtsc #65 @ 0x1414e67d1 tsc=0x100055e97 d=10515
+    rdtsc #66 @ 0x1414e67e3 tsc=0x100055ebc d=37
+    rdtsc #67 @ 0x141550c75 tsc=0x1000588d5 d=10777
+    rdtsc #68 @ 0x14158a252 tsc=0x10005b371 d=10908
+    rdtsc #69 @ 0x1414d601f tsc=0x10005de90 d=11039
+    rdtsc #70 @ 0x1414b5547 tsc=0x100060a32 d=11170
+    rdtsc #71 @ 0x1414e67d1 tsc=0x100063657 d=11301
+    rdtsc #72 @ 0x1414e67e3 tsc=0x10006367e d=39
+    rdtsc #73 @ 0x141550c75 tsc=0x1000663a9 d=11563
+    rdtsc #74 @ 0x14158a252 tsc=0x100069157 d=11694
+    rdtsc #75 @ 0x1414d601f tsc=0x10006bf88 d=11825
+    rdtsc #76 @ 0x1414b5547 tsc=0x10006ee3c d=11956
+    rdtsc #77 @ 0x1414e67d1 tsc=0x100071d73 d=12087
+    rdtsc #78 @ 0x1414e67e3 tsc=0x100071d9c d=41
+    rdtsc #79 @ 0x141550c75 tsc=0x100074dd9 d=12349
+    rdtsc #80 @ 0x14158a252 tsc=0x100077e99 d=12480
+    rdtsc #81 @ 0x1414d601f tsc=0x10007afdc d=12611
+    rdtsc #82 @ 0x1414b5547 tsc=0x10007e1a2 d=12742
+    rdtsc #83 @ 0x1414e67d1 tsc=0x1000813eb d=12873
+    rdtsc #84 @ 0x1414e67e3 tsc=0x100081416 d=43
+    rdtsc #85 @ 0x141550c75 tsc=0x100084765 d=13135
+    rdtsc #86 @ 0x14158a252 tsc=0x100087b37 d=13266
+    rdtsc #87 @ 0x1414d601f tsc=0x10008af8c d=13397
+    rdtsc #88 @ 0x1414b5547 tsc=0x10008e464 d=13528
+    rdtsc #89 @ 0x1414e67d1 tsc=0x1000919bf d=13659
+    rdtsc #90 @ 0x1414e67e3 tsc=0x1000919ec d=45
+    rdtsc #91 @ 0x141550c75 tsc=0x10009504d d=13921
+    rdtsc #92 @ 0x14158a252 tsc=0x100098731 d=14052
+    rdtsc #93 @ 0x1414b5547 tsc=0x10009be98 d=14183
+    rdtsc #94 @ 0x1414e67d1 tsc=0x10009f682 d=14314
+    rdtsc #95 @ 0x1414e67e3 tsc=0x10009f6a4 d=34
+    rdtsc #96 @ 0x141550c75 tsc=0x1000a2f94 d=14576
+    rdtsc #97 @ 0x14158a252 tsc=0x1000a6907 d=14707
+    rdtsc #98 @ 0x1414d601f tsc=0x1000aa2fd d=14838
+    rdtsc #99 @ 0x1414b5547 tsc=0x1000add76 d=14969
+    rdtsc #100 @ 0x1414e67d1 tsc=0x1000b1872 d=15100
+    rdtsc #101 @ 0x1414e67e3 tsc=0x1000b1896 d=36
+    rdtsc #102 @ 0x141550c75 tsc=0x1000b5498 d=15362
+    rdtsc #103 @ 0x14158a252 tsc=0x1000b911d d=15493
+    rdtsc #104 @ 0x1414d601f tsc=0x1000bce25 d=15624
+    rdtsc #105 @ 0x1414b5547 tsc=0x1000c0bb0 d=15755
+    rdtsc #106 @ 0x1414e67d1 tsc=0x1000c49be d=15886
+    rdtsc #107 @ 0x1414e67e3 tsc=0x1000c49e4 d=38
+    rdtsc #108 @ 0x141550c75 tsc=0x1000c88f8 d=16148
+    rdtsc #109 @ 0x14158a252 tsc=0x1000cc88f d=16279
+    rdtsc #110 @ 0x1414d601f tsc=0x1000d08a9 d=16410
+    rdtsc #111 @ 0x1414b5547 tsc=0x1000d4946 d=16541
+    rdtsc #112 @ 0x1414e67d1 tsc=0x1000d8a66 d=16672
+    rdtsc #113 @ 0x1414e67e3 tsc=0x1000d8a8e d=40
+    rdtsc #114 @ 0x141550c75 tsc=0x1000dccb4 d=16934
+    rdtsc #115 @ 0x14158a252 tsc=0x1000e0f5d d=17065
+    rdtsc #116 @ 0x1414d601f tsc=0x1000e5289 d=17196
+    rdtsc #117 @ 0x1414b5547 tsc=0x1000e9638 d=17327
+    rdtsc #118 @ 0x1414e67d1 tsc=0x1000eda6a d=17458
+    rdtsc #119 @ 0x1414e67e3 tsc=0x1000eda94 d=42
+    rdtsc #120 @ 0x141550c75 tsc=0x1000f1fcc d=17720
+    rdtsc #121 @ 0x14158a252 tsc=0x1000f6587 d=17851
+    rdtsc #122 @ 0x1414d601f tsc=0x1000fabc5 d=17982
+    rdtsc #123 @ 0x1414b5547 tsc=0x1000ff286 d=18113
+    rdtsc #124 @ 0x1414e67d1 tsc=0x1001039ca d=18244
+    rdtsc #125 @ 0x1414e67e3 tsc=0x1001039f6 d=44
+    rdtsc #126 @ 0x141550c75 tsc=0x100108240 d=18506
+    rdtsc #127 @ 0x14158a252 tsc=0x10010cb0d d=18637
+    rdtsc #128 @ 0x141550c75 tsc=0x10011145d d=18768
+    rdtsc #129 @ 0x14158a252 tsc=0x100115e30 d=18899
+    rdtsc #130 @ 0x1414d601f tsc=0x10011a886 d=19030
+    rdtsc #131 @ 0x1414b5547 tsc=0x10011f35f d=19161
+    rdtsc #132 @ 0x1414e67d1 tsc=0x100123ebb d=19292
+    rdtsc #133 @ 0x1414e67e3 tsc=0x100123f03 d=72
+    rdtsc #134 @ 0x141550c75 tsc=0x100128b65 d=19554
+    rdtsc #135 @ 0x14158a252 tsc=0x10012d84a d=19685
+    rdtsc #136 @ 0x1414d601f tsc=0x1001325b2 d=19816
+    rdtsc #137 @ 0x1414b5547 tsc=0x10013739d d=19947
+    rdtsc #138 @ 0x1414e67d1 tsc=0x10013c20b d=20078
+    rdtsc #139 @ 0x1414e67e3 tsc=0x10013c255 d=74
+    rdtsc #140 @ 0x141550c75 tsc=0x1001411c9 d=20340
+    rdtsc #141 @ 0x14158a252 tsc=0x1001461c0 d=20471
+    rdtsc #142 @ 0x1414d601f tsc=0x10014b23a d=20602
+    rdtsc #143 @ 0x1414b5547 tsc=0x100150337 d=20733
+    rdtsc #144 @ 0x1414e67d1 tsc=0x1001554b7 d=20864
+    rdtsc #145 @ 0x1414e67e3 tsc=0x100155503 d=76
+    rdtsc #146 @ 0x141550c75 tsc=0x10015a789 d=21126
+    rdtsc #147 @ 0x14158a252 tsc=0x10015fa92 d=21257
+    rdtsc #148 @ 0x1414d601f tsc=0x100164e1e d=21388
+    rdtsc #149 @ 0x1414b5547 tsc=0x10016a22d d=21519
+    rdtsc #150 @ 0x1414e67d1 tsc=0x10016f6bf d=21650
+    rdtsc #151 @ 0x1414e67e3 tsc=0x10016f70d d=78
+    rdtsc #152 @ 0x141550c75 tsc=0x100174ca5 d=21912
+    rdtsc #153 @ 0x14158a252 tsc=0x10017a2c0 d=22043
+    rdtsc #154 @ 0x1414d601f tsc=0x10017f95e d=22174
+    rdtsc #155 @ 0x1414b5547 tsc=0x10018507f d=22305
+    rdtsc #156 @ 0x1414e67d1 tsc=0x10018a823 d=22436
+    rdtsc #157 @ 0x1414e67e3 tsc=0x10018a873 d=80
+    rdtsc #158 @ 0x141550c75 tsc=0x10019011d d=22698
+    rdtsc #159 @ 0x14158a252 tsc=0x100195a4a d=22829
+    rdtsc #160 @ 0x14159762c tsc=0x10019b3fa d=22960
+    rdtsc #161 @ 0x1414d80da tsc=0x1001a0e2d d=23091
+    rdtsc #162 @ 0x1414d80da tsc=0x1001a0e72 d=69
+    rdtsc #163 @ 0x1414d80da tsc=0x1001a0ec4 d=82
+    rdtsc #164 @ 0x1414d80da tsc=0x1001a0ed7 d=19
+    rdtsc #165 @ 0x1414d80da tsc=0x1001a0ef7 d=32
+    rdtsc #166 @ 0x1414d80da tsc=0x1001a0f24 d=45
+    rdtsc #167 @ 0x1414d80da tsc=0x1001a0f5e d=58
+    rdtsc #168 @ 0x1414d80da tsc=0x1001a0fa5 d=71
+    rdtsc #169 @ 0x1414d80da tsc=0x1001a0ff9 d=84
+    rdtsc #170 @ 0x1414d80da tsc=0x1001a100e d=21
+    rdtsc #171 @ 0x1414d80da tsc=0x1001a1030 d=34
+    rdtsc #172 @ 0x1414d80da tsc=0x1001a105f d=47
+    rdtsc #173 @ 0x1414d80da tsc=0x1001a109b d=60
+    rdtsc #174 @ 0x1414d80da tsc=0x1001a10e4 d=73
+    rdtsc #175 @ 0x1414d80da tsc=0x1001a113a d=86
+    rdtsc #176 @ 0x1414d80da tsc=0x1001a1151 d=23
+    rdtsc #177 @ 0x1414d80da tsc=0x1001a1175 d=36
+    rdtsc #178 @ 0x1414d80da tsc=0x1001a11a6 d=49
+    rdtsc #179 @ 0x14146ae60 tsc=0x1001a750f d=25449
+    rdtsc #180 @ 0x1414d80da tsc=0x1001ad8fb d=25580
+    rdtsc #181 @ 0x1414d80da tsc=0x1001ad953 d=88
+    rdtsc #182 @ 0x1414d80da tsc=0x1001ad96c d=25
+    rdtsc #183 @ 0x1414d80da tsc=0x1001ad992 d=38
+    rdtsc #184 @ 0x1414d80da tsc=0x1001ad9c5 d=51
+    rdtsc #185 @ 0x1414d80da tsc=0x1001ada05 d=64
+    rdtsc #186 @ 0x1414d601f tsc=0x1001b4103 d=26366
+    rdtsc #187 @ 0x1414b5547 tsc=0x1001ba884 d=26497
+    rdtsc #188 @ 0x1414e67d1 tsc=0x1001c1088 d=26628
+    rdtsc #189 @ 0x1414e67e3 tsc=0x1001c10b0 d=40
+    rdtsc #190 @ 0x141550c75 tsc=0x1001c79ba d=26890
+    rdtsc #191 @ 0x14158a252 tsc=0x1001ce347 d=27021
+    rdtsc #192 @ 0x1414d601f tsc=0x1001d4d57 d=27152
+    rdtsc #193 @ 0x1414b5547 tsc=0x1001db7ea d=27283
+    rdtsc #194 @ 0x1414e67d1 tsc=0x1001e2300 d=27414
+    rdtsc #195 @ 0x1414e67e3 tsc=0x1001e232a d=42
+    rdtsc #196 @ 0x141550c75 tsc=0x1001e8f46 d=27676
+    rdtsc #197 @ 0x14158a252 tsc=0x1001efbe5 d=27807
+    rdtsc #198 @ 0x1414d601f tsc=0x1001f6907 d=27938
+    rdtsc #199 @ 0x1414b5547 tsc=0x1001fd6ac d=28069
+    rdtsc #200 @ 0x1414e67d1 tsc=0x1002044d4 d=28200
+    rdtsc #201 @ 0x1414e67e3 tsc=0x100204500 d=44
+    rdtsc #202 @ 0x141550c75 tsc=0x10020b42e d=28462
+    rdtsc #203 @ 0x14158a252 tsc=0x1002123df d=28593
+    rdtsc #204 @ 0x1414d601f tsc=0x100219413 d=28724
+    rdtsc #205 @ 0x1414b5547 tsc=0x1002204ca d=28855
+    rdtsc #206 @ 0x1414e67d1 tsc=0x100227604 d=28986
+    rdtsc #207 @ 0x1414e67e3 tsc=0x100227632 d=46
+    rdtsc #208 @ 0x141550c75 tsc=0x10022e872 d=29248
+    rdtsc #209 @ 0x14158a252 tsc=0x100235b35 d=29379
+    rdtsc #210 @ 0x1414d601f tsc=0x10023ce7b d=29510
+    rdtsc #211 @ 0x1414b5547 tsc=0x100244244 d=29641
+    rdtsc #212 @ 0x1414e67d1 tsc=0x10024b690 d=29772
+    rdtsc #213 @ 0x1414e67e3 tsc=0x10024b6c0 d=48
+    rdtsc #214 @ 0x141550c75 tsc=0x100252c12 d=30034
+    rdtsc #215 @ 0x14158a252 tsc=0x10025a1e7 d=30165
+    rdtsc #216 @ 0x1414d601f tsc=0x10026183f d=30296
+    rdtsc #217 @ 0x1414d601f tsc=0x100261857 d=24
+    rdtsc #218 @ 0x1414b5547 tsc=0x100268fb5 d=30558
+    rdtsc #219 @ 0x1414e67d1 tsc=0x100270796 d=30689
+    rdtsc #220 @ 0x1414e67e3 tsc=0x1002707d5 d=63
+    rdtsc #221 @ 0x141550c75 tsc=0x1002780bc d=30951
+    rdtsc #222 @ 0x14158a252 tsc=0x10027fa26 d=31082
+    rdtsc #223 @ 0x1414d601f tsc=0x100287413 d=31213
+    rdtsc #224 @ 0x1414b5547 tsc=0x10028ee83 d=31344
+    rdtsc #225 @ 0x1414e67d1 tsc=0x100296976 d=31475
+    rdtsc #226 @ 0x1414e67e3 tsc=0x1002969b7 d=65
+    rdtsc #227 @ 0x141550c75 tsc=0x10029e5b0 d=31737
+    rdtsc #228 @ 0x14158a252 tsc=0x1002a622c d=31868
+    rdtsc #229 @ 0x1414d601f tsc=0x1002adf2b d=31999
+    rdtsc #230 @ 0x1414b5547 tsc=0x1002b5cad d=32130
+    rdtsc #231 @ 0x1414e67d1 tsc=0x1002bdab2 d=32261
+    rdtsc #232 @ 0x1414e67e3 tsc=0x1002bdaf5 d=67
+    rdtsc #233 @ 0x141550c75 tsc=0x1002c5a00 d=32523
+    rdtsc #234 @ 0x14158a252 tsc=0x1002cd98e d=32654
+    rdtsc #235 @ 0x1414d601f tsc=0x1002d599f d=32785
+    rdtsc #236 @ 0x1414b5547 tsc=0x1002dda33 d=32916
+    rdtsc #237 @ 0x1414e67d1 tsc=0x1002e5b4a d=33047
+    rdtsc #238 @ 0x1414e67e3 tsc=0x1002e5b8f d=69
+    rdtsc #239 @ 0x141550c75 tsc=0x1002eddac d=33309
+    rdtsc #240 @ 0x14158a252 tsc=0x1002f604c d=33440
+    rdtsc #241 @ 0x1414d601f tsc=0x1002fe36f d=33571
+    rdtsc #242 @ 0x1414b5547 tsc=0x100306715 d=33702
+    rdtsc #243 @ 0x1414e67d1 tsc=0x10030eb3e d=33833
+    rdtsc #244 @ 0x1414e67e3 tsc=0x10030eb85 d=71
+    rdtsc #245 @ 0x141550c75 tsc=0x1003170b4 d=34095
+    rdtsc #246 @ 0x14158a252 tsc=0x10031f666 d=34226
+    rdtsc #247 @ 0x141550c75 tsc=0x100327c9b d=34357
+    rdtsc #248 @ 0x14158a252 tsc=0x100330353 d=34488
+    rdtsc #249 @ 0x1414d601f tsc=0x100338a8e d=34619
+    rdtsc #250 @ 0x1414b5547 tsc=0x10034124c d=34750
+    rdtsc #251 @ 0x1414e67d1 tsc=0x100349a8d d=34881
+    rdtsc #252 @ 0x1414e67e3 tsc=0x100349aa4 d=23
+    rdtsc #253 @ 0x141550c75 tsc=0x1003523eb d=35143
+    rdtsc #254 @ 0x14158a252 tsc=0x10035adb5 d=35274
+    rdtsc #255 @ 0x1414d601f tsc=0x100363802 d=35405
+    rdtsc #256 @ 0x1414b5547 tsc=0x10036c2d2 d=35536
+    rdtsc #257 @ 0x1414e67d1 tsc=0x100374e25 d=35667
+    rdtsc #258 @ 0x1414e67e3 tsc=0x100374e3e d=25
+    rdtsc #259 @ 0x141550c75 tsc=0x10037da97 d=35929
+    rdtsc #260 @ 0x14158a252 tsc=0x100386773 d=36060
+    rdtsc #261 @ 0x1414d601f tsc=0x10038f4d2 d=36191
+    rdtsc #262 @ 0x1414b5547 tsc=0x1003982b4 d=36322
+    rdtsc #263 @ 0x1414e67d1 tsc=0x1003a1119 d=36453
+    rdtsc #264 @ 0x1414e67e3 tsc=0x1003a1134 d=27
+    rdtsc #265 @ 0x141550c75 tsc=0x1003aa09f d=36715
+    rdtsc #266 @ 0x14158a252 tsc=0x1003b308d d=36846
+    rdtsc #267 @ 0x1414d601f tsc=0x1003bc0fe d=36977
+    rdtsc #268 @ 0x1414b5547 tsc=0x1003c51f2 d=37108
+    rdtsc #269 @ 0x1414e67d1 tsc=0x1003ce369 d=37239
+    rdtsc #270 @ 0x1414e67e3 tsc=0x1003ce386 d=29
+    rdtsc #271 @ 0x141550c75 tsc=0x1003d7603 d=37501
+    rdtsc #272 @ 0x14158a252 tsc=0x1003e0903 d=37632
+    rdtsc #273 @ 0x1414d601f tsc=0x1003e9c86 d=37763
+    rdtsc #274 @ 0x1414b5547 tsc=0x1003f308c d=37894
+    rdtsc #275 @ 0x1414e67d1 tsc=0x1003fc515 d=38025
+    rdtsc #276 @ 0x1414e67e3 tsc=0x1003fc534 d=31
+    rdtsc #277 @ 0x141550c75 tsc=0x100405ac3 d=38287
+    rdtsc #278 @ 0x14158a252 tsc=0x10040f0d5 d=38418
+    rdtsc #279 @ 0x1414d601f tsc=0x10041876a d=38549
+    rdtsc #280 @ 0x1414b5547 tsc=0x100421e82 d=38680
+    rdtsc #281 @ 0x1414e67d1 tsc=0x10042b61d d=38811
+    rdtsc #282 @ 0x1414e67e3 tsc=0x10042b63e d=33
+    rdtsc #283 @ 0x141550c75 tsc=0x100434edf d=39073
+    rdtsc #284 @ 0x14158a252 tsc=0x10043e803 d=39204
+    rdtsc #285 @ 0x14152a895 tsc=0x1004481aa d=39335
+    EAT resolve: kernel32.dll!IsDebuggerPresent
+    rdtsc #286 @ 0x14156e957 tsc=0x100451bd4 d=39466
+    rdtsc #287 @ 0x1414fce98 tsc=0x10045b681 d=39597
+    EAT resolve: kernel32.dll!CheckRemoteDebuggerPresent
+    rdtsc #288 @ 0x1414d80da tsc=0x1004651b1 d=39728
+    rdtsc #289 @ 0x1414d80da tsc=0x1004651e1 d=48
+    rdtsc #290 @ 0x1414d80da tsc=0x10046521e d=61
+    rdtsc #291 @ 0x1414d80da tsc=0x100465268 d=74
+    rdtsc #292 @ 0x1414d80da tsc=0x1004652bf d=87
+    rdtsc #293 @ 0x1414d80da tsc=0x1004652d7 d=24
+    rdtsc #294 @ 0x1414d80da tsc=0x1004652fc d=37
+    rdtsc #295 @ 0x1414d80da tsc=0x10046532e d=50
+    rdtsc #296 @ 0x14156aae2 tsc=0x10046f276 d=40776
+    EAT resolve: ntdll.dll!NtQueryInformationProcess
+    NtQIP(cls=0x1e, buf=0x7ff0003efbb8)
+    rdtsc #297 @ 0x1414a1777 tsc=0x100479241 d=40907
+    EAT resolve: ntdll.dll!NtSetInformationThread
+    rdtsc #298 @ 0x1414d601f tsc=0x10048328f d=41038
+    rdtsc #299 @ 0x1414b5547 tsc=0x10048d360 d=41169
+    rdtsc #300 @ 0x1414e67d1 tsc=0x1004974b4 d=41300
+    rdtsc #301 @ 0x1414e67e3 tsc=0x1004974e8 d=52
+    rdtsc #302 @ 0x141550c75 tsc=0x1004a1742 d=41562
+    rdtsc #303 @ 0x14158a252 tsc=0x1004aba1f d=41693
+API [default] ntdll.dll!NtSetInformationThread -> 0
+    rdtsc #304 @ 0x1414d601f tsc=0x1004b5d7f d=41824
+    rdtsc #305 @ 0x1414b5547 tsc=0x1004c0162 d=41955
+    rdtsc #306 @ 0x1414e67d1 tsc=0x1004ca5c8 d=42086
+    rdtsc #307 @ 0x1414e67e3 tsc=0x1004ca5fe d=54
+    rdtsc #308 @ 0x141550c75 tsc=0x1004d4b6a d=42348
+    rdtsc #309 @ 0x14158a252 tsc=0x1004df159 d=42479
+    rdtsc #310 @ 0x1414d601f tsc=0x1004e97cb d=42610
+    rdtsc #311 @ 0x1414b5547 tsc=0x1004f3ec0 d=42741
+    rdtsc #312 @ 0x1414e67d1 tsc=0x1004fe638 d=42872
+    rdtsc #313 @ 0x1414e67e3 tsc=0x1004fe670 d=56
+    rdtsc #314 @ 0x141550c75 tsc=0x100508eee d=43134
+    rdtsc #315 @ 0x14158a252 tsc=0x1005137ef d=43265
+    rdtsc #316 @ 0x1414d601f tsc=0x10051e173 d=43396
+    rdtsc #317 @ 0x1414b5547 tsc=0x100528b7a d=43527
+    rdtsc #318 @ 0x1414e67d1 tsc=0x100533604 d=43658
+    rdtsc #319 @ 0x1414e67e3 tsc=0x10053363e d=58
+    rdtsc #320 @ 0x141550c75 tsc=0x10053e1ce d=43920
+    rdtsc #321 @ 0x14158a252 tsc=0x100548de1 d=44051
+    rdtsc #322 @ 0x1414d601f tsc=0x100553a77 d=44182
+    rdtsc #323 @ 0x1414b5547 tsc=0x10055e790 d=44313
+    rdtsc #324 @ 0x1414e67d1 tsc=0x10056952c d=44444
+    rdtsc #325 @ 0x1414e67e3 tsc=0x100569568 d=60
+    rdtsc #326 @ 0x141550c75 tsc=0x10057440a d=44706
+    rdtsc #327 @ 0x14158a252 tsc=0x10057f32f d=44837
+    rdtsc #328 @ 0x1414d601f tsc=0x10058a2d7 d=44968
+    rdtsc #329 @ 0x1414b5547 tsc=0x100595302 d=45099
+    rdtsc #330 @ 0x1414e67d1 tsc=0x1005a03b0 d=45230
+    rdtsc #331 @ 0x1414e67e3 tsc=0x1005a03ee d=62
+    rdtsc #332 @ 0x141550c75 tsc=0x1005ab5a2 d=45492
+    rdtsc #333 @ 0x14158a252 tsc=0x1005b67d9 d=45623
+    rdtsc #334 @ 0x1414d601f tsc=0x1005c1a93 d=45754
+    rdtsc #335 @ 0x1414b5547 tsc=0x1005ccdd0 d=45885
+    rdtsc #336 @ 0x1414e67d1 tsc=0x1005d8190 d=46016
+    rdtsc #337 @ 0x1414e67e3 tsc=0x1005d81d0 d=64
+    rdtsc #338 @ 0x141550c75 tsc=0x1005e3696 d=46278
+    rdtsc #339 @ 0x14158a252 tsc=0x1005eebdf d=46409
+    rdtsc #340 @ 0x1414d601f tsc=0x1005fa1ab d=46540
+    rdtsc #341 @ 0x1414b5547 tsc=0x1006057fa d=46671
+    rdtsc #342 @ 0x1414e67d1 tsc=0x100610ecc d=46802
+    rdtsc #343 @ 0x1414e67e3 tsc=0x100610f0e d=66
+    rdtsc #344 @ 0x141550c75 tsc=0x10061c6e6 d=47064
+    rdtsc #345 @ 0x14158a252 tsc=0x100627f41 d=47195
+    rdtsc #346 @ 0x141532476 tsc=0x10063381f d=47326
+    EAT resolve: ntdll.dll!NtQuerySystemInformation
+    NtQSI(cls=0x23, len=2)
+    NtQSI(cls=0xb, len=0)
+    NtQSI(cls=0xb, len=2976)
+    rdtsc #347 @ 0x14154ed64 tsc=0x10063f180 d=47457
+    rdtsc #348 @ 0x14154ed64 tsc=0x10063f1b7 d=55
+    rdtsc #349 @ 0x1414e67d1 tsc=0x10064ac1e d=47719
+    rdtsc #350 @ 0x1414e67e3 tsc=0x10064ac6f d=81
+    rdtsc #351 @ 0x141550c75 tsc=0x1006567dc d=47981
+    rdtsc #352 @ 0x14158a252 tsc=0x1006623cc d=48112
+    rdtsc #353 @ 0x1414d601f tsc=0x10066e03f d=48243
+    rdtsc #354 @ 0x1414b5547 tsc=0x100679d35 d=48374
+    rdtsc #355 @ 0x1414e67d1 tsc=0x100685aae d=48505
+    rdtsc #356 @ 0x1414e67e3 tsc=0x100685b01 d=83
+    rdtsc #357 @ 0x141550c75 tsc=0x100691980 d=48767
+    rdtsc #358 @ 0x14158a252 tsc=0x10069d882 d=48898
+    rdtsc #359 @ 0x1414d601f tsc=0x1006a9807 d=49029
+    rdtsc #360 @ 0x1414b5547 tsc=0x1006b580f d=49160
+    rdtsc #361 @ 0x1414e67d1 tsc=0x1006c189a d=49291
+    rdtsc #362 @ 0x1414e67e3 tsc=0x1006c18ef d=85
+    rdtsc #363 @ 0x141550c75 tsc=0x1006cda80 d=49553
+    rdtsc #364 @ 0x14154ed64 tsc=0x1006d9c94 d=49684
+    rdtsc #365 @ 0x1414d80da tsc=0x1006e5f2b d=49815
+    rdtsc #366 @ 0x1414d80da tsc=0x1006e5f68 d=61
+    rdtsc #367 @ 0x1414d80da tsc=0x1006e5fb2 d=74
+    rdtsc #368 @ 0x1414d80da tsc=0x1006e6009 d=87
+    rdtsc #369 @ 0x1414d80da tsc=0x1006e6021 d=24
+    rdtsc #370 @ 0x1414d80da tsc=0x1006e6046 d=37
+    rdtsc #371 @ 0x1414d80da tsc=0x1006e6078 d=50
+    rdtsc #372 @ 0x14154ed64 tsc=0x1006e6b23 d=2731
+    rdtsc #373 @ 0x1414d80da tsc=0x1006e7651 d=2862
+    rdtsc #374 @ 0x1414d80da tsc=0x1006e76aa d=89
+    rdtsc #375 @ 0x1414d80da tsc=0x1006e76c4 d=26
+    rdtsc #376 @ 0x1414d80da tsc=0x1006e76eb d=39
+    rdtsc #377 @ 0x1414d80da tsc=0x1006e771f d=52
+    rdtsc #378 @ 0x1414d80da tsc=0x1006e7760 d=65
+    rdtsc #379 @ 0x1414d80da tsc=0x1006e77ae d=78
+    rdtsc #380 @ 0x14154ed64 tsc=0x1006e8671 d=3779
+    rdtsc #381 @ 0x14154ed64 tsc=0x1006e868d d=28
+    rdtsc #382 @ 0x1414e67d1 tsc=0x1006e9656 d=4041
+    rdtsc #383 @ 0x1414e67e3 tsc=0x1006e968c d=54
+    rdtsc #384 @ 0x141550c75 tsc=0x1006ea75b d=4303
+    rdtsc #385 @ 0x14158a252 tsc=0x1006eb8ad d=4434
+    rdtsc #386 @ 0x1414d601f tsc=0x1006eca82 d=4565
+    rdtsc #387 @ 0x1414b5547 tsc=0x1006edcda d=4696
+    rdtsc #388 @ 0x1414e67d1 tsc=0x1006eefb5 d=4827
+    rdtsc #389 @ 0x1414e67e3 tsc=0x1006eefed d=56
+    rdtsc #390 @ 0x141550c75 tsc=0x1006f03ce d=5089
+    rdtsc #391 @ 0x14158a252 tsc=0x1006f1832 d=5220
+    rdtsc #392 @ 0x1414d601f tsc=0x1006f2d19 d=5351
+    rdtsc #393 @ 0x1414b5547 tsc=0x1006f4283 d=5482
+    rdtsc #394 @ 0x1414e67d1 tsc=0x1006f5870 d=5613
+    rdtsc #395 @ 0x1414e67e3 tsc=0x1006f58aa d=58
+    rdtsc #396 @ 0x141550c75 tsc=0x1006f6f9d d=5875
+    rdtsc #397 @ 0x14154ed64 tsc=0x1006f8713 d=6006
+    rdtsc #398 @ 0x1414d80da tsc=0x1006f9f0c d=6137
+    rdtsc #399 @ 0x1414d80da tsc=0x1006f9f2e d=34
+    rdtsc #400 @ 0x1414d80da tsc=0x1006f9f5d d=47
+    EAT resolve: ntdll.dll!NtOpenFile
+    EAT resolve: ntdll.dll!NtCreateSection
+    EAT resolve: ntdll.dll!NtMapViewOfSection
+    EAT resolve: ntdll.dll!NtUnmapViewOfSection
+    EAT resolve: ntdll.dll!NtClose
+NtOpenFile('\??\C:\CODM\loader.exe')
+NtCreateSection -> handle 0x31001
+NtMapViewOfSection -> REAL FILE mapped (11,772,208 bytes) at 0x500000000
+NtUnmapViewOfSection(0xffffffffffffffff)
+    EAT resolve: ntdll.dll!NtProtectVirtualMemory
+NtProtectVirtualMemory(base=0x1406e9000, size=0x389ac5, prot=0x40)
+NtProtectVirtualMemory(base=0x1400ec000, size=0x5edda8, prot=0x4)
+NtProtectVirtualMemory(base=0x140001000, size=0xea1b7, prot=0x40)
+NtProtectVirtualMemory(base=0x1406de000, size=0xa944, prot=0x4)
+NtProtectVirtualMemory(base=0x140719000, size=0x5b58, prot=0x4)
+API getmodulehandlea('CRYPT32.dll') -> 0x100100000
+    EAT resolve: crypt32.dll!CryptProtectData
+    EAT resolve: crypt32.dll!CertGetCertificateContextProperty
+    EAT resolve: crypt32.dll!CertOpenStore
+    EAT resolve: crypt32.dll!CertCloseStore
+    EAT resolve: crypt32.dll!CertEnumCertificatesInStore
+    EAT resolve: crypt32.dll!CertFindCertificateInStore
+    EAT resolve: crypt32.dll!CertFreeCertificateContext
+    EAT resolve: crypt32.dll!CryptStringToBinaryA
+    EAT resolve: crypt32.dll!PFXImportCertStore
+    EAT resolve: crypt32.dll!CryptDecodeObjectEx
+    EAT resolve: crypt32.dll!CertAddCertificateContextToStore
+    EAT resolve: crypt32.dll!CertFindExtension
+    EAT resolve: crypt32.dll!CertGetNameStringA
+    EAT resolve: crypt32.dll!CryptQueryObject
+    EAT resolve: crypt32.dll!CertCreateCertificateChainEngine
+    EAT resolve: crypt32.dll!CertFreeCertificateChainEngine
+    EAT resolve: crypt32.dll!CertGetCertificateChain
+    EAT resolve: crypt32.dll!CertFreeCertificateChain
+    EAT resolve: crypt32.dll!CryptUnprotectData
+API getmodulehandlea('WS2_32.dll') -> 0x100200000
+    EAT resolve: ws2_32.dll!listen
+    EAT resolve: ws2_32.dll!GetSockName
+    EAT resolve: ws2_32.dll!InetPtonA
+    EAT resolve: ws2_32.dll!WSAGetQOSByName
+    EAT resolve: ws2_32.dll!GetPeerName
+    EAT resolve: ws2_32.dll!ConnectEx
+    EAT resolve: ws2_32.dll!FreeAddrInfoExW
+    EAT resolve: ws2_32.dll!WSCInstallProviderAndChains
+    EAT resolve: ws2_32.dll!send
+    EAT resolve: ws2_32.dll!WSAPoll
+    EAT resolve: ws2_32.dll!SetAddrInfoEx
+    EAT resolve: ws2_32.dll!Recv
+    EAT resolve: ws2_32.dll!GetAddrInfoW
+    EAT resolve: ws2_32.dll!ioctlsocket
+    EAT resolve: ws2_32.dll!GetAddrInfoExW
+    EAT resolve: ws2_32.dll!FreeAddrInfoW
+    EAT resolve: ws2_32.dll!WSCEnableNSProvider
+    EAT resolve: ws2_32.dll!SendEx
+    EAT resolve: ws2_32.dll!WSCEnumProtocols
+    EAT resolve: ws2_32.dll!JoinLeaf
+    EAT resolve: ws2_32.dll!GetServiceClassNameByClassIdW
+    EAT resolve: ws2_32.dll!getservbyname
+    EAT resolve: ws2_32.dll!RecvEx
+    EAT resolve: ws2_32.dll!FreeAddrInfoEx
+    EAT resolve: ws2_32.dll!WSCUpdateProvider
+    EAT resolve: ws2_32.dll!WSAInstallServiceClassW
+    EAT resolve: ws2_32.dll!WSAHtons
+    EAT resolve: ws2_32.dll!WSAGetQOSByName
+    EAT resolve: ws2_32.dll!WSAEnumProtocolsA
+    EAT resolve: ws2_32.dll!Send
+    EAT resolve: ws2_32.dll!GetHostNameW
+    EAT resolve: ws2_32.dll!SetSocketNotifySourceFilter
+    EAT resolve: ws2_32.dll!WSCQueryProviderInformation
+    EAT resolve: ws2_32.dll!RecvFrom
+API getmodulehandlea('KERNEL32.dll') -> 0x100300000
+    EAT resolve: kernel32.dll!WriteFile
+    EAT resolve: kernel32.dll!TerminateProcess
+    EAT resolve: kernel32.dll!GetModuleFileNameW
+    EAT resolve: kernel32.dll!SetConsoleWindowInfo
+    EAT resolve: kernel32.dll!WaitForSingleObject
+    EAT resolve: kernel32.dll!CreateFileW
+    EAT resolve: kernel32.dll!GetFileAttributesW
+    EAT resolve: kernel32.dll!GetModuleHandleA
+    EAT resolve: kernel32.dll!OpenProcess
+    EAT resolve: kernel32.dll!SetFileAttributesW
+    EAT resolve: kernel32.dll!CreateToolhelp32Snapshot
+    EAT resolve: kernel32.dll!Sleep
+    EAT resolve: kernel32.dll!GetTickCount64
+    EAT resolve: kernel32.dll!GetLastError
+    EAT resolve: kernel32.dll!Process32NextW
+    EAT resolve: kernel32.dll!DeleteFileW
+    EAT resolve: kernel32.dll!Process32Next
+    EAT resolve: kernel32.dll!Process32FirstW
+    EAT resolve: kernel32.dll!CloseHandle
+    EAT resolve: kernel32.dll!CreateThread
+    EAT resolve: kernel32.dll!AddAtomA
+    EAT resolve: kernel32.dll!Module32FirstW
+    EAT resolve: kernel32.dll!GetLocalTime
+    EAT resolve: kernel32.dll!FindAtomA
+    EAT resolve: kernel32.dll!VirtualAllocEx
+    EAT resolve: kernel32.dll!LocalFree
+    EAT resolve: kernel32.dll!MoveFileExW
+    EAT resolve: kernel32.dll!ExitProcess
+    EAT resolve: kernel32.dll!GetCurrentProcessId
+    EAT resolve: kernel32.dll!GetModuleHandleW
+    EAT resolve: kernel32.dll!GetConsoleWindow
+    EAT resolve: kernel32.dll!CreateRemoteThread
+    EAT resolve: kernel32.dll!lstrcmpiA
+    EAT resolve: kernel32.dll!Module32NextW
+    EAT resolve: kernel32.dll!GetSystemTimeAsFileTime
+    EAT resolve: kernel32.dll!VirtualFreeEx
+    EAT resolve: kernel32.dll!IsDebuggerPresent
+    EAT resolve: kernel32.dll!GetComputerNameA
+    EAT resolve: kernel32.dll!CheckRemoteDebuggerPresent
+    EAT resolve: kernel32.dll!FlushFileBuffers
+    EAT resolve: kernel32.dll!ReleaseSRWLockExclusive
+    EAT resolve: kernel32.dll!AcquireSRWLockExclusive
+    EAT resolve: kernel32.dll!FormatMessageW
+    EAT resolve: kernel32.dll!EnterCriticalSection
+    EAT resolve: kernel32.dll!GetModuleFileNameA
+    EAT resolve: kernel32.dll!InitializeCriticalSectionEx
+    EAT resolve: kernel32.dll!DeleteCriticalSection
+    EAT resolve: kernel32.dll!GetSystemDirectoryA
+    EAT resolve: kernel32.dll!SleepEx
+    EAT resolve: kernel32.dll!GetTickCount
+    EAT resolve: kernel32.dll!SetConsoleScreenBufferSize
+    EAT resolve: kernel32.dll!WaitForSingleObjectEx
+    EAT resolve: kernel32.dll!GetEnvironmentVariableA
+    EAT resolve: kernel32.dll!SetConsoleTextAttribute
+    EAT resolve: kernel32.dll!ReadFile
+    EAT resolve: kernel32.dll!PeekNamedPipe
+    EAT resolve: kernel32.dll!WaitForMultipleObjects
+    EAT resolve: kernel32.dll!CreateFileA
+    EAT resolve: kernel32.dll!GetFileSizeEx
+    EAT resolve: kernel32.dll!SetLastError
+    EAT resolve: kernel32.dll!ResetEvent
+    EAT resolve: kernel32.dll!SetEvent
+    EAT resolve: kernel32.dll!InitializeCriticalSectionAndSpinCount
+    EAT resolve: kernel32.dll!GetFileInformationByHandleEx
+    EAT resolve: kernel32.dll!CopyFileW
+    EAT resolve: kernel32.dll!AreFileApisANSI
+    EAT resolve: kernel32.dll!SetFileInformationByHandle
+    EAT resolve: kernel32.dll!GetFileAttributesExW
+    EAT resolve: kernel32.dll!FormatMessageA
+    EAT resolve: kernel32.dll!CreateDirectoryW
+    EAT resolve: kernel32.dll!QueryPerformanceCounter
+    EAT resolve: kernel32.dll!VerifyVersionInfoW
+    EAT resolve: kernel32.dll!FreeLibrary
+    EAT resolve: kernel32.dll!VerSetConditionMask
+    EAT resolve: kernel32.dll!GetProcAddress
+    EAT resolve: kernel32.dll!QueryPerformanceFrequency
+    EAT resolve: kernel32.dll!LoadLibraryA
+    EAT resolve: kernel32.dll!GlobalUnlock
+    EAT resolve: kernel32.dll!WideCharToMultiByte
+    EAT resolve: kernel32.dll!GlobalLock
+    EAT resolve: kernel32.dll!GlobalFree
+    EAT resolve: kernel32.dll!GlobalAlloc
+    EAT resolve: kernel32.dll!MultiByteToWideChar
+    EAT resolve: kernel32.dll!CreateEventW
+    EAT resolve: kernel32.dll!RtlCaptureContext
+    EAT resolve: kernel32.dll!GetStdHandle
+    EAT resolve: kernel32.dll!GetCurrentProcess
+    EAT resolve: kernel32.dll!MoveFileExA
+    EAT resolve: kernel32.dll!SetConsoleTitleA
+    EAT resolve: kernel32.dll!InitializeSListHead
+    EAT resolve: kernel32.dll!GetCurrentThreadId
+    EAT resolve: kernel32.dll!IsProcessorFeaturePresent
+    EAT resolve: kernel32.dll!SetUnhandledExceptionFilter
+    EAT resolve: kernel32.dll!UnhandledExceptionFilter
+    EAT resolve: kernel32.dll!GetConsoleScreenBufferInfo
+    EAT resolve: kernel32.dll!WriteProcessMemory
+    EAT resolve: kernel32.dll!GetFileType
+    EAT resolve: kernel32.dll!Process32First
+    EAT resolve: kernel32.dll!RtlLookupFunctionEntry
+    EAT resolve: kernel32.dll!RtlVirtualUnwind
+    EAT resolve: kernel32.dll!LeaveCriticalSection
+API getmodulehandlea('USER32.dll') -> 0x100400000
+    EAT resolve: user32.dll!IsWindowVisible
+    EAT resolve: user32.dll!GetWindowThreadProcessId
+    EAT resolve: user32.dll!GetWindowRect
+    EAT resolve: user32.dll!EnumChildWindows
+    EAT resolve: user32.dll!ShowWindow
+    EAT resolve: user32.dll!IsWindow
+    EAT resolve: user32.dll!SetWindowPos
+    EAT resolve: user32.dll!DestroyWindow
+    EAT resolve: user32.dll!DispatchMessageA
+    EAT resolve: user32.dll!IsIconic
+    EAT resolve: user32.dll!GetAsyncKeyState
+    EAT resolve: user32.dll!SetWindowLongA
+    EAT resolve: user32.dll!IsChild
+    EAT resolve: user32.dll!GetWindowLongA
+    EAT resolve: user32.dll!GetForegroundWindow
+    EAT resolve: user32.dll!DefWindowProcA
+    EAT resolve: user32.dll!CreateWindowExA
+    EAT resolve: user32.dll!SetLayeredWindowAttributes
+    EAT resolve: user32.dll!TranslateMessage
+    EAT resolve: user32.dll!mouse_event
+    EAT resolve: user32.dll!DrawMenuBar
+    EAT resolve: user32.dll!LoadIconA
+    EAT resolve: user32.dll!PeekMessageA
+    EAT resolve: user32.dll!GetWindowLongPtrA
+    EAT resolve: user32.dll!UnregisterClassA
+    EAT resolve: user32.dll!PostQuitMessage
+    EAT resolve: user32.dll!SetWindowLongPtrA
+    EAT resolve: user32.dll!RegisterClassExA
+    EAT resolve: user32.dll!UpdateWindow
+    EAT resolve: user32.dll!GetClipboardData
+    EAT resolve: user32.dll!GetKeyState
+    EAT resolve: user32.dll!LoadCursorA
+    EAT resolve: user32.dll!ScreenToClient
+    EAT resolve: user32.dll!GetActiveWindow
+    EAT resolve: user32.dll!GetCapture
+    EAT resolve: user32.dll!ClientToScreen
+    EAT resolve: user32.dll!SetCapture
+    EAT resolve: user32.dll!SetCursor
+    EAT resolve: user32.dll!GetClientRect
+    EAT resolve: user32.dll!ReleaseCapture
+    EAT resolve: user32.dll!SetCursorPos
+    EAT resolve: user32.dll!GetCursorPos
+    EAT resolve: user32.dll!OpenClipboard
+    EAT resolve: user32.dll!CloseClipboard
+    EAT resolve: user32.dll!EmptyClipboard
+    EAT resolve: user32.dll!SetClipboardData
+API getmodulehandlea('ADVAPI32.dll') -> 0x100500000
+    EAT resolve: advapi32.dll!CryptDestroyHash
+    EAT resolve: advapi32.dll!CryptReleaseContext
+    EAT resolve: advapi32.dll!CryptGetHashParam
+    EAT resolve: advapi32.dll!CryptEncrypt
+    EAT resolve: advapi32.dll!CryptImportKey
+    EAT resolve: advapi32.dll!CryptDestroyKey
+    EAT resolve: advapi32.dll!CryptAcquireContextA
+    EAT resolve: advapi32.dll!CryptHashData
+    EAT resolve: advapi32.dll!CryptCreateHash
+API getmodulehandlea('MSVCP140.dll') -> 0x100600000
+    EAT resolve: msvcp140.dll!??Bid@locale@std@@QEAA_KXZ
+    EAT resolve: msvcp140.dll!?_Xlength_error@std@@YAXPEBD@Z
+    EAT resolve: msvcp140.dll!_Query_perf_frequency
+    EAT resolve: msvcp140.dll!??1_Lockit@std@@QEAA@XZ
+    EAT resolve: msvcp140.dll!??0_Lockit@std@@QEAA@H@Z
+    EAT resolve: msvcp140.dll!?_Throw_Cpp_error@std@@YAXH@Z
+    EAT resolve: msvcp140.dll!?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+    EAT resolve: msvcp140.dll!?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ
+    EAT resolve: msvcp140.dll!?uncaught_exception@std@@YA_NXZ
+    EAT resolve: msvcp140.dll!?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
+    EAT resolve: msvcp140.dll!?_Xbad_alloc@std@@YAXXZ
+    EAT resolve: msvcp140.dll!?wcout@std@@3V?$basic_ostream@_WU?$char_traits@_W@std@@@1@A
+    EAT resolve: msvcp140.dll!?_Xinvalid_argument@std@@YAXPEBD@Z
+    EAT resolve: msvcp140.dll!?_Xout_of_range@std@@YAXPEBD@Z
+    EAT resolve: msvcp140.dll!?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+    EAT resolve: msvcp140.dll!?wcerr@std@@3V?$basic_ostream@_WU?$char_traits@_W@std@@@1@A
+    EAT resolve: msvcp140.dll!?_Winerror_map@std@@YAHH@Z
+    EAT resolve: msvcp140.dll!?_Throw_C_error@std@@YAXH@Z
+    EAT resolve: msvcp140.dll!?id@?$codecvt@DDU_Mbstatet@@@std@@2V0locale@2@A
+    EAT resolve: msvcp140.dll!?_Fiopen@std@@YAPEAU_iobuf@@PEBDHH@Z
+    EAT resolve: msvcp140.dll!?_Fiopen@std@@YAPEAU_iobuf@@PEB_WHH@Z
+    EAT resolve: msvcp140.dll!?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z
+    EAT resolve: msvcp140.dll!?_Random_device@std@@YAIXZ
+    EAT resolve: msvcp140.dll!?setprecision@std@@YA?AU?$_Smanip@_J@1@_J@Z
+    EAT resolve: msvcp140.dll!?_Syserror_map@std@@YAPEBDH@Z
+    EAT resolve: msvcp140.dll!_Mtx_destroy_in_situ
+    EAT resolve: msvcp140.dll!_Mtx_lock
+    EAT resolve: msvcp140.dll!_Mtx_init_in_situ
+    EAT resolve: msvcp140.dll!_Cnd_do_broadcast_at_thread_exit
+    EAT resolve: msvcp140.dll!_Thrd_sleep
+    EAT resolve: msvcp140.dll!_Thrd_id
+    EAT resolve: msvcp140.dll!_Query_perf_counter
+    EAT resolve: msvcp140.dll!_Thrd_detach
+    EAT resolve: msvcp140.dll!_Xtime_get_ticks
+    EAT resolve: msvcp140.dll!_Thrd_join
+    EAT resolve: msvcp140.dll!_Mtx_unlock
+    EAT resolve: msvcp140.dll!?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z
+    EAT resolve: msvcp140.dll!?sputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QEAA_JPEB_W_J@Z
+    EAT resolve: msvcp140.dll!?widen@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QEBA_WD@Z
+    EAT resolve: msvcp140.dll!?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z
+    EAT resolve: msvcp140.dll!?put@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QEAAAEAV12@_W@Z
+    EAT resolve: msvcp140.dll!?sbumpc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+    EAT resolve: msvcp140.dll!?sgetc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+    EAT resolve: msvcp140.dll!?snextc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHXZ
+    EAT resolve: msvcp140.dll!?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z
+    EAT resolve: msvcp140.dll!?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?sputc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QEAAG_W@Z
+    EAT resolve: msvcp140.dll!?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
+    EAT resolve: msvcp140.dll!?unshift@?$codecvt@DDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEAD1AEAPEAD@Z
+    EAT resolve: msvcp140.dll!??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ
+    EAT resolve: msvcp140.dll!?getloc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEBA?AVlocale@2@XZ
+    EAT resolve: msvcp140.dll!?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXXZ
+    EAT resolve: msvcp140.dll!?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ
+    EAT resolve: msvcp140.dll!?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
+    EAT resolve: msvcp140.dll!?_Osfx@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QEAAXXZ
+    EAT resolve: msvcp140.dll!?flush@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QEAAAEAV12@XZ
+    EAT resolve: msvcp140.dll!?_Ipfx@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA_N_N@Z
+    EAT resolve: msvcp140.dll!?in@?$codecvt@DDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z
+    EAT resolve: msvcp140.dll!?out@?$codecvt@DDU_Mbstatet@@@std@@QEBAHAEAU_Mbstatet@@PEBD1AEAPEBDPEAD3AEAPEAD@Z
+    EAT resolve: msvcp140.dll!?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z
+    EAT resolve: msvcp140.dll!?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+    EAT resolve: msvcp140.dll!?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ
+    EAT resolve: msvcp140.dll!?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
+    EAT resolve: msvcp140.dll!??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ
+    EAT resolve: msvcp140.dll!?setstate@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QEAAXH_N@Z
+    EAT resolve: msvcp140.dll!??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
+    EAT resolve: msvcp140.dll!??0?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
+    EAT resolve: msvcp140.dll!??0?$basic_iostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@@Z
+    EAT resolve: msvcp140.dll!??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ
+    EAT resolve: msvcp140.dll!?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+    EAT resolve: msvcp140.dll!?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+    EAT resolve: msvcp140.dll!?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ
+    EAT resolve: msvcp140.dll!?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+    EAT resolve: msvcp140.dll!?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
+    EAT resolve: msvcp140.dll!?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
+    EAT resolve: msvcp140.dll!?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z
+    EAT resolve: msvcp140.dll!?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+    EAT resolve: msvcp140.dll!?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z
+    EAT resolve: msvcp140.dll!??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ
+    EAT resolve: msvcp140.dll!??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAVios_base@1@AEAV21@@Z@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_N@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@G@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@I@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@J@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@K@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@_K@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@M@Z
+    EAT resolve: msvcp140.dll!?write@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEBD_J@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
+    EAT resolve: msvcp140.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QEAAAEAV01@K@Z
+    EAT resolve: msvcp140.dll!??1?$basic_istream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+    EAT resolve: msvcp140.dll!?read@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@PEAD_J@Z
+    EAT resolve: msvcp140.dll!?seekg@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@_JH@Z
+    EAT resolve: msvcp140.dll!?tellg@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAA?AV?$fpos@U_Mbstatet@@@2@XZ
+    EAT resolve: msvcp140.dll!??1?$basic_iostream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+    EAT resolve: msvcp140.dll!?always_noconv@codecvt_base@std@@QEBA_NXZ
+API getmodulehandlea('IMM32.dll') -> 0x100700000
+    EAT resolve: imm32.dll!ImmSetCompositionWindow
+    EAT resolve: imm32.dll!ImmGetContext
+    EAT resolve: imm32.dll!ImmReleaseContext
+API getmodulehandlea('dwmapi.dll') -> 0x100800000
+    EAT resolve: dwmapi.dll!DwmExtendFrameIntoClientArea
+API getmodulehandlea('bcrypt.dll') -> 0x100900000
+    EAT resolve: bcrypt.dll!BCryptHashData
+    EAT resolve: bcrypt.dll!BCryptCreateHash
+    EAT resolve: bcrypt.dll!BCryptOpenAlgorithmProvider
+    EAT resolve: bcrypt.dll!BCryptGenRandom
+    EAT resolve: bcrypt.dll!BCryptDestroyHash
+    EAT resolve: bcrypt.dll!BCryptCloseAlgorithmProvider
+    EAT resolve: bcrypt.dll!BCryptFinishHash
+API getmodulehandlea('d3d9.dll') -> 0x100a00000
+    EAT resolve: d3d9.dll!Direct3DCreate9Ex
+API getmodulehandlea('WINTRUST.dll') -> 0x100b00000
+    EAT resolve: wintrust.dll!WTHelperGetProvSignerFromChain
+    EAT resolve: wintrust.dll!WinVerifyTrust
+    EAT resolve: wintrust.dll!WTHelperProvDataFromStateData
+API getmodulehandlea('VCRUNTIME140_1.dll') -> 0x100c00000
+    EAT resolve: vcruntime140_1.dll!__CxxFrameHandler4
+API getmodulehandlea('VCRUNTIME140.dll') -> 0x100d00000
+    EAT resolve: vcruntime140.dll!memchr
+    EAT resolve: vcruntime140.dll!memcmp
+    EAT resolve: vcruntime140.dll!__current_exception
+    EAT resolve: vcruntime140.dll!memmove
+    EAT resolve: vcruntime140.dll!__std_exception_destroy
+    EAT resolve: vcruntime140.dll!__std_exception_copy
+    EAT resolve: vcruntime140.dll!__std_terminate
+    EAT resolve: vcruntime140.dll!strstr
+    EAT resolve: vcruntime140.dll!strchr
+    EAT resolve: vcruntime140.dll!strrchr
+    EAT resolve: vcruntime140.dll!__C_specific_handler
+    EAT resolve: vcruntime140.dll!__current_exception_context
+    EAT resolve: vcruntime140.dll!memcpy
+    EAT resolve: vcruntime140.dll!_CxxThrowException
+    EAT resolve: vcruntime140.dll!memset
+API getmodulehandlea('api-ms-win-crt-runtime-l1-1-0.dll') -> 0x100e00000
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!terminate
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_errno
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_invalid_parameter_noinfo_noreturn
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_exit
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_beginthreadex
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!__sys_errlist
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!__sys_nerr
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!exit
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_configure_narrow_argv
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_initialize_narrow_environment
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_register_thread_local_exe_atexit_callback
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_c_exit
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!__p___argv
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!__p___argc
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_initialize_onexit_table
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_initterm_e
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_initterm
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_get_initial_narrow_environment
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_set_app_type
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_seh_filter_exe
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_cexit
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_crt_atexit
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!_register_onexit_function
+    EAT resolve: api-ms-win-crt-runtime-l1-1-0.dll!system
+API getmodulehandlea('api-ms-win-crt-math-l1-1-0.dll') -> 0x100f00000
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!fmodf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!_fdclass
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!powf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!sinf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!cosf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!lroundf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!_fdopen
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!llround
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!sqrtf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!__setusermatherr
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!ceilf
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!atan2f
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!nearbyint
+    EAT resolve: api-ms-win-crt-math-l1-1-0.dll!acosf
+API getmodulehandlea('api-ms-win-crt-stdio-l1-1-0.dll') -> 0x101000000
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__stdio_common_vsprintf
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_read
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fread
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_lseeki64
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__acrt_iob_func
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fgets
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_open
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fopen
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__stdio_common_vsscanf
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__p__commode
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fputc
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!feof
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fputs
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__stdio_common_vswprintf_s
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_fileno
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_close
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_get_stream_buffer_pointers
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_fseeki64
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fseek
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fsetpos
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_write
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!ungetc
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fflush
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!setvbuf
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fgetpos
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_wfopen
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!ftell
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!_set_fmode
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fgetc
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!__stdio_common_vsprintf_s
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fclose
+    EAT resolve: api-ms-win-crt-stdio-l1-1-0.dll!fwrite
+API getmodulehandlea('api-ms-win-crt-string-l1-1-0.dll') -> 0x101100000
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!_wcsicmp
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!isdigit
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strcspn
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strpbrk
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!isspace
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strncmp
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strcmp
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!_strdup
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strspn
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!tolower
+    EAT resolve: api-ms-win-crt-string-l1-1-0.dll!strncpy
+API getmodulehandlea('api-ms-win-crt-utility-l1-1-0.dll') -> 0x101200000
+    EAT resolve: api-ms-win-crt-utility-l1-1-0.dll!rand
+    EAT resolve: api-ms-win-crt-utility-l1-1-0.dll!srand
+    EAT resolve: api-ms-win-crt-utility-l1-1-0.dll!qsort
+API getmodulehandlea('api-ms-win-crt-heap-l1-1-0.dll') -> 0x101300000
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!calloc
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!malloc
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!realloc
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!free
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!_callnewh
+    EAT resolve: api-ms-win-crt-heap-l1-1-0.dll!_set_new_mode
+API getmodulehandlea('api-ms-win-crt-convert-l1-1-0.dll') -> 0x101400000
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!atof
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!strtof
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!strtoul
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!strtoll
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!strtol
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!wcstombs
+    EAT resolve: api-ms-win-crt-convert-l1-1-0.dll!atoi
+API getmodulehandlea('api-ms-win-crt-filesystem-l1-1-0.dll') -> 0x101500000
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!_unlink
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!remove
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!_unlock_file
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!_stat64
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!_fstat64
+    EAT resolve: api-ms-win-crt-filesystem-l1-1-0.dll!_lock_file
+API getmodulehandlea('api-ms-win-crt-time-l1-1-0.dll') -> 0x101600000
+    EAT resolve: api-ms-win-crt-time-l1-1-0.dll!strftime
+    EAT resolve: api-ms-win-crt-time-l1-1-0.dll!_time64
+    EAT resolve: api-ms-win-crt-time-l1-1-0.dll!_gmtime64
+API getmodulehandlea('api-ms-win-crt-environment-l1-1-0.dll') -> 0x101700000
+    EAT resolve: api-ms-win-crt-environment-l1-1-0.dll!getenv
+API getmodulehandlea('api-ms-win-crt-locale-l1-1-0.dll') -> 0x101800000
+    EAT resolve: api-ms-win-crt-locale-l1-1-0.dll!___lc_codepage_func
+    EAT resolve: api-ms-win-crt-locale-l1-1-0.dll!_configthreadlocale
+API getmodulehandlea('Normaliz.dll') -> 0x101900000
+    EAT resolve: normaliz.dll!IdnToAscii
+    EAT resolve: normaliz.dll!IdnToUnicode
+API getmodulehandlea('WLDAP32.dll') -> 0x101a00000
+    EAT resolve: wldap32.dll!ldap_get_dnA
+    EAT resolve: wldap32.dll!ldap_delete_s
+    EAT resolve: wldap32.dll!ldap_modify_sA
+    EAT resolve: wldap32.dll!ldap_get_dn
+    EAT resolve: wldap32.dll!ldap_get_valuesA
+    EAT resolve: wldap32.dll!ldap_delete_sA
+    EAT resolve: wldap32.dll!ldap_dn2ufn
+    EAT resolve: wldap32.dll!ldap_escape_filter_element
+    EAT resolve: wldap32.dll!ldap_search_stW
+    EAT resolve: wldap32.dll!ldap_bindW
+    EAT resolve: wldap32.dll!ldap_connect
+    EAT resolve: wldap32.dll!ldap_controls_free
+    EAT resolve: wldap32.dll!ldap_deleteA
+API getmodulehandlea('WTSAPI32.dll') -> 0x101b00000
+    EAT resolve: wtsapi32.dll!WTSSendMessageW
+API getmodulehandlea('KERNEL32.dll') -> 0x100300000
+    EAT resolve: kernel32.dll!GetSystemTimeAsFileTime
+    EAT resolve: kernel32.dll!GetModuleHandleA
+    EAT resolve: kernel32.dll!CreateEventA
+    EAT resolve: kernel32.dll!GetModuleFileNameW
+    EAT resolve: kernel32.dll!LoadLibraryA
+    EAT resolve: kernel32.dll!TerminateProcess
+    EAT resolve: kernel32.dll!GetCurrentProcess
+    EAT resolve: kernel32.dll!CreateToolhelp32Snapshot
+    EAT resolve: kernel32.dll!Thread32First
+    EAT resolve: kernel32.dll!GetCurrentProcessId
+    EAT resolve: kernel32.dll!GetCurrentThreadId
+    EAT resolve: kernel32.dll!OpenThread
+    EAT resolve: kernel32.dll!Thread32Next
+    EAT resolve: kernel32.dll!CloseHandle
+    EAT resolve: kernel32.dll!SuspendThread
+    EAT resolve: kernel32.dll!ResumeThread
+    EAT resolve: kernel32.dll!WriteProcessMemory
+    EAT resolve: kernel32.dll!GetSystemInfo
+    EAT resolve: kernel32.dll!VirtualAlloc
+    EAT resolve: kernel32.dll!VirtualProtect
+    EAT resolve: kernel32.dll!VirtualFree
+    EAT resolve: kernel32.dll!GetProcessAffinityMask
+    EAT resolve: kernel32.dll!SetProcessAffinityMask
+    EAT resolve: kernel32.dll!GetCurrentThread
+    EAT resolve: kernel32.dll!SetThreadAffinityMask
+    EAT resolve: kernel32.dll!Sleep
+    EAT resolve: kernel32.dll!FreeLibrary
+    EAT resolve: kernel32.dll!GetTickCount
+    EAT resolve: kernel32.dll!SystemTimeToFileTime
+    EAT resolve: kernel32.dll!FileTimeToSystemTime
+    EAT resolve: kernel32.dll!GlobalFree
+    EAT resolve: kernel32.dll!LocalAlloc
+    EAT resolve: kernel32.dll!LocalFree
+    EAT resolve: kernel32.dll!GetProcAddress
+    EAT resolve: kernel32.dll!ExitProcess
+    EAT resolve: kernel32.dll!EnterCriticalSection
+    EAT resolve: kernel32.dll!LeaveCriticalSection
+    EAT resolve: kernel32.dll!InitializeCriticalSection
+    EAT resolve: kernel32.dll!DeleteCriticalSection
+    EAT resolve: kernel32.dll!GetModuleHandleW
+    EAT resolve: kernel32.dll!LoadResource
+    EAT resolve: kernel32.dll!MultiByteToWideChar
+    EAT resolve: kernel32.dll!FindResourceExW
+    EAT resolve: kernel32.dll!FindResourceExA
+    EAT resolve: kernel32.dll!WideCharToMultiByte
+    EAT resolve: kernel32.dll!GetThreadLocale
+    EAT resolve: kernel32.dll!GetUserDefaultLCID
+    EAT resolve: kernel32.dll!GetSystemDefaultLCID
+    EAT resolve: kernel32.dll!EnumResourceNamesA
+    EAT resolve: kernel32.dll!EnumResourceNamesW
+    EAT resolve: kernel32.dll!EnumResourceLanguagesA
+    EAT resolve: kernel32.dll!EnumResourceLanguagesW
+    EAT resolve: kernel32.dll!EnumResourceTypesA
+    EAT resolve: kernel32.dll!EnumResourceTypesW
+    EAT resolve: kernel32.dll!CreateFileW
+    EAT resolve: kernel32.dll!LoadLibraryW
+    EAT resolve: kernel32.dll!GetLastError
+    EAT resolve: kernel32.dll!FlushFileBuffers
+    EAT resolve: kernel32.dll!CreateFileA
+    EAT resolve: kernel32.dll!WriteConsoleW
+    EAT resolve: kernel32.dll!GetConsoleOutputCP
+    EAT resolve: kernel32.dll!WriteConsoleA
+    EAT resolve: kernel32.dll!SetStdHandle
+    EAT resolve: kernel32.dll!FlsSetValue
+    EAT resolve: kernel32.dll!GetCommandLineA
+    EAT resolve: kernel32.dll!RaiseException
+    EAT resolve: kernel32.dll!RtlPcToFileHeader
+    EAT resolve: kernel32.dll!RtlLookupFunctionEntry
+    EAT resolve: kernel32.dll!RtlUnwindEx
+    EAT resolve: kernel32.dll!HeapFree
+    EAT resolve: kernel32.dll!GetCPInfo
+    EAT resolve: kernel32.dll!GetACP
+    EAT resolve: kernel32.dll!GetOEMCP
+    EAT resolve: kernel32.dll!IsValidCodePage
+    EAT resolve: kernel32.dll!EncodePointer
+    EAT resolve: kernel32.dll!DecodePointer
+    EAT resolve: kernel32.dll!FlsGetValue
+    EAT resolve: kernel32.dll!FlsFree
+    EAT resolve: kernel32.dll!SetLastError
+    EAT resolve: kernel32.dll!FlsAlloc
+    EAT resolve: kernel32.dll!UnhandledExceptionFilter
+    EAT resolve: kernel32.dll!SetUnhandledExceptionFilter
+    EAT resolve: kernel32.dll!IsDebuggerPresent
+    EAT resolve: kernel32.dll!RtlVirtualUnwind
+    EAT resolve: kernel32.dll!RtlCaptureContext
+    EAT resolve: kernel32.dll!HeapAlloc
+    EAT resolve: kernel32.dll!LCMapStringA
+    EAT resolve: kernel32.dll!LCMapStringW
+    EAT resolve: kernel32.dll!SetHandleCount
+    EAT resolve: kernel32.dll!GetStdHandle
+    EAT resolve: kernel32.dll!GetFileType
+    EAT resolve: kernel32.dll!GetStartupInfoA
+    EAT resolve: kernel32.dll!GetModuleFileNameA
+    EAT resolve: kernel32.dll!FreeEnvironmentStringsA
+    EAT resolve: kernel32.dll!GetEnvironmentStrings
+    EAT resolve: kernel32.dll!FreeEnvironmentStringsW
+    EAT resolve: kernel32.dll!GetEnvironmentStringsW
+    EAT resolve: kernel32.dll!HeapSetInformation
+    EAT resolve: kernel32.dll!HeapCreate
+    EAT resolve: kernel32.dll!HeapDestroy
+    EAT resolve: kernel32.dll!QueryPerformanceCounter
+    EAT resolve: kernel32.dll!GetStringTypeA
+    EAT resolve: kernel32.dll!GetStringTypeW
+    EAT resolve: kernel32.dll!GetLocaleInfoA
+    EAT resolve: kernel32.dll!HeapSize
+    EAT resolve: kernel32.dll!WriteFile
+    EAT resolve: kernel32.dll!SetFilePointer
+    EAT resolve: kernel32.dll!GetConsoleCP
+    EAT resolve: kernel32.dll!GetConsoleMode
+    EAT resolve: kernel32.dll!HeapReAlloc
+    EAT resolve: kernel32.dll!InitializeCriticalSectionAndSpinCount
+API getmodulehandlea('USER32.dll') -> 0x100400000
+    EAT resolve: user32.dll!GetUserObjectInformationW
+    EAT resolve: user32.dll!CharUpperBuffW
+    EAT resolve: user32.dll!MessageBoxW
+    EAT resolve: user32.dll!GetProcessWindowStation
+    EAT resolve: kernel32.dll!CloseHandle
+    GetUserObjectInformationW(h=0x1234, idx=1, buf=0x7ff0003eedc8, len=12)
+API loadlibrarya('user32.dll') -> 0x100400000
+    EAT resolve: user32.dll!MessageBoxW
+*** [MESSAGEBOX 'loader.exe                                                      '] A debugger has been found running in your system.
+Please, unload it from memory and restart your program.                        ***
+API ExitProcess(3735929054) — IGNORING (continuing emulation to trace post-abort path)
+automap 0x9abcd00000000-0x9abcd00001000 (access 19, total 0MB)
+round 0: 29.3s reason=timeout RIP=0x9abcd00000000
+  .text fill=85.23%  .rdata fill=98.05%
+  api_calls: {'getmodulehandlea': 31, 'ntprotectvirtualmemory': 5, 'localalloc': 3, 'ntquerysysteminformation': 3, 'localfree': 2, 'getmodulefilenamew': 2, 'ntclose': 2, 'isdebuggerpresent': 1, 'checkremotedebuggerpresent': 1, 'ntqueryinformationprocess': 1, 'ntsetinformationthread': 1, 'ntopenfile': 1}
+returned to sentinel — stub returned (unusual)
+dump_state('sentinel') complete: full image 22,732,800 bytes
+dump_state('final') complete: full image 22,732,800 bytes
+API call summary:
+  getmodulehandlea: 31
+  ntprotectvirtualmemory: 5
+  localalloc: 3
+  ntquerysysteminformation: 3
+  localfree: 2
+  getmodulefilenamew: 2
+  ntclose: 2
+  isdebuggerpresent: 1
+  checkremotedebuggerpresent: 1
+  ntqueryinformationprocess: 1
+  ntsetinformationthread: 1
+  ntopenfile: 1
+  ntcreatesection: 1
+  ntmapviewofsection: 1
+  ntunmapviewofsection: 1
+  closehandle: 1
+  getprocesswindowstation: 1
+  getuserobjectinformationw: 1
+  loadlibrarya: 1
+  messageboxw: 1
+  freelibrary: 1
+  exitprocess: 1
+DONE

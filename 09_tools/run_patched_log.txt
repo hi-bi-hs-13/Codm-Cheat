@@ -1,0 +1,73 @@
+[21:55:21] target: C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\test.exe
+[21:55:21] launched suspended pid=552
+[21:55:21] remote image base = 0x7ff6c0e00000 (ASLR-resolved)
+[21:55:23] auto-key injected: 5/5 bytes (OK)
+[21:55:23] JIT mode: resumed; waiting for cheat request in .\requests_log.jsonl (type the fake key at the prompt when it appears)...
+[21:55:23] request seen (all VMP checks passed, verify is waiting on the delayed response) — patching NOW...
+[21:55:23] decrypt detected; applying 5 patches...
+[21:55:23] site 0x7ff6c0e6e201: 0f843b100000 -> 909090909090 OK
+[21:55:23] site 0x7ff6c0e6e21d: 0f841f100000 -> 909090909090 OK
+[21:55:23] site 0x7ff6c0e6e287: 0f8531030000 -> e93203000090 OK
+[21:55:23] site 0x7ff6c0e693de: 7505 -> 9090 OK
+[21:55:23] site 0x7ff6c0e6dc0f: 0f8506050000 -> e90705000090 OK
+[21:55:23] ALL PATCHES APPLIED. Type ANY key at the cheat prompt.
+[21:55:23] Expected: LICENSE VERIFIED -> Waiting for target process. Video that screen. (No offsets => not game-usable, proof only.)
+[21:55:23] console fix skipped: function 'GetConsoleWindow' not found
+[21:55:23] entering background watch mode: process will stay running...
+[21:55:23] captured ext.dll -> ext_dropped.dll
+[22:14:48] target: C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\test.exe
+[22:14:48] launched suspended pid=21488
+[22:14:48] remote image base = 0x7ff6fda10000 (ASLR-resolved)
+[22:14:50] auto-key injected: 5/5 bytes (OK)
+[22:14:50] JIT mode: resumed; waiting for cheat request in .\requests_log.jsonl (type the fake key at the prompt when it appears)...
+[22:14:55] child exited with code 1 (0x1) before any request — VMP verdict or user closed it.
+[22:18:58] target: C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\test.exe
+[22:18:58] launched suspended pid=10888
+[22:18:58] remote image base = 0x7ff636a10000 (ASLR-resolved)
+[22:19:00] auto-key injected: 5/5 bytes (OK)
+[22:19:00] JIT mode: resumed; waiting for cheat request in .\requests_log.jsonl (type the fake key at the prompt when it appears)...
+[22:19:00] request seen (all VMP checks passed, verify is waiting on the delayed response) — patching NOW...
+[22:19:00] decrypt detected; applying 5 patches...
+[22:19:00] site 0x7ff636a7e201: 0f843b100000 -> 909090909090 OK
+[22:19:00] site 0x7ff636a7e21d: 0f841f100000 -> 909090909090 OK
+[22:19:00] site 0x7ff636a7e287: 0f8531030000 -> e93203000090 OK
+[22:19:00] site 0x7ff636a793de: 7505 -> 9090 OK
+[22:19:00] site 0x7ff636a7dc0f: 0f8506050000 -> e90705000090 OK
+[22:19:00] ALL PATCHES APPLIED. Type ANY key at the cheat prompt.
+[22:19:00] Expected: LICENSE VERIFIED -> Waiting for target process. Video that screen. (No offsets => not game-usable, proof only.)
+[22:19:00] console fix skipped: function 'GetConsoleWindow' not found
+[22:19:00] entering background watch mode: process will stay running...
+[22:19:00] captured ext.dll -> ext_dropped.dll
+[22:32:52] target: C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\test.exe
+[22:32:52] launched suspended pid=6216
+[22:32:52] remote image base = 0x7ff7c8580000 (ASLR-resolved)
+[22:32:54] auto-key injected: 5/5 bytes (OK)
+[22:32:54] JIT mode: resumed; waiting for cheat request in .\requests_log.jsonl (type the fake key at the prompt when it appears)...
+[22:32:54] request seen (all VMP checks passed, verify is waiting on the delayed response) — patching NOW...
+[22:32:54] decrypt detected; applying 5 patches...
+[22:32:54] site 0x7ff7c85ee201: 0f843b100000 -> 909090909090 OK
+[22:32:54] site 0x7ff7c85ee21d: 0f841f100000 -> 909090909090 OK
+[22:32:54] site 0x7ff7c85ee287: 0f8531030000 -> e93203000090 OK
+[22:32:54] site 0x7ff7c85e93de: 7505 -> 9090 OK
+[22:32:54] site 0x7ff7c85edc0f: 0f8506050000 -> e90705000090 OK
+[22:32:54] ALL PATCHES APPLIED. Type ANY key at the cheat prompt.
+[22:32:54] Expected: LICENSE VERIFIED -> Waiting for target process. Video that screen. (No offsets => not game-usable, proof only.)
+[22:32:54] console fix skipped: function 'GetConsoleWindow' not found
+[22:32:54] entering background watch mode: process will stay running...
+[22:32:54] captured ext.dll -> ext_dropped.dll
+[23:02:00] target: C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\test.exe
+[23:02:00] launched suspended pid=9920
+[23:02:00] remote image base = 0x7ff78ce50000 (ASLR-resolved)
+[23:02:00] JIT mode: resumed; waiting for cheat request in C:\Users\<user>\Desktop\Codm-Dump\iacpc\09_bypass_session4\requests_log.jsonl (type the fake key at the prompt when it appears)...
+[23:02:03] request seen (all VMP checks passed, verify is waiting on the delayed response) — patching NOW...
+[23:02:03] decrypt detected; applying 5 patches...
+[23:02:03] site 0x7ff78cebe201: 0f843b100000 -> 909090909090 OK
+[23:02:03] site 0x7ff78cebe21d: 0f841f100000 -> 909090909090 OK
+[23:02:03] site 0x7ff78cebe287: 0f8531030000 -> e93203000090 OK
+[23:02:03] site 0x7ff78ceb93de: 7505 -> 9090 OK
+[23:02:03] site 0x7ff78cebdc0f: 0f8506050000 -> e90705000090 OK
+[23:02:03] ALL PATCHES APPLIED. Type ANY key at the cheat prompt.
+[23:02:03] Expected: LICENSE VERIFIED -> Waiting for target process. Video that screen. (No offsets => not game-usable, proof only.)
+[23:02:03] console fix skipped: function 'GetConsoleWindow' not found
+[23:02:03] entering background watch mode: process will stay running...
+[23:02:03] captured ext.dll -> ext_dropped.dll

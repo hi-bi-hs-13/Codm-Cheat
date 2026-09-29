@@ -1,0 +1,34 @@
+unpacked_rdata_98pct.bin | PLAIN | 0x14000592e | https://curl.se/docs/http-cookies.html
+unpacked_rdata_98pct.bin | PLAIN | 0x140007e86 | https://curl.se/docs/alt-svc.html
+unpacked_rdata_98pct.bin | PLAIN | 0x140008063 | https://curl.se/docs/hsts.html
+unpacked_rdata_98pct.bin | xor1 k=0x00 | 0x14000592e | https://curl.se/docs/http-cookies.html
+unpacked_rdata_98pct.bin | xor1 k=0x00 | 0x140007e86 | https://curl.se/docs/alt-svc.html
+unpacked_rdata_98pct.bin | xor1 k=0x00 | 0x140008063 | https://curl.se/docs/hsts.html
+unpacked_rdata_98pct.bin | xor1 k=0xab | 0x1405da8e0 | https://api.bestcheatir.com/CODMTTTTTTTTTTTTTTTT;
+unpacked_rdata_98pct.bin | xor4roll @+0x392e | 0x14000592e | https://curl.se/docs/http-cookies.html
+unpacked_rdata_98pct.bin | xor4roll @+0x5e86 | 0x140007e86 | https://curl.se/docs/alt-svc.html
+unpacked_rdata_98pct.bin | xor4roll @+0x6063 | 0x140008063 | https://curl.se/docs/hsts.html
+unpacked_rdata_98pct.bin | xor4roll @+0x16027e | 0x14016227e | http://-4
+unpacked_rdata_98pct.bin | xor4roll @+0x5d88e0 | 0x1405da8e0 | https://api.bestcheatir.com/CODMTTTTTTTTTTTTTTTT;
+test.bin | PLAIN | 0xb3946a | :http://crl.sectigo.com/SectigoPublicCodeSigningRootR46.crl0
+test.bin | PLAIN | 0xb394c2 | :http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c0#
+test.bin | PLAIN | 0xb3950a | http://ocsp.sectigo.com0
+test.bin | PLAIN | 0xb39b51 | 8http://crl.sectigo.com/SectigoPublicCodeSigningCAR36.crl0y
+test.bin | PLAIN | 0xb39ba7 | 8http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt0#
+test.bin | PLAIN | 0xb39bed | http://ocsp.sectigo.com0
+test.bin | PLAIN | 0xb39b1d | https://sectigo.com/CPS0
+test.bin | xor1 k=0x00 | 0xb3946a | http://crl.sectigo.com/SectigoPublicCodeSigningRootR46.crl0
+test.bin | xor1 k=0x00 | 0xb394c2 | http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c0#
+test.bin | xor1 k=0x00 | 0xb3950a | http://ocsp.sectigo.com0
+test.bin | xor1 k=0x00 | 0xb39b1d | https://sectigo.com/CPS0
+test.bin | xor1 k=0x00 | 0xb39b51 | http://crl.sectigo.com/SectigoPublicCodeSigningCAR36.crl0y
+test.bin | xor1 k=0x00 | 0xb39ba7 | http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt0#
+test.bin | xor1 k=0x00 | 0xb39bed | http://ocsp.sectigo.com0
+test.bin | xor4roll @+0xb3946a | 0xb3946a | http://crl.sectigo.com/SectigoPublicCodeSigningRootR46.crl0
+test.bin | xor4roll @+0xb394c2 | 0xb394c2 | http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c0#
+test.bin | xor4roll @+0xb3950a | 0xb3950a | http://ocsp.sectigo.com0
+test.bin | xor4roll @+0xb39b1d | 0xb39b1d | https://sectigo.com/CPS0
+test.bin | xor4roll @+0xb39b51 | 0xb39b51 | http://crl.sectigo.com/SectigoPublicCodeSigningCAR36.crl0y
+test.bin | xor4roll @+0xb39ba7 | 0xb39ba7 | http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt0#
+test.bin | xor4roll @+0xb39bed | 0xb39bed | http://ocsp.sectigo.com0
+embedded_dll_rdata_0x166b0.bin | xor4roll @+0x149bce | 0x18014dbce | http://-4

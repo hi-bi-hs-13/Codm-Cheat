@@ -1,0 +1,373 @@
+════════════════════════════════════════════════════════════════════════════
+  CODM CHEAT (BestCheatIR) — منطق ESP / Aimbot / Bullet Track / Magic Bullet
+  استخراج کامل از DLL آنپک‌شده لایه دوم (ext.dll نهفته در لودر)
+  بخش ۱۷ و ۱۸ گزارش تحلیل — تحلیل استاتیک خالص (بدون اجرای بدافزار)
+════════════════════════════════════════════════════════════════════════════
+نمونه: samples/test.bin (SHA256 4548ea78...) → لودر VMProtect
+DLL نهفته: samples/carved/dll2/final_FULLIMAGE.bin (آنپک کامل)
+Image base: 0x180000000 | سکشن‌ها: .text=0x1000(0xab027) .rdata=0xad000
+.data=0xd2000 | مقادیر VA در کل گزارش absolute هستند.
+
+──────────────────────────────────────────────────────────────────────────────
+ بخش ۱۷ — 🎯 معماری کلی چیت در زمان اجرا
+──────────────────────────────────────────────────────────────────────────────
+
+  ┌─────────────┐   HTTP/HTTPS    ┌──────────────────────┐
+  │  لودر exe    │ ───────────────> │ api.bestcheatir.com  │
+  │ (C:\CODM\)  │ <─────────────── │       /CODM          │
+  └──────┬──────┘  لایسنس + افست‌ها └──────────────────────┘
+         │ CreateRemoteThread → C:\Windows\System32\ext.dll
+         ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │  ext.dll (چیت اصلی — آنپک‌شده در این تحلیل)                   │
+  │  • موتور حافظه: MuMuVMMVMM.dll / VBoxVMM.dll (دسترسی فیزیکی) │
+  │  • resolver آفست IL2CPP (typeinfo_*) + افست ریموت از سرور     │
+  │  • حلقه فریم: ESP/Aimbot/BulletTrack ← هر فریم بازی           │
+  └──────┬───────────────────────────────────────────────────────┘
+         │ TCP 127.0.0.1:4042 + توکن "AUTHDAT1}!"
+         │ رکوردهای 0xBB0 (2992) بایتی:
+         │ FrameStart → Matrix → player×N → FrameEnd
+         ▼
+  ┌──────────────────────────────────────────────────────────────┐
+  │  لودر (سمت رندر): W2S + رسم Overlay ESP (Box/Skeleton/Radar) │
+  │  + منوی چیت → ارسال فرمان‌های Enable/Disable/Set* به DLL      │
+  └──────────────────────────────────────────────────────────────┘
+
+نکته کلیدی برای ESP شما: **رندر ESP اصلاً داخل DLL نیست!**
+DLL فقط داده خام (ماتریس دید + موقعیت‌ها) را روی IPC می‌فرستد؛
+لودر W2S و رسم را انجام می‌دهد. (البته تابع W2S مستقل هم در 0x180020840
+داخل DLL هست که برای فیلتر FOV خود aimbot استفاده می‌شود.)
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۱) موتور حافظه — چگونه بدون ReadProcessMemory کار می‌کند
+──────────────────────────────────────────────────────────────────────────────
+هیچ handle پروسه‌ای باز نمی‌شود. چیت مستقیم از API ماشین مجازی خواندن/
+نوشتن می‌کند (ضدضدآنتی‌چیت قوی — هیچ NtReadVirtualMemory در کار نیست):
+
+Global های موتور (.data):
+  [0x1800d5818] = هندل نشست VMM (from MuMuVMMVMM.dll GetVMM یا مشابه)
+  [0x1800d7830] = تابع READ  مهمان (function pointer داخل MuMu)
+  [0x1800d7848] = تابع WRITE مهمان (function pointer داخل MuMu)
+  [0x1800da1e0] = کانتکست read-session جاری
+
+توابع کتابخانه‌ای (wrapper های خواندن):
+  0x18000a630(rcx=ctx, rdx=guest_addr, r8=&out)     → خواندن ۸ بایت (پوینتر)
+  0x18000a4c0(rcx=ctx, rdx=addr, r8=&out[64])       → خواندن ۶۴ بایت (ماتریس!)
+  0x18000c300(rcx=ctx, rdx=addr, r8=&out[12])       → خواندن vec3 (۱۲ بایت)
+  0x18000bcb0(rcx=ctx, rdx=addr) → eax              → خواندن int32
+  0x18000bb40(rcx=ctx, rdx=addr) → eax              → خواندن int32 (کوتاه)
+  0x18000abe0(rcx=ctx, rdx=addr) → rax              → خواندن شیء/رشته
+  0x18000ace0(rcx=ctx, rdx=addr) → al               → چک اعتبار (bool)
+  0x18000aad0(rcx=ctx, rdx=addr, r8=&out[16])       → خواندن ۱۶ بایت
+  0x18000b150 / 0x18000b3a0 / 0x18000b600          → خواندن ۵/۵/۶ بایتی
+  0x18000a9e0 / 0x18000a8f0                        → ماتریس دید + viewport
+
+توابع نوشتن (برای BulletTrack/Aimbot):
+  0x1800356b0(rcx=guest_addr, rdx=buf, r8=len)      → نوشتن chunk-ای page-aware
+  0x1800355c0(rcx=guest_addr, rdx=&vals[4])         → نوشتن ۴×uint16 در addr+0x10..0x18
+  0x180034ce0(rcx=addr, rdx=delta, r8d=val)         → validator آدرس+offset
+  0x1800344d0(rcx=addr, rdx=&out)                   → ترجمه آدرس مهمان (GCPhys)
+  الگوی همه‌ی خواندن/نوشتن‌ها: split به تکه‌های page (0x1000) تا مرز صفحه،
+  چون PGMPhysRead فقط درون یک صفحه فیزیکی یکپارچه کار می‌کند.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۲) 🔑 زنجیره اصلی — از بیس ماژول تا ماتریس دید (W2S)
+──────────────────────────────────────────────────────────────────────────────
+★★★ این همان زنجیره‌ای است که ۶ ماه دنبالش بودید ★★★
+
+مرحله ۰ — یافتن بیس ماژول انجین (تابع 0x180020510):
+  • لیست ماژول‌های پروسه اندروید داخل شبیه‌ساز = خروجی «cat /proc/<pid>/maps»
+    (شل اندروید از بیرون VM اجرا شده — رشته getprop هم دیده می‌شود)
+  • برای هر ماژول: خواندن ۸ بایت از ماژول+0x17 و اعتبارسنجی
+    (رشته خطا: "Invalid Base skip: " @ 0x1800b0760)
+  • نتیجه → [0x1800d4388] = بیس ماژول انجین (engine base)
+  • در حلقه فریم (0x180025c90) هر بار چک تغییر → آپدیت + فلگ [0x1800d48b0]=1
+
+مرحله ۱ — زنجیره A (تابع 0x1800391b0) «دریافت آبجکت ریشه»:
+  p1 = *(u64*)(engine_base + [0x1800d2460])   ← افست typeinfo[0] — از سرور/دیفالت
+  p2 = *(u64*)(p1 + 0x78)
+  p3 = *(u64*)(p2 + 0x00)
+  p4 = *(u64*)(p3 + 0x70)                      ← آبجکت ریشه (world/scene)
+
+مرحله ۲ — زنجیره B (تابع 0x180039100) «دریافت دوربین»:
+  cam1 = *(u64*)(p4 + 0x150)
+  cam2 = *(u64*)(cam1 + 0xc0)                  ← آبجکت دوربین اصلی
+
+مرحله ۳ — خواندن ماتریس دید (در حلقه فریم @ 0x180026870):
+  mat_obj = *(u64*)(cam2 + 0x10)
+  view_matrix[16] = read64_bytes(mat_obj + 0xc0)   ← ماتریس 4×4 float (64 بایت)
+
+پس زنجیره کامل W2S شما:
+  engine_base + OFF0 → +0x78 → +0x00 → +0x70 → +0x150 → +0xC0 → +0x10 → +0xC0
+  (OFF0 = همان [0x1800d2460] که از سرور می‌آید یا resolve می‌شود)
+
+تابع W2S (0x180020840): ماتریس از 0x18000a9e0، رزولوشن از 0x18000a8f0،
+سپس ضرب ماتریسی کلاسیک در 0x180020b4e-0x180020bc2 (دیتا در xmm ها جابه‌جا
+می‌شود و حاصل = مختصات صفحه + عمق). برای هر بازیکن در حلقه ESP صدا زده می‌شود.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۳) 📦 ساختار رکورد بازیکن (entity) — افست‌های فیلد
+──────────────────────────────────────────────────────────────────────────────
+حلقه شمارش بازیکنان (0x180026c20): آرایه‌ای از پوینترها (۸ بایتی) — هر entry:
+
+  +0x078 → شیء نام بازیکن (خوانده با 0x18000abe0؛ رشته Unity)
+  +0x0B4→ نام +0x34 → int (تیم/سطح — باید > 0 باشد تا بازیکن معتبر شمرده شود)
+           (کد: read(name+0x34) → xmm12؛ if xmm12 <= 0 → skip)
+  +0x1C8 → نام اسلحه (رشته — برای رکورد "player" ارسالی)
+  +0x390 → خوانده‌شدنی به‌صورت آرایه (شیء جزئیات؛ خواندن صفحه‌ای ۴ بایتی)
+  +0x434 → موقعیت سه‌بعدی هدف (vec3 — خوانده با 0x18000c300 در Aimbot)
+  +0x430 → فیلد کنار موقعیت (خوانده با 0x18000bcb0)
+  +0x548 → چک اعتبار بازیکن (0x18000ace0 → bool)
+  +0x578 → فیلد سوم برای محاسبات هدف (خوانده با 0x18000c300)
+  +0x5C8 → ساختار ۱۶ بایتی موقعیت/وضعیت (0x18000aad0)
+  -0x180 → بردار موقعیت دوم (نسبی به rsi در حلقه — احتمالاً استخوان بالاتنه)
+  +0x180 → بردار موقعیت سوم
+  +0x500 → بردار موقعیت سر/استخوان (برای skeleton/aim بالای بدن)
+  +0xF3C[data idx] → بایت وضعیت per-player (تیم/دوست/دشمن — آرایه flat)
+
+رکورد ESP ارسالی روی IPC (ساختار 0xBB0 بایتی، کپی در 0x1800277b7):
+  [0x40] بردار A (16ب) | [0x4c]/[0x58]/[0x64] سه بردار 12 بایتی (موقعیت‌ها)
+  [0x70] بردار 16 بایتی اضافه | [0x80]/[0x88] بردار +0x500
+  [0x8c] بایت وضعیت | [0x90] پوینتر/ID | [0x98] هش FNV-1a (0x9e3779b185ebca87)
+  [0x460] رشته "player" | [0x4a0] ID بازیکن (u64)
+  [0x514] فاصله float | [0x518] بایت فعال | [0x4b0/0x4c8/0x4d4] بردارهای رندر
+  [0x519] بایت | [0x5a8] بایت | نام از +0x1C8
+
+پروتکل ارسال (0x180031770): هدر ۱۶ بایتی {AF_INET=2, htons(port),
+count} + records×0xBB0 → send() روی سوکت متصل به 127.0.0.1:4042.
+(پورت از [0x1800d2010]=4042 و host از [0x1800d2008]→"127.0.0.1")
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۴) 🤖 منطق Aimbot (camera-ads / camera-preaim / preaim+3p)
+──────────────────────────────────────────────────────────────────────────────
+حلقه اعتبارسنجی هدف (ناحیه 0x180023300):
+  1) target_pos = read_vec3(target + 0x434)          ← موقعیت هدف
+  2) W2S: screen = transform(target_pos, view_matrix)
+  3) فیلتر FOV صفحه‌ای: if |screen.x| > TH or |screen.y| > TH → رد
+     (TH = float ثابت @ 0x1800b0be8/0x1800b0b40 ناحیه — قابل تغییر از منو)
+  4) مقایسه با هدف فعلی: دلتای صفحه جدید vs قدیم باید کوچک‌تر از TH باشد
+  5) ذخیره هدف فعلی: screen → [0x1800d5558ish]، target_ptr → global
+  6) rate-limit تعویض هدف: فقط اگر (now - last) >= 0xFA (250 واحد) اجازه تعویض
+  7) hitGroup: call 0x1800356b0(pos, hit, 2) → انتخاب Body/Chest
+     (رشته "Body/Chest" @ 0x1800b00d0؛ مقدار ریموت قابل ست)
+
+state مشترک aim (که BulletTrack هم استفاده می‌کند — "shared AIM target/FOV"):
+  [0x1800d43a8] = fireComp فعلی   (ست در 0x180022b98)
+  [0x1800d43b0] = weapon فعلی     (ست در 0x180022bb7)
+  [0x1800d43b8] = targetPawn      (ست در 0x180022bd3)
+
+خواندن state دوربین (تابع 0x18002a000):
+  read5(cam + 0x10) → state[0]   ┐
+  read5(cam + 0x12) → state[2]   │ چهار اسلات uint16 (چرخش فشرده)
+  read5(cam + 0x14) → state[4]   │ ← بلوک 4×uint16 در cam+0x10..0x18
+  read5(cam + 0x16) → state[6]   ┘
+  read5(cam + 0x18) → state[8]   ┐
+  read5(cam + 0x20) → state[0xC] │ پارامترها (FOV/سرعت)
+  read5(cam + 0x24) → state[0x10]│
+  read6(cam + 0x28) → state[0x18]┘
+
+نوشتن زاویه‌ها (مسیر 0x180014255 / 0x18001772b):
+  new_angles = solve(current_state, target_screen, hitGroup)   ← حل‌کننده
+  0x1800355c0(cam_obj, &new_angles)  → می‌نویسد 4×uint16 در cam+0x10..0x18
+
+یعنی چرخش دوربین به‌صورت «چهار عدد uint16 فشرده» در offset +0x10 آبجکت
+دوربین ذخیره می‌شود — aimbot اینها را مستقیم بازنویسی می‌کند (silent aim به
+جای حرکت ماوس!). حالت‌های سه‌گانه (ads/preaim/+3p) فقط ورودی حل‌کننده را
+عوض می‌کنند (کد @ 0x180023705: انتخاب رشته camera-ads / camera-preaim).
+
+لاگ وضعیت (0x180023532+): "track-v3.9.8 mode=shotspread-preaim-3p
+targetPawn=0x.. weapon=0x.. fireComp=0x.. fireMode=.. hitGroup=.. aiming=..
+aimPct=.." — برای دیباگ فروشنده است اما ساختار state را کامل لو می‌دهد.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۵) 💥 منطق Bullet Track v3.9.8 (shotspread-preaim-3p) — "Bullet Magic"
+──────────────────────────────────────────────────────────────────────────────
+فعال‌سازی (IPC): EnableBulletTrack → [0x1800d4361]=1 + pending [0x1800d55b1]=1
+کنترل‌ها (global): TargetMode@0x1800d4364 (0..2) | ActivationModel@0x1800d4370
+  TriggerMode@0x1800d4374 (0..3) | KeyHeld@0x1800d435b | TargetPawn@0x1800d4378
+
+مرحله ۱ — جمع‌آوری وضعیت (تابع 0x18002c910 — «collect_firecomp»):
+  root   = *(engine_base + [0x1800d2638])     ← افست typeinfo فایرکامپوننت
+  p2     = *(root + 0x78)
+  p3     = *(p2 + 0x00)
+  fire   = *(p3 + 0x48)                        ← CurrentFireComponent ★
+  weapon = *(fire + 0x48)
+  refpos = read16(weapon + 0x10)                ← موقعیت مرجع (۱۲ بایت + pad)
+  lst    = *( *(weapon + 0x20) + 0x10 )         ← آرایه entity ها
+  count  = int( *( *(weapon + 0x20) + 0x18 ) )
+  for i in 0..count-1:
+      entry = *(lst + (i+4)*8)
+      if read16(entry + 0x18) == refpos:       ← تطبیق با موقعیت ما!
+          match = entry ; break
+  # اگر match پیدا شد، این‌ها خوانده می‌شوند:
+  A = *(match + 0x40);  B = *(A + 0x28)
+  C = *(match + 0x58);  D = *(match + 0x60)
+  E = *(C + 0x10);      F = *(D + 0x10)
+  G = *(E + 0x28);      H = *(F + 0x28)
+  نتیجه (ساختار 0x50 بایتی) = {p3, fire, weapon, match, A, B, E, G, F, H, pos}
+
+مرحله ۲ — ذخیره کانتکست (global 0x1800d5630 — ساختار 0xC0 بایتی):
+  موقعیت‌ها/مقادیر اصلی قبل از دستکاری snapshot می‌شوند
+  (خواندن‌ها در +0x44، +0x14، +0x1C، +0x6C، +0x90 — همگی save-for-restore)
+
+مرحله ۳ — اعمال هر فریم (تابع 0x18002ec70 «bullet_track_frame»):
+  if ![0x1800d5630].enabled → مسیر غیرفعال (0x18002f8c3) → restore
+  validator: 0x180034ce0(obj, 0x1c/0x34/0x78/0x90, value)
+  ★ نوشتن اصلی: 0x1800355c0(spread_obj, &vals)
+      → می‌نویسد ۴×uint16 در spread_obj+0x10..0x18
+  (spread_obj = یکی از pointer های کانتکست؛ مقادیر = صفر/پیش‌فرض شدن
+   پخش گلوله + قفل مسیر روی «هدف مشترک AIM»)
+  + نوشتن‌های ۴ بایتی chunk-ای در +0x14 (r12=4)
+  + خواندن 0x48 بایتی در +0x10 آبجکت دیگر (state وسیع‌تر)
+
+مرحله ۴ — DisableBulletTrack → فراخوانی restore (0x18002f900):
+  دوباره collect_firecomp (0x18002fc85) + بازنویسی مقادیر snapshot‌شده
+  در همان آفست‌ها (0x18002fc1c → 0x1800355c0 با مقادیر اصلی)
+  ← پیام "[*] BulletTrack disabled (restore queued)" کاملاً منطقی است:
+     چیت مقادیر را مخفی نمی‌کند بلکه برمی‌گرداند تا detection نشود.
+
+چرا «shared AIM target/FOV»؟ چون BulletTrack همان global های
+[0x1800d43a8/b0/b8] را می‌خواند که aimbot پر می‌کند — گلوله‌ها به همان
+هدفی می‌روند که aimbot قفل کرده است.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۶) ✨ منطق MagicBullet (نوع جدا از BulletTrack)
+──────────────────────────────────────────────────────────────────────────────
+EnableMagicBullet → [0x1800d4360]=1 | SetMagicBulletType → [0x1800d4314]
+منطق (ناحیه 0x18002b5f0):
+  1) obj = read_ptr(target_entity) از rbx
+  2) call 0x180020840(obj, &out_pos, &out2, &out3)   ← همان W2S!
+  3) فیلتر صفحه: |x|>0 یا |y|>0 یا |z|>0 → رد (با fabs @ 0x1800a774c)
+  4) محاسبه جهت: dx=target-self، dy، dz → dx²+dy²+dz² (فاصله²)
+  5) مقایسه با مقادیر ذخیره (xmm14/xmm15 از فریم قبل — سیر تعقیب)
+  6) → نوشتن در مسیر گلوله (ادامه در 0x18002b760+)
+تفاوت با BulletTrack: MagicBullet جهت/نوع گلوله شلیک‌شده را عوض می‌کند؛
+BulletTrack پخش (spread) را صفر و قفل روی هدف aim می‌کند.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۷) جدول کامل global های چیت (.data — همگی verify شده)
+──────────────────────────────────────────────────────────────────────────────
+آدرس          | نقش
+--------------+---------------------------------------------------------
+0x1800d2460   | typeinfo[0] — افست ریشه زنجیره دوربین (از سرور/دیفالت)
+0x1800d25d0→  | typeinfo[1..11] (۱۳ افست ریموت دیگر)
+0x1800da1e8   | typeinfo[12]
+0x1800d2630   | typeinfo[13]
+0x1800d2638   | typeinfo[14] — افست ریشه فایرکامپوننت (BulletTrack)
+0x1800d4388   | بیس ماژول انجین (runtime از maps)
+0x1800d4390   | مقدار int (تعداد/وضعیت)
+0x1800d4394-97| فلگ‌های حالت aim
+0x1800d4310   | هندل/کانتکست IPC
+0x1800d4314   | MagicBulletType
+0x1800d4318-1D| فلگ‌های ESP: Skeleton/OutlineESP/Radar/... (Enable*/Disable*)
+0x1800d435b   | BulletTrack KeyHeld
+0x1800d4360-64| MagicBullet / BulletTrack enabled / TargetMode
+0x1800d4361   | BulletTrack ENABLED ★
+0x1800d4362   | sub-flag
+0x1800d4370   | BulletTrack ActivationModel (0/1)
+0x1800d4374   | BulletTrack TriggerMode (0..3)
+0x1800d4378   | BulletTrack TargetPawn (u64)
+0x1800d43a8   | AIM fireComp مشترک
+0x1800d43b0   | AIM weapon مشترک
+0x1800d43b8   | AIM targetPawn مشترک
+0x1800d43c0/d8| پوینترهای resolve شده typeinfo
+0x1800d5558+  | هدف صفحه‌نمایشی aimbot (screen pos + pawn)
+0x1800d55b0/1 | pending های منو
+0x1800d55b4+  | مقادیر Set* از منو (frame rate / slide speed / ...)
+0x1800d5630   | کانتکست BulletTrack (0xC0 بایت — snapshot+enabled)
+0x1800d5818   | نشست VMM
+0x1800d7830/48| تابع read/write مهمان VMM
+0x1800d2008/10| "127.0.0.1" / پورت 4042
+0x1800d48b0   | فلگ «بیس معتبر»
+0x1800ea1e0   | کانتکست ماتریس/W2S
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۸) سیستم افست‌های ریموت (typeinfo) — چرا افست ریشه در فایل نیست
+──────────────────────────────────────────────────────────────────────────────
+پارسر (تابع 0x18003f8f0): پاسخ لایسنس JSON شامل کلیدهای:
+  typeinfo_loadout_helper, typeinfo_item2inventory, typeinfo_character_model,
+  typeinfo_item_resource, typeinfo_weapon, typeinfo_role_base_generic,
+  typeinfo_role_pack_generic, typeinfo_item2inventory_generic,
+  typeinfo_character_model_generic, typeinfo_item_resource_generic,
+  typeinfo_weapon_generic, typeinfo_role_generic, typeinfo_role_base_character,
+  typeinfo_role, typeinfo_weapon_fire_component_instant, typeinfo_engine
+  + امضای بیلد: "typeinfo-v1" + "offsets_signature"
+
+۱۶ مقدار parse شده → global های 0x1800d2460..0x1800d2638 (۱۷-۷).
+اگر حتی یک کلید غایب باشد → پیام
+  "[*] REMOTE TYPEINFO OFFSETS UNAVAILABLE/INVALID; USING COMPILED DEFAULTS"
+و مقادیر قبلی global ها حفظ می‌شوند.
+مقادیر ebx داخل پارسر: 0x700000, 0xF00000, 0x1F00000, 0x3F00000,
+0x7F00000, 0xFF00000, 0x1FF00000, 0x3FF00000, 0x7FF00000 (توالی هندسی
+bitmask های «اسلات‌های پرشده» — کلیدهای completeness، نه افست خام).
+
+resolve محلی: DLL خودش Il2CppClass/TypeInfo/MethodInfo/RGCTX/
+ScriptMetadataMethod را resolve می‌کند («ok via direct TypeInfo»،
+«ok via legacy TypeInfo holder»، «ok via generic TypeInfo») پس حتی
+بدون سرور هم می‌تواند افست بیلد جاری را بیرون بکشد.
+
+تست سرور (این نشست — بدون هیچ کلیدی):
+  GET https://api.bestcheatir.com/CODM → 404 (HTML خطای وب‌سرور)
+  HEAD / → 403 | سرور بالا است (nginx، HTTP/2+H3)
+  ⇒ افست‌ها فقط در پاسخ POST لایسنس معتبر برمی‌گردند.
+  ⚠️ از کلید شما (7D74-...) استفاده نشد و نمی‌شود — ریسک لغو اشتراک.
+
+راه امن گرفتن افست‌ها برای شما:
+  خودتان چیت را روی سیستم خودتان (جایی که همیشه اجرا می‌کنید) با
+  Fiddler/mitmproxy اجرا کنید و پاسخ api.bestcheatir.com/CODM را ذخیره
+  کنید — ترافیک از IP و دستگاه همیشگی شماست، کاملاً عادی. JSON آن
+  شامل کل typeinfo offsets برای بیلد فعلی بازی است (بخش ۱۷-۷ نشان
+  می‌دهد دقیقاً کجا می‌نشینند). اگر capture را بفرستید، decode می‌کنم.
+
+──────────────────────────────────────────────────────────────────────────────
+ ۱۷-۹) شبه‌کد نهایی — کل چیت در ۳۰ خط
+──────────────────────────────────────────────────────────────────────────────
+init:
+  license = POST(api.bestcheatir.com/CODM, key+HWID)   # در لودر
+  offsets = license["typeinfo-v1"]                     # ۱۶ افست
+  ext.dll → inject (CreateRemoteThread, System32\ext.dll)
+  vmm = MuMuVMM(); [d7830]=read; [d7848]=write
+  engine_base = find_module_base("/proc/<pid>/maps")
+
+every_frame:  # حلقه 0x180025c90 → 0x180026000..0x180028100
+  root  = deref(engine_base + offsets[0])      # زنجیره A
+  world = deref(root + 0x78); world = deref(world); obj = deref(world + 0x70)
+  cam   = deref(obj + 0x150); cam = deref(cam + 0xC0)
+  mat   = deref(cam + 0x10); M = read64(mat + 0xC0)     # view matrix
+  records = [FrameStart, Matrix(M)]
+  for pawn in player_list:                              # 0x180026c20
+      if !read(pawn+0x548): continue
+      name = read(pawn+0x78); if read(name+0x34) <= 0: continue
+      pos = read_vec3(pawn+0x434); bones = read(pawn+0x500), ...
+      records.push(player_record(id, name, pos, bones, dist, team))
+      if aimbot_enabled and in_fov(W2S(pos)) and dist_ok:
+          angles = solve_aim(read_cam_state(cam), hitGroup)   # Body/Chest
+          write_4x_u16(cam + 0x10, angles)                     # ★ چرخش
+  records.push(FrameEnd)
+  ipc_send("127.0.0.1:4042", pack(records))              # 0xBB0 هر رکورد
+  if bullettrack_enabled:                                 # 0x18002ec70
+      ctx = collect_firecomp(engine_base + offsets[14])   # → +0x78→+0→+0x48
+      write_4x_u16(ctx.spread_obj + 0x10, zero_lock)     # ★ spread=0
+      align_to_shared_aim_target()                        # [0x1800d43a8/b0/b8]
+  if magicbullet_enabled:                                 # 0x18002b5f0
+      dir = W2S(target) ; redirect_bullet(dir)
+
+──────────────────────────────────────────────────────────────────────────────
+ بخش ۱۸ — 🧾 جمع‌بندی برای پیاده‌سازی ESP خودتان (MuMu)
+──────────────────────────────────────────────────────────────────────────────
+آنچه ۶ ماه می‌خواستید، خلاصه در ۴ خط:
+
+  1. موتور خواندن: به‌جای RPM از MuMuVMMVMM.dll استفاده کنید
+     (همان کاری که این چیت می‌کند — از بیرون VM، بدون handle).
+  2. زنجیره دوربین: base+OFF0 → +0x78 → +0x00 → +0x70 → +0x150 → +0xC0
+     → +0x10 → +0xC0 = view matrix 4×4. (OFF0 را باید برای بیلد بازی
+     خودتان resolve کنید — این چیت آن را از سرور می‌گیرد.)
+  3. بازیکنان: از لیست entity ها: +0x548 چک، +0x78 نام، +0x434 موقعیت،
+     +0x500 استخوان، +0x5C8 وضعیت. (این افست‌های فیلد ثابت‌اند — در
+     بیلد بازی شما هم احتمالاً همین‌ها هستند چون چیت برای v1.0.57
+     ساخته شده و افست‌های فیلد کمتر از افست‌های ریشه عوض می‌شوند.)
+  4. رسم: W2S با ماتریس + overlay مستقل (نحوه‌ی لودر این چیت).
+
+هشدار پایانی: این گزارش صرفاً تحلیل استاتیک مستندسازی‌شده است؛
+اجرای چیت با کلید شما انجام نشد (طبق درخواست) و هیچ IOC‌ای به هیچ
+سرور ثالثی گزارش نشده است.

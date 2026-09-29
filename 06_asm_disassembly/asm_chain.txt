@@ -1,0 +1,100 @@
+
+===== chain_A_0x1800391b0 =====
+0x0001800391b0  mov      qword ptr [rsp + 8], rbx
+0x0001800391b5  push     rdi
+0x0001800391b6  sub      rsp, 0x30
+0x0001800391ba  mov      rax, qword ptr [rip + 0x99d3f]   ; 0x1800d2f00
+0x0001800391c1  xor      rax, rsp
+0x0001800391c4  mov      qword ptr [rsp + 0x28], rax
+0x0001800391c9  mov      rcx, qword ptr [rip + 0x9b1b8]   ; 0x1800d4388
+0x0001800391d0  lea      r8, [rsp + 0x20]
+0x0001800391d5  nop      
+0x0001800391d6  xor      edi, edi
+0x0001800391d8  mov      rdx, qword ptr [rip + 0x99281]   ; 0x1800d2460
+0x0001800391df  add      rdx, rcx
+0x0001800391e2  mov      qword ptr [rsp + 0x20], rdi
+0x0001800391e7  lea      rcx, [rip + 0xa0ff2]   ; 0x1800da1e0
+0x0001800391ee  call     0x18000a630
+0x0001800391f3  test     al, al
+0x0001800391f5  je       0x1800392a3
+0x0001800391fb  mov      rdx, qword ptr [rsp + 0x20]
+0x000180039200  movabs   rbx, 0x7fffffffeffd
+0x00018003920a  lea      rax, [rdx - 0x1001]
+0x000180039211  cmp      rax, rbx
+0x000180039214  ja       0x1800392a3
+0x00018003921a  add      rdx, 0x78
+0x00018003921e  mov      qword ptr [rsp + 0x20], rdi
+0x000180039223  lea      r8, [rsp + 0x20]
+0x000180039228  lea      rcx, [rip + 0xa0fb1]   ; 0x1800da1e0
+0x00018003922f  call     0x18000a630
+0x000180039234  test     al, al
+0x000180039236  je       0x1800392a3
+0x000180039238  mov      rdx, qword ptr [rsp + 0x20]
+0x00018003923d  lea      rax, [rdx - 0x1001]
+0x000180039244  cmp      rax, rbx
+0x000180039247  ja       0x1800392a3
+0x000180039249  lea      r8, [rsp + 0x20]
+0x00018003924e  mov      qword ptr [rsp + 0x20], rdi
+0x000180039253  lea      rcx, [rip + 0xa0f86]   ; 0x1800da1e0
+0x00018003925a  call     0x18000a630
+0x00018003925f  test     al, al
+0x000180039261  je       0x1800392a3
+0x000180039263  mov      rdx, qword ptr [rsp + 0x20]
+0x000180039268  lea      rax, [rdx - 0x1001]
+0x00018003926f  cmp      rax, rbx
+0x000180039272  ja       0x1800392a3
+0x000180039274  add      rdx, 0x70
+0x000180039278  mov      qword ptr [rsp + 0x20], rdi
+0x00018003927d  lea      r8, [rsp + 0x20]
+0x000180039282  lea      rcx, [rip + 0xa0f57]   ; 0x1800da1e0
+0x000180039289  call     0x18000a630
+0x00018003928e  test     al, al
+0x000180039290  je       0x1800392a3
+0x000180039292  mov      rax, qword ptr [rsp + 0x20]
+0x000180039297  lea      rcx, [rax - 0x1001]
+0x00018003929e  cmp      rcx, rbx
+0x0001800392a1  jbe      0x1800392a5
+
+===== chain_B_0x180039100 =====
+0x000180039100  push     rbx
+0x000180039102  sub      rsp, 0x30
+0x000180039106  mov      rax, qword ptr [rip + 0x99df3]   ; 0x1800d2f00
+0x00018003910d  xor      rax, rsp
+0x000180039110  mov      qword ptr [rsp + 0x28], rax
+0x000180039115  lea      rax, [rcx - 0x1001]
+0x00018003911c  movabs   rbx, 0x7fffffffeffd
+0x000180039126  cmp      rax, rbx
+0x000180039129  ja       0x180039197
+0x00018003912b  lea      rdx, [rcx + 0x150]
+0x000180039132  mov      qword ptr [rsp + 0x20], 0
+0x00018003913b  lea      rcx, [rip + 0xa109e]   ; 0x1800da1e0
+0x000180039142  lea      r8, [rsp + 0x20]
+0x000180039147  call     0x18000a630
+0x00018003914c  test     al, al
+0x00018003914e  je       0x180039197
+0x000180039150  mov      rdx, qword ptr [rsp + 0x20]
+0x000180039155  lea      rax, [rdx - 0x1001]
+0x00018003915c  cmp      rax, rbx
+0x00018003915f  ja       0x180039197
+0x000180039161  add      rdx, 0xc0
+0x000180039168  mov      qword ptr [rsp + 0x20], 0
+0x000180039171  lea      r8, [rsp + 0x20]
+0x000180039176  lea      rcx, [rip + 0xa1063]   ; 0x1800da1e0
+0x00018003917d  call     0x18000a630
+0x000180039182  test     al, al
+0x000180039184  je       0x180039197
+0x000180039186  mov      rax, qword ptr [rsp + 0x20]
+0x00018003918b  lea      rcx, [rax - 0x1001]
+0x000180039192  cmp      rcx, rbx
+0x000180039195  jbe      0x180039199
+0x000180039197  xor      eax, eax
+0x000180039199  mov      rcx, qword ptr [rsp + 0x28]
+0x00018003919e  xor      rcx, rsp
+0x0001800391a1  call     0x1800a6610
+0x0001800391a6  add      rsp, 0x30
+0x0001800391aa  pop      rbx
+0x0001800391ab  ret      
+0x0001800391ac  int3     
+0x0001800391ad  int3     
+0x0001800391ae  int3     
+0x0001800391af  int3     

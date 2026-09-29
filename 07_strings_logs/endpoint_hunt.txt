@@ -1,0 +1,7 @@
+k=0x03 @ 0x1400165c1: 1f8[,Gwd/api%H 1X.9jZq$
+k=0x20 @ 0x140006261: POST   mIME
+k=0x20 @ 0x140013458:         POSTALcODE      
+k=0x20 @ 0x140004308: ALLOWED    curluCODE
+k=0x20 @ 0x1400064b0: sslversion      curl
+k=0x20 @ 0x140006668: S        curl
+k=0xab @ 0x1405da8e7: +https://api.bestcheatir.com/CODMTTTTTTTTTTTTTTTT;

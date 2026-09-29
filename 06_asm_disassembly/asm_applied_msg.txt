@@ -1,0 +1,150 @@
+; region applied_msg 0x180034000-0x180034300
+0x000180034000  cmp      dword ptr [rsp + 0x48], 0x10
+0x000180034005  cmovae   rcx, qword ptr [rsp + 0x30]
+0x00018003400b  mov      rdx, qword ptr [rsp + 0x40]
+0x000180034010  call     0x18000e300
+0x000180034015  shr      eax, 0x1f
+0x000180034018  test     al, al
+0x00018003401a  jne      0x18003402a
+0x00018003401c  cmp      rbx, qword ptr [rsp + 0x190]
+0x000180034024  lea      rdx, [rbx + 0x40]
+0x000180034028  jne      0x18003402f
+0x00018003402a  lea      rdx, [rsp + 0x50]
+0x00018003402f  lea      rcx, [rsp + 0x128]
+0x000180034037  call     0x180005260
+0x00018003403c  nop      
+0x00018003403d  lea      rcx, [rsp + 0x30]
+0x000180034042  call     0x180005720
+0x000180034047  nop      
+0x000180034048  lea      rcx, [rsp + 0x50]
+0x00018003404d  call     0x180005720
+0x000180034052  lea      rcx, [rsp + 0x108]
+0x00018003405a  cmp      qword ptr [rsp + 0x120], 0x10
+0x000180034063  cmovae   rcx, qword ptr [rsp + 0x108]
+0x00018003406c  mov      r8, qword ptr [rsp + 0x118]
+0x000180034074  cmp      r8, 0xd
+0x000180034078  jne      0x1800343fd
+0x00018003407e  lea      rdx, [rip + 0x7cb1b]
+0x000180034085  call     0x1800a76fe
+0x00018003408a  test     eax, eax
+0x00018003408c  jne      0x1800343fd
+0x000180034092  lea      rcx, [rsp + 0x128]
+0x00018003409a  cmp      qword ptr [rsp + 0x140], 0x10
+0x0001800340a3  cmovae   rcx, qword ptr [rsp + 0x128]
+0x0001800340ac  mov      r8, qword ptr [rsp + 0x138]
+0x0001800340b4  cmp      r8, 4
+0x0001800340b8  jne      0x1800343fd
+0x0001800340be  lea      rdx, [rip + 0x7a343]
+0x0001800340c5  call     0x1800a76fe
+0x0001800340ca  test     eax, eax
+0x0001800340cc  jne      0x1800343fd
+0x0001800340d2  lea      rdx, [rsp + 0x1a0]
+0x0001800340da  lea      rcx, [rsp + 0x168]
+0x0001800340e2  call     0x18003f8f0
+0x0001800340e7  lea      rcx, [rip + 0x7ce5a]
+0x0001800340ee  lea      rdx, [rip + 0x7ce7b]
+0x0001800340f5  test     al, al
+0x0001800340f7  cmovne   rdx, rcx
+0x0001800340fb  mov      qword ptr [rsp + 0x30], r14
+0x000180034100  movdqa   xmm0, xmmword ptr [rip + 0x7a018]
+0x000180034108  movdqu   xmmword ptr [rsp + 0x40], xmm0
+0x00018003410e  mov      r8, rsi
+0x000180034111  inc      r8
+0x000180034114  cmp      byte ptr [rdx + r8], 0
+0x000180034119  jne      0x180034111
+0x00018003411b  lea      rcx, [rsp + 0x30]
+0x000180034120  call     0x1800095f0
+0x000180034125  lea      rcx, [rsp + 0x30]
+0x00018003412a  call     0x180005720
+0x00018003412f  mov      edx, 0xa
+0x000180034134  lea      rcx, [rsp + 0x30]
+0x000180034139  call     0x1800297c0
+0x00018003413e  mov      rdx, rax
+0x000180034141  lea      rbx, [rip + 0x9e2f8]
+0x000180034148  mov      rcx, rbx
+0x00018003414b  call     0x180011960
+0x000180034150  lea      rcx, [rsp + 0x30]
+0x000180034155  call     0x180005720
+0x00018003415a  cmp      qword ptr [rip + 0x9e2f6], 0x10
+0x000180034162  cmovae   rbx, qword ptr [rip + 0x9e2d6]
+0x00018003416a  mov      qword ptr [rsp + 0x30], r14
+0x00018003416f  movdqa   xmm0, xmmword ptr [rip + 0x79fa9]
+0x000180034177  movdqu   xmmword ptr [rsp + 0x40], xmm0
+0x00018003417d  mov      byte ptr [rsp + 0x30], 0
+0x000180034182  inc      rsi
+0x000180034185  cmp      byte ptr [rbx + rsi], 0
+0x000180034189  jne      0x180034182
+0x00018003418b  mov      r8, rsi
+0x00018003418e  mov      rdx, rbx
+0x000180034191  lea      rcx, [rsp + 0x30]
+0x000180034196  call     0x1800095f0
+0x00018003419b  nop      
+0x00018003419c  lea      r8, [rsp + 0x30]
+0x0001800341a1  lea      rdx, [rsp + 0x260]
+0x0001800341a9  lea      rcx, [rip + 0xa0780]
+0x0001800341b0  call     0x18000e360
+0x0001800341b5  mov      rax, qword ptr [rax]
+0x0001800341b8  mov      byte ptr [rax + 0x30], 1
+0x0001800341bc  lea      rcx, [rsp + 0x30]
+0x0001800341c1  call     0x180005720
+0x0001800341c6  mov      qword ptr [rsp + 0x30], r14
+0x0001800341cb  movdqa   xmm0, xmmword ptr [rip + 0x79f4d]
+0x0001800341d3  movdqu   xmmword ptr [rsp + 0x40], xmm0
+0x0001800341d9  mov      r8d, 0x11
+0x0001800341df  lea      rdx, [rip + 0x7cdda]
+0x0001800341e6  lea      rcx, [rsp + 0x30]
+0x0001800341eb  call     0x1800095f0
+0x0001800341f0  lea      rcx, [rsp + 0x30]
+0x0001800341f5  call     0x180005720
+0x0001800341fa  mov      qword ptr [rsp + 0x50], r14
+0x0001800341ff  movdqa   xmm0, xmmword ptr [rip + 0x79f19]
+0x000180034207  movdqu   xmmword ptr [rsp + 0x60], xmm0
+0x00018003420d  mov      byte ptr [rsp + 0x50], 0
+0x000180034212  mov      r8d, 7
+0x000180034218  lea      rdx, [rip + 0x7cdb9]
+0x00018003421f  lea      rcx, [rsp + 0x50]
+0x000180034224  call     0x1800095f0
+0x000180034229  nop      
+0x00018003422a  mov      qword ptr [rsp + 0x30], r14
+0x00018003422f  mov      qword ptr [rsp + 0x40], r14
+0x000180034234  mov      qword ptr [rsp + 0x48], 0xf
+0x00018003423d  mov      byte ptr [rsp + 0x30], 0
+0x000180034242  mov      r8d, 0xa
+0x000180034248  lea      rdx, [rip + 0x7c721]
+0x00018003424f  lea      rcx, [rsp + 0x30]
+0x000180034254  call     0x1800095f0
+0x000180034259  nop      
+0x00018003425a  lea      r8, [rsp + 0x30]
+0x00018003425f  lea      rdx, [rsp + 0x260]
+0x000180034267  lea      rcx, [rsp + 0x190]
+0x00018003426f  call     0x18000db30
+0x000180034274  mov      rbx, qword ptr [rsp + 0x270]
+0x00018003427c  cmp      byte ptr [rbx + 0x19], 0
+0x000180034280  jne      0x1800342c4
+0x000180034282  lea      r8, [rbx + 0x20]
+0x000180034286  mov      r9, qword ptr [r8 + 0x10]
+0x00018003428a  cmp      qword ptr [r8 + 0x18], 0x10
+0x00018003428f  jb       0x180034294
+0x000180034291  mov      r8, qword ptr [r8]
+0x000180034294  lea      rcx, [rsp + 0x30]
+0x000180034299  cmp      qword ptr [rsp + 0x48], 0x10
+0x00018003429f  cmovae   rcx, qword ptr [rsp + 0x30]
+0x0001800342a5  mov      rdx, qword ptr [rsp + 0x40]
+0x0001800342aa  call     0x18000e300
+0x0001800342af  shr      eax, 0x1f
+0x0001800342b2  test     al, al
+0x0001800342b4  jne      0x1800342c4
+0x0001800342b6  cmp      rbx, qword ptr [rsp + 0x190]
+0x0001800342be  lea      rdx, [rbx + 0x40]
+0x0001800342c2  jne      0x1800342c9
+0x0001800342c4  lea      rdx, [rsp + 0x50]
+0x0001800342c9  lea      rcx, [rsp + 0xd0]
+0x0001800342d1  call     0x180005260
+0x0001800342d6  nop      
+0x0001800342d7  lea      r8, [rsp + 0xd0]
+0x0001800342df  lea      rdx, [rip + 0x7ccfa]
+0x0001800342e6  lea      rcx, [rsp + 0x70]
+0x0001800342eb  call     0x18000a1b0
+0x0001800342f0  lea      rcx, [rsp + 0x70]
+0x0001800342f5  call     0x180005720
+0x0001800342fa  nop      

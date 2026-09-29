@@ -1,0 +1,82 @@
+; region magic_bullet 0x18002b5f0-0x18002b760
+0x00018002b5f0  add      byte ptr [rax], 0
+0x00018002b5f3  add      bl, dh
+0x00018002b5f5  movups   xmm13, xmmword ptr [rip + 0x85bd7]   ; 0x1800b11d4
+0x00018002b5fd  movaps   xmmword ptr [rsp + 0x70], xmm14
+0x00018002b603  movss    xmm14, dword ptr [rsp + 0x38]
+0x00018002b60a  movaps   xmmword ptr [rsp + 0x60], xmm15
+0x00018002b610  movss    xmm15, dword ptr [rsp + 0x34]
+0x00018002b617  movaps   xmmword ptr [rsp + 0xe0], xmm7
+0x00018002b61f  movaps   xmmword ptr [rsp + 0xd0], xmm8
+0x00018002b628  movaps   xmmword ptr [rsp + 0xc0], xmm9
+0x00018002b631  mov      rdx, rbx
+0x00018002b634  lea      rcx, [rip + 0xaeba5]   ; 0x1800da1e0
+0x00018002b63b  call     0x18000c610
+0x00018002b640  lea      rcx, [rax + r13]
+0x00018002b644  cmp      rcx, rbp
+0x00018002b647  ja       0x18002b77d
+0x00018002b64d  xor      ecx, ecx
+0x00018002b64f  lea      r9, [rsp + 0x40]
+0x00018002b654  mov      qword ptr [rsp + 0x20], rcx
+0x00018002b659  lea      r8, [rsp + 0x50]
+0x00018002b65e  mov      dword ptr [rsp + 0x28], ecx
+0x00018002b662  lea      rdx, [rsp + 0x20]
+0x00018002b667  mov      qword ptr [rsp + 0x40], rcx
+0x00018002b66c  xorps    xmm0, xmm0
+0x00018002b66f  mov      dword ptr [rsp + 0x48], ecx
+0x00018002b673  mov      rcx, rax
+0x00018002b676  movups   xmmword ptr [rsp + 0x50], xmm0
+0x00018002b67b  call     0x180020840
+0x00018002b680  test     al, al
+0x00018002b682  je       0x18002b77d
+0x00018002b688  movss    xmm9, dword ptr [rsp + 0x20]
+0x00018002b68f  movaps   xmm0, xmm9
+0x00018002b693  call     0x1800a774c
+0x00018002b698  test     ax, ax
+0x00018002b69b  jg       0x18002b77d
+0x00018002b6a1  movss    xmm6, dword ptr [rsp + 0x24]
+0x00018002b6a7  movaps   xmm0, xmm6
+0x00018002b6aa  call     0x1800a774c
+0x00018002b6af  test     ax, ax
+0x00018002b6b2  jg       0x18002b77d
+0x00018002b6b8  movss    xmm8, dword ptr [rsp + 0x28]
+0x00018002b6bf  movaps   xmm0, xmm8
+0x00018002b6c3  call     0x1800a774c
+0x00018002b6c8  test     ax, ax
+0x00018002b6cb  jg       0x18002b77d
+0x00018002b6d1  ucomiss  xmm9, xmm10
+0x00018002b6d5  jp       0x18002b6ed
+0x00018002b6d7  jne      0x18002b6ed
+0x00018002b6d9  ucomiss  xmm6, xmm10
+0x00018002b6dd  jp       0x18002b6ed
+0x00018002b6df  jne      0x18002b6ed
+0x00018002b6e1  ucomiss  xmm8, xmm10
+0x00018002b6e5  jp       0x18002b6ed
+0x00018002b6e7  je       0x18002b77d
+0x00018002b6ed  movaps   xmm7, xmm6
+0x00018002b6f0  movaps   xmm0, xmm8
+0x00018002b6f4  subss    xmm6, dword ptr [r15 + 4]
+0x00018002b6fa  subss    xmm8, dword ptr [r15 + 8]
+0x00018002b700  subss    xmm7, xmm15
+0x00018002b705  movaps   xmm1, xmm9
+0x00018002b709  subss    xmm1, dword ptr [rsp + 0x30]
+0x00018002b70f  subss    xmm9, dword ptr [r15]
+0x00018002b714  subss    xmm0, xmm14
+0x00018002b719  mulss    xmm6, xmm6
+0x00018002b71d  mulss    xmm7, xmm7
+0x00018002b721  mulss    xmm1, xmm1
+0x00018002b725  mulss    xmm0, xmm0
+0x00018002b729  addss    xmm7, xmm1
+0x00018002b72d  mulss    xmm9, xmm9
+0x00018002b732  mulss    xmm8, xmm8
+0x00018002b737  addss    xmm6, xmm9
+0x00018002b73c  addss    xmm7, xmm0
+0x00018002b740  addss    xmm6, xmm8
+0x00018002b745  movaps   xmm0, xmm7
+0x00018002b748  call     0x1800a774c
+0x00018002b74d  test     ax, ax
+0x00018002b750  jg       0x18002b77d
+0x00018002b752  movaps   xmm0, xmm6
+0x00018002b755  call     0x1800a774c
+0x00018002b75a  test     ax, ax
+0x00018002b75d  jg       0x18002b77d

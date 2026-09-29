@@ -1,0 +1,2310 @@
+0x1800ad310: op4K*df
+0x1800ad7f9: m?H"u8ML
+0x1800ad8de: LX/f{;r
+0x1800adb83: xR34uZ`
+0x1800ade98: Unknown exception
+0x1800adee0: bad array new length
+0x1800adef8: string too long
+0x1800adf28: bad cast
+0x1800adf38: invalid stoull argument
+0x1800adf50: stoull argument out of range
+0x1800ae028: getprop
+0x1800ae030: ro.product.model
+0x1800ae058: /maps | grep 
+0x1800ae068: cat /proc/
+0x1800ae078: /maps | head
+0x1800ae090: CreatePipe failed.
+0x1800ae0a8:  Command=
+0x1800ae0b8: CreateProcessA failed. Error=
+0x1800ae0f0: invalid string position
+0x1800ae108: vector too long
+0x1800ae130: mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+0x1800ae168: my_cpp_app
+0x1800ae174: 1.0.14
+0x1800ae180: 127.0.0.1
+0x1800ae1b8: AUTHDAT1}!
+0x1800ae1ff: )Unranked
+0x1800ae210: Rookie I
+0x1800ae220: Rookie II
+0x1800ae230: Rookie III
+0x1800ae240: Rookie IV
+0x1800ae250: Rookie V
+0x1800ae260: Veteran I
+0x1800ae270: Veteran II
+0x1800ae280: Veteran III
+0x1800ae290: Veteran IV
+0x1800ae2a0: Veteran V
+0x1800ae2b0: Elite I
+0x1800ae2b8: Elite II
+0x1800ae2c8: Elite III
+0x1800ae2d8: Elite IV
+0x1800ae2e8: Elite V
+0x1800ae2f8: Pro II
+0x1800ae300: Pro III
+0x1800ae308: Pro IV
+0x1800ae318: Master I
+0x1800ae328: Master II
+0x1800ae338: Master III
+0x1800ae348: Master IV
+0x1800ae358: Master V
+0x1800ae368: GrandM I
+0x1800ae378: GrandM II
+0x1800ae388: GrandM III
+0x1800ae398: GrandM IV
+0x1800ae3a8: GrandM V
+0x1800ae3b8: Legendary
+0x1800ae3c8: Legendary+
+0x1800ae3f8: success
+0x1800ae420: map/set too long
+0x1800ae438: Memoryy() started
+0x1800ae450: MuMuVMMVMM.dll
+0x1800ae460: VBoxVMM.dll
+0x1800ae470: PGMPhysRead
+0x1800ae480: MH_Initialize failed: 
+0x1800ae498: VMMGetCpuById
+0x1800ae4a8: PGMPhysGCPtr2GCPhys
+0x1800ae4c0: PGMPhysSimpleWriteGCPhys
+0x1800ae500: socket() failed, WSAError = 
+0x1800ae520: Socket Error
+0x1800ae530: Il2CppClass invalid
+0x1800ae548: closed generic parent unresolved
+0x1800ae570: generic static_fields unresolved
+0x1800ae598: ConfigCollections Coll unresolved
+0x1800ae5c0: cached configs array unresolved
+0x1800ae5e8: ok via 
+0x1800ae5f0: libunity base is invalid
+0x1800ae610: direct ScriptMetadataMethod
+0x1800ae630: legacy holder
+0x1800ae640: MethodInfo/RGCTX config resolver failed
+0x1800ae668:  result=
+0x1800ae678:  array=0x
+0x1800ae688:  class=0x
+0x1800ae698:  classSlot=0x
+0x1800ae6a8:  rgctx=0x
+0x1800ae6b8:  method=0x
+0x1800ae6c8:  metadata=0x
+0x1800ae6d8: TypeInfo RVA unavailable
+0x1800ae6f8: ok via direct TypeInfo
+0x1800ae710: ok via direct TypeInfo static_fields
+0x1800ae738: ok via legacy TypeInfo holder
+0x1800ae758: TypeInfo config resolver failed
+0x1800ae778: generic TypeInfo unavailable
+0x1800ae798: generic TypeInfo unresolved
+0x1800ae7b8: ok via generic TypeInfo
+0x1800ae7d0:  genericTypeInfo=0x
+0x1800ae7e8:  expected=
+0x1800ae7f8:  rejected: length=
+0x1800ae810:  accepted=
+0x1800ae81c:  noId=
+0x1800ae828:  invalidPtr=
+0x1800ae838:  valid=
+0x1800ae840:  samples=
+0x1800ae850:  length=
+0x1800ae860:  candidate array=0x
+0x1800ae878: WeaponConfConfig.GenericTypeInfo
+0x1800ae8a0: WeaponConfConfig.TypeInfo
+0x1800ae8c0: ok via TypeInfo
+0x1800ae8d0: WeaponConfConfig.GetArray
+0x1800ae8f0: ok via MethodInfo fallback
+0x1800ae910:  ; MethodInfo=
+0x1800ae920:  ; TypeInfo=
+0x1800ae930: RoleConfConfig.GenericTypeInfo
+0x1800ae950: RoleConfConfig.TypeInfo
+0x1800ae968: RoleConfConfig.GetArray
+0x1800ae980: ok via GetArray
+0x1800ae990: RoleConfConfig.GetDataFallback
+0x1800ae9b0: ok via GetData fallback
+0x1800ae9c8:  ; fallback=
+0x1800ae9d8:  ; GetArray=
+0x1800ae9e8: RoleBaseCharacterConfig.GenericTypeInfo
+0x1800aea10: RoleBaseCharacterConfig.TypeInfo
+0x1800aea38: RoleBaseCharacterConfig candidate rejected
+0x1800aea68: SkinStatus
+0x1800aea78: libunity base invalid
+0x1800aea90: LoadoutHelper singleton unresolved
+0x1800aeab8: MP lobby loadout is not loaded
+0x1800aead8: squad member list missing
+0x1800aeaf8: squad member list invalid
+0x1800aeb18: selected squad member unresolved
+0x1800aeb3c:  bag=(
+0x1800aeb48:  viceConf=0x
+0x1800aeb58:  viceSI=0x
+0x1800aeb68:  mainConf=0x
+0x1800aeb78:  mainSI=0x
+0x1800aeb88:  roleConf=0x
+0x1800aeb98:  roleObj=0x
+0x1800aeba8:  member=0x
+0x1800aebb8:  mpLoadout=0x
+0x1800aebc8: ok helper=0x
+0x1800aebd8:  rejected 
+0x1800aebe8: GenericTypeInfo
+0x1800aebf8: GenericTypeInfo=
+0x1800aec10: TypeInfo
+0x1800aec20: TypeInfo=
+0x1800aec30: MethodInfo
+0x1800aec3c: cached
+0x1800aec48: ok cached; resolver=
+0x1800aec60: ; stale pointer map discarded
+0x1800aec80:  new=0x
+0x1800aec88:  array changed old=0x
+0x1800aeca0: ok cached; unstable length for 
+0x1800aecc0: : invalid/unstable array length
+0x1800aece0: : no valid entries
+0x1800aecf8:  invalidId=
+0x1800aed08:  rawLength=
+0x1800aed18:  cachedTotal=
+0x1800aed28:  mappedNow=
+0x1800aed38: ok cached; no new rows
+0x1800aed50: libunity base unavailable
+0x1800aed70: ok (cached required tables)
+0x1800aed90: not requested
+0x1800aeda0: ItemResourceConfig
+0x1800aedb8: CharacterModelConfig
+0x1800aedd0: RolePackConfConfig
+0x1800aede8: Item2InventoryConfig
+0x1800aee00:  | charModel=
+0x1800aee10:  | item2=
+0x1800aee20:  rolePackStatus=
+0x1800aee38:  needItem2=
+0x1800aee48:  needChar=
+0x1800aee58:  rolePack=
+0x1800aee68:  item2Inventory=
+0x1800aee80:  characterModel=
+0x1800aee98: Skin runtime ready itemResource=
+0x1800aeec0: ; transient config caches invalidated, desired skins preserved
+0x1800aef00: unknown
+0x1800aef08: Skin scene generation changed: 
+0x1800aef28:  ptr=0x
+0x1800aef30:  pass=
+0x1800aef38:  index=
+0x1800aef40:  direct targeted lookup id=
+0x1800aef60:  targeted lookup id=
+0x1800aef80: Character skin restored (validated config + current lobby runtime)
+0x1800aefc8: RoleConfConfig
+0x1800aefd8: RoleConfConfig row missing/stale
+0x1800af000: catalog refresh failed: 
+0x1800af020: RoleConfConfig still missing after forced catalog refresh
+0x1800af060: ok after forced catalog refresh
+0x1800af080: Character skin failed: catalog not ready - 
+0x1800af0b0: Character skin failed: 
+0x1800af0d0: Character skin failed: selected RoleConfConfig missing/stale - 
+0x1800af110: Character skin failed: 100301208 template RoleConfConfig missing/stale - 
+0x1800af160:  targetModelId=0x
+0x1800af178:  selectedModelId=0x
+0x1800af190:  targetModel=0x
+0x1800af1a0:  selectedModel=0x
+0x1800af1b8:  targetRes=0x
+0x1800af1c8: Character skin failed: visual chain missing selectedRes=0x
+0x1800af210: Character skin incomplete; resource/model readback did not match source
+0x1800af258:  lobbyResolve={
+0x1800af268:  persistentReapply=
+0x1800af280:  rolePackSwap=
+0x1800af290:  lobbySwap=
+0x1800af2a0:  lobbyReady=
+0x1800af2b0:  modelApplied=
+0x1800af2c0:  resourceApplied=
+0x1800af2d8:  avatarModel=0x
+0x1800af2e8:  targetRole=
+0x1800af2f8: Character skin applied v3.10.0 selectedRole=
+0x1800af328: No saved weapon skin override for this gun
+0x1800af358:  (validated current generation)
+0x1800af378: Weapon skin restored baseWeaponId=
+0x1800af3a0: Weapon skin failed: catalog not ready - 
+0x1800af3d0: Weapon skin failed: 
+0x1800af3e8: WeaponConfConfig
+0x1800af400: ApplyRefresh
+0x1800af418:  refresh={
+0x1800af430: Weapon skin failed: selected WeaponConfConfig missing/stale direct id=
+0x1800af478: Weapon skin failed: invalid BaseWeaponId read
+0x1800af4a8: Item2InventoryConfig.Apply
+0x1800af4c8: ItemResourceConfig.Apply
+0x1800af4e8:  itemRes=0x
+0x1800af4f8:  item2=0x
+0x1800af508: Weapon skin failed: selected cosmetic rows missing selected=
+0x1800af548: Weapon skin failed: base cosmetic targets incomplete base=
+0x1800af588:  conf=0x
+0x1800af598:  verifyModel=
+0x1800af5a8:  expectedModel=
+0x1800af5b8:  verifyAssetGroup=
+0x1800af5d0:  expectedAssetGroup=
+0x1800af5e8:  verifySkin=
+0x1800af5f8:  expectedSkin=
+0x1800af608:  itemResourceWrites=
+0x1800af620:  item2Writes=
+0x1800af630:  confWrites=
+0x1800af640:  base=
+0x1800af648: Weapon skin incomplete; refusing false success selected=
+0x1800af688:  lobbyPointerWrites=
+0x1800af6a0:  sourceModel=
+0x1800af6b0:  sourceSkin=
+0x1800af6c0:  sourceAssetGroup=
+0x1800af6d8: Weapon skin applied v3.10.0 selected=
+0x1800af700: WeaponConfConfig.Runtime
+0x1800af720:  inMatch=
+0x1800af730:  liveWeaponObjects=
+0x1800af748:  weapons=
+0x1800af758: Persistent skins synchronized character=
+0x1800af788: Character skins unavailable: 
+0x1800af7a8: SkinRole
+0x1800af7b8: SkinRoleBegin
+0x1800af7c8: SkinRoleEnd
+0x1800af7d8: All character skins ready count=
+0x1800af800:  count=
+0x1800af808: Character variants ready base=
+0x1800af828: Weapon skins unavailable: 
+0x1800af848: SkinWeapon
+0x1800af858: SkinWeaponBegin
+0x1800af868: SkinWeaponEnd
+0x1800af878:  missingItemRes=
+0x1800af890:  missingItem2=
+0x1800af8a8:  usable=
+0x1800af8b8: Weapon variants ready base=
+0x1800af8d8: CatalogStatus
+0x1800af8e8: ok (cached partial; refresh can merge more rows)
+0x1800af920: ok (validated cached catalog)
+0x1800af940:  | weapons=
+0x1800af950: ok cached after transient resolver failure: roles=
+0x1800af988: Catalog resolver transient; keeping previous cache: 
+0x1800af9c0:  | roleBase=
+0x1800af9d0: roles=
+0x1800af9d8:  weaponLength=
+0x1800af9e8:  roleLength=
+0x1800af9f8:  weaponArray=0x
+0x1800afa08: array length unstable/invalid roleArray=0x
+0x1800afa38: ok cached after transient length failure: 
+0x1800afa68:  haveRoleBaseArray=
+0x1800afa80:  roleBaseLength=
+0x1800afa98:  roleBaseArray=0x
+0x1800afab0: roleArray=0x
+0x1800afac1: ===== CATALOG BUILD v3.10.0 / SKIN INDEX =====
+0x1800afaf8: CatalogRole
+0x1800afb08:  name="
+0x1800afb10:  config=0x
+0x1800afb20:  defaultRoleId=
+0x1800afb30:  baseCharacterId=
+0x1800afb48: ROLE_BASE index=
+0x1800afb68: ROLE index=
+0x1800afb78: CatalogWeapon
+0x1800afb88:  blueType=
+0x1800afb98:  baseWeaponId=
+0x1800afba8: WEAPON index=
+0x1800afbb8:  (valid rows will be merged into cache)
+0x1800afbe8: WARN partial pointer recovery roles=
+0x1800afc18:  inferredFamilies=
+0x1800afc30: WEAPON_BASE_SOURCE explicit EBaseWeapon rows=
+0x1800afc60: WEAPON_BASE_SOURCE fallback inferred families=
+0x1800afc90: ===== END CATALOG BUILD =====
+0x1800afcb0:  weaponNoId=
+0x1800afcc0:  weaponInvalidPtr=
+0x1800afcd8:  baseWeaponFamilies=
+0x1800afcf0:  weaponVariants=
+0x1800afd08:  roleNoId=
+0x1800afd18:  roleInvalidPtr=
+0x1800afd30:  baseCharacters=
+0x1800afd48:  roleBaseRows=
+0x1800afd58: SUMMARY roleVariants=
+0x1800afd70: RoleConfConfig array identity changed; stale role pointers discarded
+0x1800afdc0: WeaponConfConfig array identity changed; stale weapon pointers discarded
+0x1800afe10: catalog arrays contained no valid unique entries
+0x1800afe48: Catalog request started v3.10.0
+0x1800afe68: Catalog not ready: 
+0x1800afe80: CatalogBegin
+0x1800afe98:  characters, 
+0x1800afea8: Sending cached catalog: 
+0x1800afec8: CatalogEnd
+0x1800afed8:  weapons
+0x1800afee8: Catalog loaded: 
+0x1800aff00: MatchGame old=0x
+0x1800aff18: LocalPlayer
+0x1800aff28:  target=(
+0x1800aff38:  origin=(
+0x1800aff48:  camera=(
+0x1800aff58:  refRot=(
+0x1800aff68:  lastRotationMod=(
+0x1800aff80:  readback=(
+0x1800aff90:  desiredPitchYaw=(
+0x1800affa8:  aimPct=
+0x1800affb8:  spreadSize=
+0x1800affc8:  targetAngle=
+0x1800affd8:  dist=
+0x1800affe0:  applied=
+0x1800afff0:  solved=
+0x1800b0000: camera-ads
+0x1800b0010: camera-preaim+3p
+0x1800b0028: camera-preaim
+0x1800b0038:  originSource=
+0x1800b0048:  triggerMode=
+0x1800b0058:  activationModel=
+0x1800b0070:  trigger=
+0x1800b0080:  aiming=
+0x1800b0090:  firing=
+0x1800b00a0:  targetSource=
+0x1800b00b0:  hitGroup=
+0x1800b00d0: Body/Chest
+0x1800b00e0:  targetMode=
+0x1800b00f0:  fireMode=
+0x1800b0100:  fireComp=0x
+0x1800b0110:  weapon=0x
+0x1800b0120:  targetPawn=0x
+0x1800b0130: track-v3.9.8 mode=shotspread-preaim-3p
+0x1800b0158: FrameStart
+0x1800b0168: FrameEnd
+0x1800b0174: Matrix
+0x1800b017c: player
+0x1800b0188: OBSERVED ROLE id=0x
+0x1800b01a0: OBSERVED WEAPON id=0x
+0x1800b01b8: HEARTBEAT
+0x1800b01d0: EnableFastScope
+0x1800b01e0: DisableFastScope
+0x1800b01f8: EnableNoSpread
+0x1800b0208: DisableNoSpread
+0x1800b0218: EnableNoReload
+0x1800b0228: DisableNoReload
+0x1800b0238: EnableNoRecoil
+0x1800b0248: DisableNoRecoil
+0x1800b0258: EnableHighJump
+0x1800b0268: DisableHighJump
+0x1800b0278: EnableSpeedHack
+0x1800b0288: DisableSpeedHack
+0x1800b02a0: EnableSlideSpeed
+0x1800b02b8: DisableSlideSpeed
+0x1800b02d0: EnableSkeleton
+0x1800b02e0: DisableSkeleton
+0x1800b02f0: EnableOutlineESP
+0x1800b0308: EnableChams
+0x1800b0318: DisableOutlineESP
+0x1800b0330: DisableChams
+0x1800b0340: EnableRadar
+0x1800b0350: DisableRadar
+0x1800b0360: EnableFastWeaponSwitch
+0x1800b0378: DisableFastWeaponSwitch
+0x1800b0390: EnableBulletTrack
+0x1800b03b0: BulletTrack enabled (CurrentFireComponent, shared AIM target/FOV)
+0x1800b03f8: DisableBulletTrack
+0x1800b0410: BulletTrack disabled (restore queued)
+0x1800b0438: SetBulletTrackTargetMode
+0x1800b0458: BulletTrack target mode = 
+0x1800b0478: SetBulletTrackActivationModel
+0x1800b0498: SetBulletTrackTriggerMode
+0x1800b04b8: SetBulletTrackKeyHeld
+0x1800b04d0: SetBulletTrackTargetPawn
+0x1800b04f0: RequestCatalog
+0x1800b0500: RequestCatalog command received from external menu
+0x1800b0538: RequestRoleSkins
+0x1800b0550: RequestWeaponSkins
+0x1800b0568: ApplyCharacterSkin
+0x1800b0580: ResetCharacterSkin
+0x1800b0598: ResetAllSkins
+0x1800b05a8: ApplyWeaponSkin
+0x1800b05b8: ResetWeaponSkin
+0x1800b05c8: EnableMagicBullet
+0x1800b05e0: DisableMagicBullet
+0x1800b05f8: UnloadHack
+0x1800b0608: SetMagicBulletType
+0x1800b0620: SetSlideSpeed
+0x1800b0630: SetFrameRate
+0x1800b0640: SetSpeedHackValue
+0x1800b06f0: SOFTWARE\XuanZhi\LDPlayer9
+0x1800b0710: InstallDir
+0x1800b071c: ld.exe
+0x1800b0728: com.activision.callofduty.shooter
+0x1800b0750: libunity.so
+0x1800b0760: Invalid Base skip: 
+0x1800b0778: libunity
+0x1800b0788: base = 
+0x1800b0890: USERNAME
+0x1800b08a0: unknown-machine
+0x1800b08b0: |local-hwid-salt
+0x1800b08c8: curl_easy_escape failed
+0x1800b08e0: curl_easy_init failed
+0x1800b08f8: LicenseClient/1.0
+0x1800b0910: curl_easy_perform failed: 
+0x1800b0930:  response: 
+0x1800b0940: HTTP error: 
+0x1800b0960: server_time
+0x1800b0970: expires_at
+0x1800b0990: signature
+0x1800b09a0: typeinfo_loadout_helper
+0x1800b09b8: typeinfo_item2inventory
+0x1800b09d0: typeinfo_character_model
+0x1800b09f0: typeinfo_item_resource
+0x1800b0a08: typeinfo_weapon
+0x1800b0a18: typeinfo_role_base_generic
+0x1800b0a38: typeinfo_role_pack_generic
+0x1800b0a58: typeinfo_item2inventory_generic
+0x1800b0a78: typeinfo_character_model_generic
+0x1800b0aa0: typeinfo_item_resource_generic
+0x1800b0ac0: typeinfo_weapon_generic
+0x1800b0ad8: typeinfo_role_generic
+0x1800b0af0: typeinfo_role_base_character
+0x1800b0b10: typeinfo_role
+0x1800b0b20: typeinfo_weapon_fire_component_instant
+0x1800b0b48: typeinfo_engine
+0x1800b0b58: typeinfo-v1|
+0x1800b0b68: typeinfo-v1
+0x1800b0b78: offset_schema
+0x1800b0b88: offsets_signature
+0x1800b0ba0: LOGIN_SUCCESS
+0x1800b0bb0: Login successful
+0x1800b0bc8: MISSING_FIELDS
+0x1800b0bd8: Request is incomplete
+0x1800b0bf0: INVALID_METHOD
+0x1800b0c00: Invalid HTTP method
+0x1800b0c18: INVALID_TIMESTAMP
+0x1800b0c30: Client/server time mismatch
+0x1800b0c50: REPLAY_DETECTED
+0x1800b0c60: Replay detected
+0x1800b0c70: RATE_LIMITED
+0x1800b0c80: Too many requests
+0x1800b0c98: INVALID_SIGNATURE
+0x1800b0cb0: Invalid request signature
+0x1800b0cd0: INVALID_KEY
+0x1800b0ce0: Invalid license key
+0x1800b0cf8: KEY_DISABLED
+0x1800b0d08: License key is disabled
+0x1800b0d20: KEY_EXPIRED
+0x1800b0d30: License key is expired
+0x1800b0d48: HWID_MISMATCH
+0x1800b0d58: License key is bound to another device
+0x1800b0d80: APP_VERSION_OUTDATED
+0x1800b0da0: Your app version is outdated. Please update to the latest version.
+0x1800b0de8: SERVER_ERROR
+0x1800b0df8: Server error
+0x1800b0e08: Unknown response
+0x1800b0e28: C:\Windows\System32\keysex.txt
+0x1800b0e48: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+0x1800b0e88: [X] CURL INIT FAILED
+0x1800b0ea0: [X] LICENSE FILE EMPTY OR NOT FOUND
+0x1800b0ec8: [*] STARTING LOGIN
+0x1800b0ee0: app_id
+0x1800b0ee8: app_version
+0x1800b0ef8: timestamp
+0x1800b0f08: [X] INVALID SERVER RESPONSE
+0x1800b0f28: [X] SERVER SIGNATURE INVALID
+0x1800b0f48: [+] REMOTE TYPEINFO OFFSETS APPLIED
+0x1800b0f70: [*] REMOTE TYPEINFO OFFSETS UNAVAILABLE/INVALID; USING COMPILED DEFAULTS
+0x1800b0fc0: [+] LOGIN SUCCESS
+0x1800b0fd8: UNKNOWN
+0x1800b0fe0: [+] EXPIRES: 
+0x1800b0ff0: [X] LOGIN FAILED
+0x1800b1008: [X] CODE: 
+0x1800b1018: [X] MESSAGE: 
+0x1800b1028: [X] EXCEPTION: 
+0x1800b1070: Connected
+0x1800b10c0: Memory Load Success
+0x1800b1128: unordered_map/set too long
+0x1800b1148: invalid hash bucket count
+0x1800b1338: 0123456789ABCDEF
+0x1800b1350: 0123456789abcdef
+0x1800b1368: easy handle already used in multi handle
+0x1800b1398: No error
+0x1800b13a8: Unsupported protocol
+0x1800b13c0: Failed initialization
+0x1800b13d8: URL using bad/illegal format or missing URL
+0x1800b1410: A requested feature, protocol or option was not found built-in in this libcurl due to a build-time decision.
+0x1800b1480: Could not resolve proxy name
+0x1800b14a0: Could not resolve hostname
+0x1800b14c0: Could not connect to server
+0x1800b14e0: Weird server reply
+0x1800b14f8: Access denied to remote resource
+0x1800b1520: FTP: The server failed to connect to data port
+0x1800b1550: FTP: Accepting server connect has timed out
+0x1800b1580: FTP: The server did not accept the PRET command.
+0x1800b15b8: FTP: unknown PASS reply
+0x1800b15d0: FTP: unknown PASV reply
+0x1800b15e8: FTP: unknown 227 response format
+0x1800b1610: FTP: cannot figure out the host in the PASV response
+0x1800b1648: Error in the HTTP2 framing layer
+0x1800b1670: FTP: could not set file type
+0x1800b1690: Transferred a partial file
+0x1800b16b0: FTP: could not retrieve (RETR failed) the specified file
+0x1800b16f0: Quote command returned error
+0x1800b1710: HTTP response code said error
+0x1800b1730: Failed writing received data to disk/application
+0x1800b1768: Upload failed (at start/before it took off)
+0x1800b1798: Failed to open/read local data from file/application
+0x1800b17d0: Out of memory
+0x1800b17e0: Timeout was reached
+0x1800b17f8: FTP: command PORT failed
+0x1800b1818: FTP: command REST failed
+0x1800b1838: Requested range was not delivered by the server
+0x1800b1868: Internal problem setting up the POST
+0x1800b1890: SSL connect error
+0x1800b18a8: Could not resume download
+0x1800b18c8: Could not read a file:// file
+0x1800b18e8: LDAP: cannot bind
+0x1800b1900: LDAP: search failed
+0x1800b1918: A required function in the library was not found
+0x1800b1950: Operation was aborted by an application callback
+0x1800b1988: A libcurl function was given a bad argument
+0x1800b19b8: Failed binding local connection end
+0x1800b19e0: Number of redirects hit maximum amount
+0x1800b1a08: An unknown option was passed in to libcurl
+0x1800b1a38: Malformed option provided in a setopt
+0x1800b1a60: Server returned nothing (no headers, no data)
+0x1800b1a90: SSL crypto engine not found
+0x1800b1ab0: Can not set SSL crypto engine as default
+0x1800b1ae0: Failed to initialise SSL crypto engine
+0x1800b1b08: Failed sending data to the peer
+0x1800b1b28: Failure when receiving data from the peer
+0x1800b1b58: Problem with the local SSL certificate
+0x1800b1b80: Could not use specified SSL cipher
+0x1800b1ba8: SSL peer certificate or SSH remote key was not OK
+0x1800b1be0: Problem with the SSL CA cert (path? access rights?)
+0x1800b1c18: Unrecognized or bad HTTP Content or Transfer-Encoding
+0x1800b1c50: Maximum file size exceeded
+0x1800b1c70: Requested SSL level failed
+0x1800b1c90: Failed to shut down the SSL connection
+0x1800b1cb8: Failed to load CRL file (path? access rights?, format?)
+0x1800b1cf0: Issuer check against peer certificate failed
+0x1800b1d20: Send failed since rewinding of the data stream failed
+0x1800b1d58: Login denied
+0x1800b1d68: TFTP: File Not Found
+0x1800b1d80: TFTP: Access Violation
+0x1800b1d98: Disk full or allocation exceeded
+0x1800b1dc0: TFTP: Illegal operation
+0x1800b1dd8: TFTP: Unknown transfer ID
+0x1800b1df8: Remote file already exists
+0x1800b1e18: TFTP: No such user
+0x1800b1e30: Remote file not found
+0x1800b1e48: Error in the SSH layer
+0x1800b1e60: Socket not ready for send/recv
+0x1800b1e80: RTSP CSeq mismatch or invalid CSeq
+0x1800b1ea8: RTSP session error
+0x1800b1ec0: Unable to parse FTP file list
+0x1800b1ee0: Chunk callback failed
+0x1800b1ef8: The max connection limit is reached
+0x1800b1f20: SSL public key does not match pinned public key
+0x1800b1f50: SSL server certificate status verification FAILED
+0x1800b1f88: Stream error in the HTTP/2 framing layer
+0x1800b1fb8: API function called from within callback
+0x1800b1fe8: An authentication function returned an error
+0x1800b2018: HTTP/3 error
+0x1800b2028: QUIC connection error
+0x1800b2040: proxy handshake error
+0x1800b2058: SSL Client Certificate required
+0x1800b2078: Unrecoverable error in select/poll
+0x1800b20a0: A value or data field grew larger than allowed
+0x1800b20d0: ECH attempted but failed
+0x1800b20f0: Unknown error
+0x1800b2100: An invalid CURLU pointer was passed as argument
+0x1800b2130: An invalid 'part' argument was passed as argument
+0x1800b2168: Malformed input to a URL function
+0x1800b2190: Port number was not a decimal number between 0 and 65535
+0x1800b21d0: Unsupported URL scheme
+0x1800b21e8: URL decode error, most likely because of rubbish in the input
+0x1800b2228: A memory function failed
+0x1800b2248: Credentials was passed in the URL when prohibited
+0x1800b2280: An unknown part ID was passed to a URL API function
+0x1800b22b8: No scheme part in the URL
+0x1800b22d8: No user part in the URL
+0x1800b22f0: No password part in the URL
+0x1800b2310: No options part in the URL
+0x1800b2330: No host part in the URL
+0x1800b2348: No port part in the URL
+0x1800b2360: No query part in the URL
+0x1800b2380: No fragment part in the URL
+0x1800b23a0: No zoneid part in the URL
+0x1800b23c0: Bad login part
+0x1800b23d0: Bad IPv6 address
+0x1800b23e8: Bad hostname
+0x1800b23f8: Bad file:// URL
+0x1800b2408: Unsupported number of slashes following scheme
+0x1800b2438: Bad scheme
+0x1800b2448: Bad path
+0x1800b2458: Bad fragment
+0x1800b2468: Bad query
+0x1800b2478: Bad password
+0x1800b2488: Bad user
+0x1800b2498: libcurl lacks IDN support
+0x1800b24b8: A value or data field is larger than allowed
+0x1800b24e8: CURLUcode unknown
+0x1800b2500: Call interrupted
+0x1800b2518: Bad file
+0x1800b2528: Bad access
+0x1800b2538: Bad argument
+0x1800b2548: Invalid arguments
+0x1800b2560: Out of file descriptors
+0x1800b2578: Call would block
+0x1800b2590: Blocking call in progress
+0x1800b25b0: Descriptor is not a socket
+0x1800b25d0: Need destination address
+0x1800b25f0: Bad message size
+0x1800b2608: Bad protocol
+0x1800b2618: Protocol option is unsupported
+0x1800b2638: Protocol is unsupported
+0x1800b2650: Socket is unsupported
+0x1800b2668: Operation not supported
+0x1800b2680: Address family not supported
+0x1800b26a0: Protocol family not supported
+0x1800b26c0: Address already in use
+0x1800b26d8: Address not available
+0x1800b26f0: Network down
+0x1800b2700: Network unreachable
+0x1800b2718: Network has been reset
+0x1800b2730: Connection was aborted
+0x1800b2748: Connection was reset
+0x1800b2760: No buffer space
+0x1800b2770: Socket is already connected
+0x1800b2790: Socket is not connected
+0x1800b27a8: Socket has been shut down
+0x1800b27c8: Too many references
+0x1800b27e0: Timed out
+0x1800b27f0: Connection refused
+0x1800b2804: Loop??
+0x1800b2810: Name too long
+0x1800b2820: Host down
+0x1800b2830: Host unreachable
+0x1800b2848: Not empty
+0x1800b2858: Process limit reached
+0x1800b2870: Too many users
+0x1800b2880: Bad quota
+0x1800b2890: Something is stale
+0x1800b28a8: Remote error
+0x1800b28b8: Disconnected
+0x1800b28c8: Winsock library is not ready
+0x1800b28e8: Winsock library not initialised
+0x1800b2908: Winsock version not supported
+0x1800b2928: Host not found
+0x1800b2938: Host not found, try again
+0x1800b2958: Unrecoverable error in call to nameserver
+0x1800b2988: No data record of requested type
+0x1800b29b0: Unknown error %d (%#x)
+0x1800b29c8: Unknown error %lu (0x%08lX)
+0x1800b29e8: CRYPT_E_REVOKED
+0x1800b29f8: CRYPT_E_NO_REVOCATION_DLL
+0x1800b2a18: CRYPT_E_NO_REVOCATION_CHECK
+0x1800b2a38: CRYPT_E_REVOCATION_OFFLINE
+0x1800b2a58: CRYPT_E_NOT_IN_REVOCATION_DATABASE
+0x1800b2a80: SEC_E_ALGORITHM_MISMATCH
+0x1800b2aa0: SEC_E_BAD_BINDINGS
+0x1800b2ab8: SEC_E_BAD_PKGID
+0x1800b2ac8: SEC_E_BUFFER_TOO_SMALL
+0x1800b2ae0: SEC_E_CANNOT_INSTALL
+0x1800b2af8: SEC_E_CANNOT_PACK
+0x1800b2b10: SEC_E_CERT_EXPIRED
+0x1800b2b28: SEC_E_CERT_UNKNOWN
+0x1800b2b40: SEC_E_CERT_WRONG_USAGE
+0x1800b2b58: SEC_E_CONTEXT_EXPIRED
+0x1800b2b70: SEC_E_CROSSREALM_DELEGATION_FAILURE
+0x1800b2b98: SEC_E_CRYPTO_SYSTEM_INVALID
+0x1800b2bb8: SEC_E_DECRYPT_FAILURE
+0x1800b2bd0: SEC_E_DELEGATION_POLICY
+0x1800b2be8: SEC_E_DELEGATION_REQUIRED
+0x1800b2c08: SEC_E_DOWNGRADE_DETECTED
+0x1800b2c28: SEC_E_ENCRYPT_FAILURE
+0x1800b2c40: SEC_E_INCOMPLETE_CREDENTIALS
+0x1800b2c60: SEC_E_INCOMPLETE_MESSAGE
+0x1800b2c80: SEC_E_INSUFFICIENT_MEMORY
+0x1800b2ca0: SEC_E_INTERNAL_ERROR
+0x1800b2cb8: SEC_E_INVALID_HANDLE
+0x1800b2cd0: SEC_E_INVALID_PARAMETER
+0x1800b2ce8: SEC_E_INVALID_TOKEN
+0x1800b2d00: SEC_E_ISSUING_CA_UNTRUSTED
+0x1800b2d20: SEC_E_ISSUING_CA_UNTRUSTED_KDC
+0x1800b2d40: SEC_E_KDC_CERT_EXPIRED
+0x1800b2d58: SEC_E_KDC_CERT_REVOKED
+0x1800b2d70: SEC_E_KDC_INVALID_REQUEST
+0x1800b2d90: SEC_E_KDC_UNABLE_TO_REFER
+0x1800b2db0: SEC_E_KDC_UNKNOWN_ETYPE
+0x1800b2dc8: SEC_E_LOGON_DENIED
+0x1800b2de0: SEC_E_MAX_REFERRALS_EXCEEDED
+0x1800b2e00: SEC_E_MESSAGE_ALTERED
+0x1800b2e18: SEC_E_MULTIPLE_ACCOUNTS
+0x1800b2e30: SEC_E_MUST_BE_KDC
+0x1800b2e48: SEC_E_NOT_OWNER
+0x1800b2e58: SEC_E_NO_AUTHENTICATING_AUTHORITY
+0x1800b2e80: SEC_E_NO_CREDENTIALS
+0x1800b2e98: SEC_E_NO_IMPERSONATION
+0x1800b2eb0: SEC_E_NO_IP_ADDRESSES
+0x1800b2ec8: SEC_E_NO_KERB_KEY
+0x1800b2ee0: SEC_E_NO_PA_DATA
+0x1800b2ef8: SEC_E_NO_S4U_PROT_SUPPORT
+0x1800b2f18: SEC_E_NO_TGT_REPLY
+0x1800b2f30: SEC_E_OUT_OF_SEQUENCE
+0x1800b2f48: SEC_E_PKINIT_CLIENT_FAILURE
+0x1800b2f68: SEC_E_PKINIT_NAME_MISMATCH
+0x1800b2f88: SEC_E_POLICY_NLTM_ONLY
+0x1800b2fa0: SEC_E_QOP_NOT_SUPPORTED
+0x1800b2fb8: SEC_E_REVOCATION_OFFLINE_C
+0x1800b2fd8: SEC_E_REVOCATION_OFFLINE_KDC
+0x1800b2ff8: SEC_E_SECPKG_NOT_FOUND
+0x1800b3010: SEC_E_SECURITY_QOS_FAILED
+0x1800b3030: SEC_E_SHUTDOWN_IN_PROGRESS
+0x1800b3050: SEC_E_SMARTCARD_CERT_EXPIRED
+0x1800b3070: SEC_E_SMARTCARD_CERT_REVOKED
+0x1800b3090: SEC_E_SMARTCARD_LOGON_REQUIRED
+0x1800b30b0: SEC_E_STRONG_CRYPTO_NOT_SUPPORTED
+0x1800b30d8: SEC_E_TARGET_UNKNOWN
+0x1800b30f0: SEC_E_TIME_SKEW
+0x1800b3100: SEC_E_TOO_MANY_PRINCIPALS
+0x1800b3120: SEC_E_UNFINISHED_CONTEXT_DELETED
+0x1800b3148: SEC_E_UNKNOWN_CREDENTIALS
+0x1800b3168: SEC_E_UNSUPPORTED_FUNCTION
+0x1800b3188: SEC_E_UNSUPPORTED_PREAUTH
+0x1800b31a8: SEC_E_UNTRUSTED_ROOT
+0x1800b31c0: SEC_E_WRONG_CREDENTIAL_HANDLE
+0x1800b31e0: SEC_E_WRONG_PRINCIPAL
+0x1800b31f8: SEC_I_COMPLETE_AND_CONTINUE
+0x1800b3218: SEC_I_COMPLETE_NEEDED
+0x1800b3230: SEC_I_CONTEXT_EXPIRED
+0x1800b3248: SEC_I_CONTINUE_NEEDED
+0x1800b3260: SEC_I_INCOMPLETE_CREDENTIALS
+0x1800b3280: SEC_I_LOCAL_LOGON
+0x1800b3298: SEC_I_NO_LSA_CONTEXT
+0x1800b32b0: SEC_I_RENEGOTIATE
+0x1800b32c8: SEC_I_SIGNATURE_NEEDED
+0x1800b32e0: SEC_E_ILLEGAL_MESSAGE (0x%08X) - This error usually occurs when a fatal SSL/TLS alert is received (e.g. handshake failed). More detail may be available in the Windows System event log.
+0x1800b33a0: %s (0x%08X) - %s
+0x1800b33b8: %s (0x%08X)
+0x1800b33dc: RELOAD
+0x1800b33e8: Set-Cookie:
+0x1800b34a0: Connection #%lld to host %s left intact
+0x1800b34c8: multi_getsock: unexpected multi state %d
+0x1800b34f8: WARNING: no socket in pollset, transfer may stall!
+0x1800b3530: Resolving timed out after %lld milliseconds
+0x1800b3560: Connection timed out after %lld milliseconds
+0x1800b3590: Operation timed out after %lld milliseconds with %lld out of %lld bytes received
+0x1800b35f0: Operation timed out after %lld milliseconds with %lld bytes received
+0x1800b3638: Hostname '%s' was found in DNS cache
+0x1800b3660: operation aborted by pre-request callback
+0x1800b3690: PENDING handle timeout
+0x1800b36a8: Internal error removing splay node = %d
+0x1800b36d0: Internal error clearing splay node = %d
+0x1800b36f8: transfer has no multi handle
+0x1800b3718: transfer buffer size is 0
+0x1800b3738: attempt to borrow xfer_buf when already borrowed
+0x1800b3770: could not allocate xfer_buf of %zu bytes
+0x1800b37a0: transfer upload buffer size is 0
+0x1800b37c8: attempt to borrow xfer_ulbuf when already borrowed
+0x1800b3800: could not allocate xfer_ulbuf of %zu bytes
+0x1800b3850: ignoring failed cookie_init for %s
+0x1800b3878: localhost
+0x1800b3890: cookie contains TAB, dropping
+0x1800b38b0: oversized cookie dropped, name/val %zu + %zu bytes
+0x1800b38e8: __Secure-
+0x1800b38f8: __Host-
+0x1800b3900: invalid octets in name/value, cookie dropped
+0x1800b3930: secure
+0x1800b3938: httponly
+0x1800b394c: domain
+0x1800b3958: skipped cookie with bad tailmatch domain: %s
+0x1800b3988: version
+0x1800b3990: max-age
+0x1800b3998: expires
+0x1800b39a0: #HttpOnly_
+0x1800b39c0: cookie '%s' for domain '%s' dropped, would overlay an existing cookie
+0x1800b3a08: Replaced
+0x1800b3a20: %s cookie %s="%s" for domain %s, path %s, expire %lld
+0x1800b3a60: WARNING: failed to open cookie file "%s"
+0x1800b3a90: Included max number of cookies (%zu) in request!
+0x1800b3ac8: %s%s%s
+0x1800b3af0: # Netscape HTTP Cookie File
+0x1800b3b0c: # https://curl.se/docs/http-cookies.html
+0x1800b3b35: # This file was generated by libcurl! Edit at your own risk.
+0x1800b3b78: WARNING: failed to save cookies in %s: %s
+0x1800b3ba8: getaddrinfo() thread failed to start
+0x1800b3bd0: abort upload after having sent %lld bytes
+0x1800b3c00: abort upload
+0x1800b3c10: upload completely sent off: %lld bytes
+0x1800b3c38: We are completely uploaded and fine
+0x1800b3c60: Request completely sent off
+0x1800b3e10: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+0x1800b3f60: 0123456789ABCDEF
+0x1800b3fb8: image/gif
+0x1800b3fd0: image/jpeg
+0x1800b3ff0: image/png
+0x1800b4008: image/svg+xml
+0x1800b4020: text/plain
+0x1800b4038: text/html
+0x1800b4058: application/pdf
+0x1800b4070: application/xml
+0x1800b4080: cr-mime
+0x1800b4088: binary
+0x1800b40a0: base64
+0x1800b40a8: quoted-printable
+0x1800b40e0: Content-Type
+0x1800b4108: ; boundary=
+0x1800b4118: Content-Type: %s%s%s
+0x1800b4130: multipart/mixed
+0x1800b4140: application/octet-stream
+0x1800b4160: Content-Disposition
+0x1800b4178: multipart/
+0x1800b4188: attachment
+0x1800b4198: ; filename="
+0x1800b41a8: ; name="
+0x1800b41b8: Content-Disposition: %s%s%s%s%s%s%s
+0x1800b41e0: Content-Transfer-Encoding
+0x1800b4200: Content-Transfer-Encoding: %s
+0x1800b4220: multipart/form-data
+0x1800b4238: form-data
+0x1800b4248: cr_mime_read(len=%zu) is errored -> %d, eos=0
+0x1800b4278: cr_mime_read(len=%zu) seen eos -> 0, eos=1
+0x1800b42a8: cr_mime_read(len=%zu), too small, return
+0x1800b42d8: cr_mime_read(len=%zu), mime_read() -> %zd
+0x1800b4308: client mime read EOF fail, only %lld/%lld of needed bytes read
+0x1800b4348: operation aborted by callback
+0x1800b4368: cr_mime_read(len=%zu), paused by callback
+0x1800b4398: read error getting mime data
+0x1800b43b8: read function returned funny value
+0x1800b43e0: cr_mime_read(len=%zu, total=%lld, read=%lld) -> %d, %zu, %d
+0x1800b4420: Could only read %lld bytes from the mime post
+0x1800b4450: Mime post already completely uploaded
+0x1800b4478: Cannot rewind mime/post data
+0x1800b44a0: ----------------Connection pool is full, closing the oldest one
+0x1800b44e0: closing
+0x1800b44e8: shutting down
+0x1800b44f8: %s connection #%lld
+0x1800b4510: closing connection #%lld
+0x1800b4530: http/1.1
+0x1800b4650: SSL-PROXY
+0x1800b4660: Unrecognized parameter value passed via CURLOPT_SSLVERSION
+0x1800b46a0: CURL_SSLVERSION_MAX incompatible with CURL_SSLVERSION
+0x1800b46e8: %s cached session ID for %s://%s:%d
+0x1800b4714: server
+0x1800b4720: Failed to add Session ID to cache for %s://%s:%d [%s]
+0x1800b4758: Added Session ID to cache for %s://%s:%d [%s]
+0x1800b4788: adjust_pollset, POLLOUT fd=%qd
+0x1800b47a8: adjust_pollset, POLLIN fd=%qd
+0x1800b47c8: -----BEGIN PUBLIC KEY-----
+0x1800b47e9: -----END PUBLIC KEY-----
+0x1800b4808: sha256//
+0x1800b4818:  public key hash: sha256//%s
+0x1800b4838: ;sha256//
+0x1800b4850: %s%s%s%s
+0x1800b4860: CURL_SSL_BACKEND
+0x1800b4878: cf_connect()
+0x1800b4888: cf_connect() -> %d, done=%d
+0x1800b48a8: cf_recv(len=%zu) -> %zd, %d
+0x1800b48c8: cf_shutdown -> %d, done=%d
+0x1800b48e8: SSL shutdown timeout
+0x1800b4900: select/poll on SSL socket, errno: %d
+0x1800b4928: shutdown and remove SSL, start
+0x1800b4948: shutdown and remove SSL, done -> %d
+0x1800b4970: unsupported ALPN protocol: '%.*s'
+0x1800b4998: ALPN: server accepted %.*s
+0x1800b49b8: ALPN: server did not agree on a protocol. Uses default.
+0x1800b4c08: Too old connection (%lld seconds idle), disconnect it
+0x1800b4c40: Too old connection (%lld seconds since creation), disconnect it
+0x1800b4c80: Connection %lld seems to be dead
+0x1800b4ca8: Connection #%lld is not open enough, cannot reuse
+0x1800b4ce0: Server upgrade does not support multiplex yet, wait
+0x1800b4d18: Server upgrade cannot be used
+0x1800b4d38: client side MAX_CONCURRENT_STREAMS reached, skip (%zu)
+0x1800b4d70: MAX_CONCURRENT_STREAMS reached, skip (%zu)
+0x1800b4da0: Multiplexed connection found
+0x1800b4dc0: Found pending candidate for reuse and CURLOPT_PIPEWAIT is set
+0x1800b4e00: Connected 2nd connection to %s port %u
+0x1800b4e28: Connected to %s (%s) port %u
+0x1800b4e48:  (in redirect)
+0x1800b4e58: disabled
+0x1800b4e68: not supported
+0x1800b4e78: Protocol "%s" %s%s
+0x1800b4e90: Invalid zoneid: %s; %s
+0x1800b4ea8: %s://%s
+0x1800b4eb0: URL rejected: %s
+0x1800b4ed0: Too long hostname (maximum is %d)
+0x1800b4f08: Switched from HTTP to HTTPS due to HSTS => %s
+0x1800b4f40: %u/%d/%s
+0x1800b4f50: %s_proxy
+0x1800b4f60: http_proxy
+0x1800b4f70: all_proxy
+0x1800b4f80: ALL_PROXY
+0x1800b4f90: Uses proxy env variable %s == '%s'
+0x1800b4fb8: socks5h
+0x1800b4fc0: socks5
+0x1800b4fc8: socks4a
+0x1800b4fd0: socks4
+0x1800b4fe0: Unsupported proxy scheme for '%s'
+0x1800b5008: Unsupported proxy syntax in '%s': %s
+0x1800b5030: Unsupported proxy '%s', libcurl is built without the HTTPS-proxy support.
+0x1800b5080: localhost%s
+0x1800b5090: memory shortage
+0x1800b50a0: no_proxy
+0x1800b50b0: NO_PROXY
+0x1800b50bc: .netrc
+0x1800b50c8: Couldn't find host %s in the %s file; using defaults
+0x1800b5100: .netrc parser error
+0x1800b5118: anonymous
+0x1800b5128: ftp@example.com
+0x1800b5140: Please URL encode %% as %%25, see RFC 6874.
+0x1800b5170: Invalid IPv6 address format
+0x1800b5190: No valid port number in connect to host string (%s)
+0x1800b51cc: %s%s%s
+0x1800b51d8: Connecting to hostname: %s
+0x1800b51f8: Connecting to port: %d
+0x1800b5210: Alt-svc connecting from [%s]%s:%d to [%s]%s:%d
+0x1800b5240: Unix socket path too long: '%s'
+0x1800b5268: localhost/
+0x1800b5280: Failed to resolve %s '%s' with timeout after %lld ms
+0x1800b52b8: Could not resolve %s: %s
+0x1800b52d8: Re-using existing connection with %s %s
+0x1800b5300: No more connections allowed to host
+0x1800b5328: Allowing DoH to override max connection limit
+0x1800b5358: No connections available in cache
+0x1800b5380: No connections available.
+0x1800b53a0: NTLM picked AND auth done set, clear picked
+0x1800b53d0: NTLM-proxy picked AND auth done set, clear picked
+0x1800b5430: shut down failed with %d
+0x1800b5450: shut down not done yet
+0x1800b5468: shut down successfully
+0x1800b5480: recv: no filter connected
+0x1800b54a0: send: no filter connected
+0x1800b5508: [%s-%d] 
+0x1800b5518: protocol
+0x1800b5720: cr-lineconv
+0x1800b5730: cr-null
+0x1800b5738: cr-buf
+0x1800b5740: client_write(type=%x, len=%zu) -> %d
+0x1800b5768: client_reset, will rewind reader
+0x1800b5790: client_reset, clear readers
+0x1800b57b0: client start, rewind readers
+0x1800b57d0: rewind of client reader '%s' failed: %d
+0x1800b57f8: download_write header(type=%x, blen=%zu) -> %d
+0x1800b5828: download_write body(type=%x, blen=%zu), did not want a BODY
+0x1800b5868: end of response with %lld bytes missing
+0x1800b5890: download_write body(type=%x, blen=%zu) -> %d
+0x1800b58c0: Excess found writing body: excess = %zu, size = %lld, maxdownload = %lld, bytecount = %lld
+0x1800b5920: Exceeded the maximum allowed file size (%lld) with %lld bytes
+0x1800b5960: client read function EOF fail, only %lld/%lld of needed bytes read
+0x1800b59a8: Read callback asked for PAUSE when not supported
+0x1800b59e0: cr_in_read, callback returned CURL_READFUNC_PAUSE
+0x1800b5a20: cr_in_read(len=%zu, total=%lld, read=%lld) -> %d, nread=%zu, eos=%d
+0x1800b5a68: Could not seek stream
+0x1800b5a80: Could only read %lld bytes from the input
+0x1800b5ab0: File already completely uploaded
+0x1800b5ad8: cr_in, rewind via set.seek_func -> %d
+0x1800b5b00: seek callback returned error %d
+0x1800b5b20: cr_in, rewind via set.ioctl_func -> %d
+0x1800b5b48: ioctl callback returned error %d
+0x1800b5b70: cr_in, rewind via fseek -> %d(%d)
+0x1800b5b98: necessary data rewind was not possible
+0x1800b5bc0: cr_lc_read(len=%zu) -> %d, nread=%zu, eos=%d
+0x1800b5bf0: add fread reader, len=%lld -> %d
+0x1800b5c18: client_read(len=%zu) -> %d, nread=%zu, eos=%d
+0x1800b5c48: client reader needs rewind before next request
+0x1800b5c78: cr_buf_read(len=%zu) -> 0, nread=%zu, eos=%d
+0x1800b5ca8: add buf reader, len=%zu -> %d
+0x1800b5cc8: HAPPY-EYEBALLS
+0x1800b5d28: %s failed
+0x1800b5d38: %s connect timeout after %lldms, move on!
+0x1800b5d68: %s connect -> %d, connected=%d
+0x1800b5d88: %s done
+0x1800b5d90: %s trying next
+0x1800b5da0: Connection timeout after %lld ms
+0x1800b5dc8: %s starting (timeout=%lldms)
+0x1800b5de8: all eyeballers failed
+0x1800b5e00: %s assess started=%d, result=%d
+0x1800b5e20: Failed to connect to %s port %u after %lld ms: %s
+0x1800b5e58: Connection time-out
+0x1800b5e70: created %s (timeout %lldms)
+0x1800b5e90: shutdown -> %d, done=%d
+0x1800b5ea8: adjust_pollset -> %d socks
+0x1800b5ed0: query connect reply: %dms
+0x1800b5ef0: destroy
+0x1800b5ef8: unsupported transport type %d
+0x1800b5f20: haproxy protocol not support with SSL encryption in place (QUIC?)
+0x1800b5f64: Digest
+0x1800b5f74: Proxy-
+0x1800b5f80: %sAuthorization: Digest %s
+0x1800b5fa0: iphlpapi.dll
+0x1800b5fb0: if_nametoindex
+0x1800b5fc0: kernel32
+0x1800b5fd0: LoadLibraryExA
+0x1800b5fe0: AddDllDirectory
+0x1800b6000: %10s %512s %u %10s %512s %u "%64[^"]" %u %u
+0x1800b6030: %s %s%s%s %u %s %s%s%s %u "%d%02d%02d %02d:%02d:%02d" %u %u
+0x1800b6070: # Your alt-svc cache. https://curl.se/docs/alt-svc.html
+0x1800b60a8: # This file was generated by libcurl! Edit at your own risk.
+0x1800b60e8: Excessive alt-svc header, ignoring.
+0x1800b6118: 0123456789abcdefABCDEF:.
+0x1800b6138: Excessive alt-svc hostname, ignoring.
+0x1800b6160: Unknown alt-svc port number, ignoring.
+0x1800b6190: persist
+0x1800b6198: Added alt-svc: %s:%d over %s
+0x1800b61b8: max-age=
+0x1800b61c8: includesubdomains
+0x1800b61e0: %d%02d%02d %02d:%02d:%02d
+0x1800b6200: unlimited
+0x1800b6210: %s%s "%d%02d%02d %02d:%02d:%02d"
+0x1800b6238: %s%s "%s"
+0x1800b6250: # Your HSTS cache. https://curl.se/docs/hsts.html
+0x1800b6282: # This file was generated by libcurl! Edit at your own risk.
+0x1800b62c0: %256s "%64[^"]"
+0x1800b62d0: 0123456789abcdefghijklmnopqrstuvwxyz
+0x1800b62f8: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0x1800b6360:  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
+0x1800b6460:  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+0x1800b6550: ifhost!
+0x1800b6568: TCP-ACCEPT
+0x1800b6578: Could not set TCP_NODELAY: %s
+0x1800b6598: Failed to set SO_KEEPALIVE on fd %qd: errno %d
+0x1800b65c8: Failed to set TCP_KEEPIDLE on fd %qd: errno %d
+0x1800b65f8: Failed to set TCP_KEEPINTVL on fd %qd: errno %d
+0x1800b6628: Failed to set TCP_KEEPCNT on fd %qd: errno %d
+0x1800b6658: Couldn't bind to interface '%s' with errno %d: %s
+0x1800b6690: Local Interface %s is ip %s using address family %i
+0x1800b66c8: Name '%s' family %i resolved to '%s' family %i
+0x1800b66f8: Couldn't bind to '%s' with errno %d: %s
+0x1800b6720: Local port: %hu
+0x1800b6730: Bind to local port %d failed, trying next
+0x1800b6760: bind failed with errno %d: %s
+0x1800b6780: Immediate connect fail for %s: %s
+0x1800b67a8: cf_socket_close(%qd)
+0x1800b67c0: cf_socket_shutdown(%qd)
+0x1800b67d8: getsockname() failed with errno %d: %s
+0x1800b6800: ssloc inet_ntop() failed with errno %d: %s
+0x1800b6830: sa_addr inet_ntop() failed with errno %d: %s
+0x1800b6860:   Trying [%s]:%d...
+0x1800b6878:   Trying %s:%d...
+0x1800b6890: cf_socket_open() -> %d, fd=%qd
+0x1800b68b0: local address %s port %d...
+0x1800b68d0: not connected yet
+0x1800b68e8: connected
+0x1800b68f8: connect to %s port %u from %s port %d failed: %s
+0x1800b6930: adjust_pollset, listening, POLLIN fd=%qd
+0x1800b6960: adjust_pollset, !connected, POLLOUT fd=%qd
+0x1800b6990: adjust_pollset, !active, POLLIN fd=%qd
+0x1800b69b8: Send failure: %s
+0x1800b69d0: send(len=%zu) -> %d, err=%d
+0x1800b69f0: Recv failure: %s
+0x1800b6a08: recv(len=%zu) -> %d, err=%d
+0x1800b6a28: is_alive: poll error, assume dead
+0x1800b6a50: is_alive: poll timeout, assume alive
+0x1800b6a78: is_alive: err/hup/etc events, assume dead
+0x1800b6aa8: is_alive: valid events, looks alive
+0x1800b6ad8: %s socket %qd connected: [%s:%d] -> [%s:%d]
+0x1800b6b08: cf_udp_connect(), open failed -> %d
+0x1800b6b30: cf_udp_connect(), opened socket=%qd (%s:%d)
+0x1800b6b60: cf_udp_connect(), opened socket=%qd (unconnected)
+0x1800b6b98: Curl_conn_tcp_listen_set(%qd)
+0x1800b6bb8: getpeername() failed with errno %d: %s
+0x1800b6be0: ssrem inet_ntop() failed with errno %d: %s
+0x1800b6c10: accepted_set(sock=%qd, remote=%s port=%d)
+0x1800b6cc0: identity
+0x1800b6cd8: ce-error
+0x1800b6cf0: Unrecognized content encoding type. libcurl understands %s content encodings.
+0x1800b6d40: transfer
+0x1800b6d50: content
+0x1800b6d58: looking for %s decoder: %.*s
+0x1800b6d78: chunked
+0x1800b6d80: decoder not requested, ignored: %.*s
+0x1800b6da8: Reject response due to more than %u content encodings
+0x1800b6de0: ignoring duplicate 'chunked' decoder
+0x1800b6e10: Reject response due to 'chunked' not being the last Transfer-Encoding
+0x1800b6e58: added %s decoder %s -> %d
+0x1800b6e78: The requested document is not new enough
+0x1800b6ea8: The requested document is not old enough
+0x1800b6ed8: we are done reading and this is set to close, stop send
+0x1800b6f10: transfer closed with %lld bytes remaining to read
+0x1800b6f48: No URL set
+0x1800b6f58: cannot mix POSTFIELDS with RESUME_FROM
+0x1800b6f80: User-Agent: %s
+0x1800b6f98: The redirect target URL could not be parsed: %s
+0x1800b6fc8: Clear auth, redirects to port from %u to %u
+0x1800b6ff8: Clear auth, redirects scheme from %s to %s
+0x1800b7028: Maximum (%ld) redirects followed
+0x1800b7050: Issue another request to this URL: '%s'
+0x1800b7078: Switch from POST to GET
+0x1800b7090: Switch to %s
+0x1800b70a0: REFUSED_STREAM, retrying a fresh connect
+0x1800b70d0: Connection died, tried %d times before giving up
+0x1800b7108: Connection died, retrying a fresh connect (retry count: %d)
+0x1800b7148: xfer_write_resp(len=%zu, eos=%d) -> %d
+0x1800b7178: Hostname in DNS cache was stale, zapped
+0x1800b71a0: Hostname in DNS cache does not have needed family, zapped
+0x1800b71e0: Shuffling %i addresses
+0x1800b71fc: .onion
+0x1800b7208: .onion.
+0x1800b7210: Not resolving .onion address (RFC 7686)
+0x1800b7238: Hostname %s was found in DNS cache
+0x1800b7260: .localhost
+0x1800b7270: Bad syntax CURLOPT_RESOLVE removal entry '%s'
+0x1800b72a0: Resolve address '%s' found illegal
+0x1800b72c8: Couldn't parse CURLOPT_RESOLVE entry '%s'
+0x1800b72f8: RESOLVE %.*s:%d - old addresses discarded
+0x1800b7328:  (non-permanent)
+0x1800b7340: Added %.*s:%d:%s to DNS cache%s
+0x1800b7360: RESOLVE *:%d using wildcard
+0x1800b737c: (none)
+0x1800b7388: Host %s:%d was resolved.
+0x1800b73a8: too many IP, cannot show
+0x1800b73c8: IPv6: %s
+0x1800b73d8: IPv4: %s
+0x1800b7420: Transfer-Encoding
+0x1800b7438: Proxy-Connection
+0x1800b7450: Upgrade
+0x1800b7458: Connection
+0x1800b7468: Keep-Alive
+0x1800b7618: cr-exp100
+0x1800b7630: %sAuthorization: Basic %s
+0x1800b7650: Authorization: Bearer %s
+0x1800b7670: Need to rewind upload for next request
+0x1800b76a0: NEGOTIATE
+0x1800b76b0:  send, 
+0x1800b76b8: %s%sclose instead of sending %lld more bytes
+0x1800b76e8: %s%sclose instead of sending unknown amount of more bytes
+0x1800b7728: Forcing HTTP/1.1 for NTLM
+0x1800b7748: The requested URL returned error: %d
+0x1800b7770: AWS_SIGV4
+0x1800b7780: Negotiate
+0x1800b7798: Proxy-authorization
+0x1800b77b0: Authorization
+0x1800b77c8: Bearer
+0x1800b77d8: Server
+0x1800b77e0: %s auth using %s with user '%s'
+0x1800b7800: Authentication problem. Ignoring this.
+0x1800b7828: Ignoring duplicate digest auth header.
+0x1800b7850: Empty reply from server
+0x1800b7878: Content-Type:
+0x1800b7888: Content-Length:
+0x1800b7898: Connection:
+0x1800b78a8: Transfer-Encoding:
+0x1800b78c0: Authorization:
+0x1800b78d0: Cookie:
+0x1800b78e0: Invalid TIMEVALUE
+0x1800b78f8: If-Modified-Since
+0x1800b7910: If-Unmodified-Since
+0x1800b7928: Last-Modified
+0x1800b7938: %s: %s, %02d %s %4d %02d:%02d:%02d GMT
+0x1800b7968: User-Agent
+0x1800b7978: Host:%s
+0x1800b7988: Host: %s%s%s
+0x1800b7998: Host: %s%s%s:%d
+0x1800b79b0: ;type=
+0x1800b79b8: ;type=%c
+0x1800b79c8: Unable to resume from offset %lld
+0x1800b79f0: suppressing chunked transfer encoding on connection using HTTP version 2 or higher
+0x1800b7a48: Chunky upload is not supported by HTTP 1.0
+0x1800b7a78: Transfer-Encoding: chunked
+0x1800b7a98: Expect
+0x1800b7aa0: 100-continue
+0x1800b7ab0: Expect:
+0x1800b7ab8: Expect: 100-continue
+0x1800b7ad0: Content-Length
+0x1800b7ae0: Content-Length: %lld
+0x1800b7af8: Content-Type: application/x-www-form-urlencoded
+0x1800b7b2c: Cookie
+0x1800b7b38: Cookie: 
+0x1800b7b48: Restricted outgoing cookies due to header size, '%s' not sent
+0x1800b7b90: %s%s=%s
+0x1800b7ba8: Range: bytes=%s
+0x1800b7bc0: Content-Range
+0x1800b7bd0: Content-Range: bytes 0-%lld/%lld
+0x1800b7bf8: Content-Range: bytes %s%lld/%lld
+0x1800b7c20: Content-Range: bytes %s/%lld
+0x1800b7c40: Ignoring the response-body
+0x1800b7c60: The entire document is already downloaded
+0x1800b7c90: HTTP server does not seem to support byte ranges. Cannot resume.
+0x1800b7cd8: Simulate an HTTP 304 response
+0x1800b7d00: Referer
+0x1800b7d08: Referer: %s
+0x1800b7d18: Accept-Encoding
+0x1800b7d28: Accept-Encoding: %s
+0x1800b7d40: Accept
+0x1800b7d48: Accept: */*
+0x1800b7d60: Alt-Used
+0x1800b7d70: Alt-Used: %s:%d
+0x1800b7d88: Proxy-Connection: Keep-Alive
+0x1800b7da8:  HTTP/%s
+0x1800b7db2: %s%s%s%s%s%s%s%s%s%s%s%s
+0x1800b7dd0: HTTP request too large
+0x1800b7df8: Alt-Svc:
+0x1800b7e08: Overflow Content-Length: value
+0x1800b7e28: Invalid Content-Length: value
+0x1800b7e48: Content-Encoding:
+0x1800b7e60: keep-alive
+0x1800b7e70: HTTP/1.0 connection set to keep alive
+0x1800b7e98: Content-Range:
+0x1800b7ea8: Last-Modified:
+0x1800b7eb8: Location:
+0x1800b7ec8: Proxy-Connection:
+0x1800b7ee0: HTTP/1.0 proxy connection set to keep alive
+0x1800b7f10: HTTP/1.1 proxy connection set close
+0x1800b7f38: Proxy-authenticate:
+0x1800b7f50: Persistent-Auth:
+0x1800b7f68: Negotiate: noauthpersist -> %d, header part: %s
+0x1800b7f98: Retry-After:
+0x1800b7fa8: Strict-Transport-Security:
+0x1800b7fc8: Illegal STS header skipped
+0x1800b7fe8: Trailer:
+0x1800b7ff8: WWW-Authenticate:
+0x1800b8010: Version mismatch (from HTTP/%u to HTTP/%u)
+0x1800b8040: Unsupported HTTP version (%u.%d) in response
+0x1800b8070: HTTP 1.0, assume close after body
+0x1800b8098: Nul byte in header
+0x1800b80b0: Header without colon
+0x1800b80c8: Too large response headers: %zu > %u
+0x1800b80f0: Lying server, not serving HTTP/2
+0x1800b8118: Unsupported response code in HTTP response
+0x1800b8148: unexpected 101 response code
+0x1800b8168: Received 101, Switching to HTTP/2
+0x1800b8190: no chunk, no close, no size. Assume close to signal end
+0x1800b81c8: Connection closure while negotiating auth (HTTP 1.0?)
+0x1800b8200: Got HTTP failure 417 while waiting for a 100
+0x1800b8230: Got HTTP failure 417 while sending data
+0x1800b8258: HTTP error before end of send, keep sending
+0x1800b8288: HTTP error before end of send, stop sending
+0x1800b82b8: Keep sending data to get tossed away
+0x1800b82e0: Unsupported HTTP/1 subversion in response
+0x1800b8310: Unsupported HTTP version in response
+0x1800b8338: Invalid status line
+0x1800b8350: Received HTTP/0.9 when not allowed
+0x1800b8378: CONNECT
+0x1800b8380: Done waiting for 100-continue
+0x1800b83a8: total 
+0x1800b83b0: rwx-tTsS
+0x1800b83c0: 0123456789-
+0x1800b83d0: APM0123456789:
+0x1800b83e8: --:--:--
+0x1800b83f8: %2lld:%02lld:%02lld
+0x1800b8410: %3lldd %02lldh
+0x1800b8420: %7lldd
+0x1800b8430: %4lldk
+0x1800b8438: %2lld.%0lldM
+0x1800b8448: %4lldM
+0x1800b8450: %2lld.%0lldG
+0x1800b8460: %4lldG
+0x1800b8468: %4lldT
+0x1800b8470: %4lldP
+0x1800b8478: ** Resuming transfer from byte position %lld
+0x1800b84b0:   %% Total    %% Received %% Xferd  Average Speed   Time    Time     Time  Current
+0x1800b8503:                                  Dload  Upload   Total   Spent    Left  Speed
+0x1800b8559: %3lld %s  %3lld %s  %3lld %s  %s  %s %s %s %s %s
+0x1800b8590: Callback aborted
+0x1800b85af: @Operation too slow. Less than %ld bytes/sec transferred the last %ld seconds
+0x1800b8a9c: Monday
+0x1800b8aa8: Tuesday
+0x1800b8ab0: Wednesday
+0x1800b8ac0: Thursday
+0x1800b8acc: Friday
+0x1800b8ad8: Saturday
+0x1800b8ae4: Sunday
+0x1800b8af8: %s%s.tmp
+0x1800b8b80: Bad label
+0x1800b8b90: Out of range
+0x1800b8ba0: Label loop
+0x1800b8bb0: Too small
+0x1800b8bc0: RDATA length
+0x1800b8bd0: Malformat
+0x1800b8be0: Bad RCODE
+0x1800b8bf0: Unexpected TYPE
+0x1800b8c00: Unexpected CLASS
+0x1800b8c18: No content
+0x1800b8c24: Bad ID
+0x1800b8c30: bad error code
+0x1800b8c40: a DoH request is completed, %u to go
+0x1800b8c68: DoH request %s
+0x1800b8c78: Failed to encode DoH packet [%d]
+0x1800b8ca0: Content-Type: application/dns-message
+0x1800b8cc8: [DoH] TTL: %u seconds
+0x1800b8ce0: [DoH] A: %u.%u.%u.%u
+0x1800b8cf8: [DoH] AAAA: 
+0x1800b8d08: %s%02x%02x
+0x1800b8d18: CNAME: %s
+0x1800b8d30: Could not DoH-resolve: %s
+0x1800b8d50: DoH: %s type %s for %s
+0x1800b8d68: [DoH] hostname: %s
+0x1800b8d80: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+0x1800b8dc8: Negotiate auth restarted
+0x1800b8df0: Curl_output_negotiate, no persistent authentication: cleanup existing context
+0x1800b8e40: %sAuthorization: Negotiate %s
+0x1800b8e60: NTLM auth restarted
+0x1800b8e78: NTLM handshake rejected
+0x1800b8e90: NTLM handshake failure (internal error)
+0x1800b8eb8: %sAuthorization: NTLM %s
+0x1800b92c0: CALG_MD2
+0x1800b92d0: CALG_MD4
+0x1800b92e0: CALG_MD5
+0x1800b92f0: CALG_SHA
+0x1800b9300: CALG_SHA1
+0x1800b9310: CALG_MAC
+0x1800b9320: CALG_RSA_SIGN
+0x1800b9330: CALG_DSS_SIGN
+0x1800b9340: CALG_NO_SIGN
+0x1800b9350: CALG_RSA_KEYX
+0x1800b9360: CALG_DES
+0x1800b9370: CALG_3DES_112
+0x1800b9380: CALG_3DES
+0x1800b9390: CALG_DESX
+0x1800b93a0: CALG_RC2
+0x1800b93b0: CALG_RC4
+0x1800b93c0: CALG_SEAL
+0x1800b93d0: CALG_DH_SF
+0x1800b93e0: CALG_DH_EPHEM
+0x1800b93f0: CALG_AGREEDKEY_ANY
+0x1800b9408: CALG_HUGHES_MD5
+0x1800b9418: CALG_SKIPJACK
+0x1800b9428: CALG_TEK
+0x1800b9438: CALG_CYLINK_MEK
+0x1800b9448: CALG_SSL3_SHAMD5
+0x1800b9460: CALG_SSL3_MASTER
+0x1800b9478: CALG_SCHANNEL_MASTER_HASH
+0x1800b9498: CALG_SCHANNEL_MAC_KEY
+0x1800b94b0: CALG_SCHANNEL_ENC_KEY
+0x1800b94c8: CALG_PCT1_MASTER
+0x1800b94e0: CALG_SSL2_MASTER
+0x1800b94f8: CALG_TLS1_MASTER
+0x1800b9510: CALG_RC5
+0x1800b9520: CALG_HMAC
+0x1800b9530: CALG_TLS1PRF
+0x1800b9540: CALG_HASH_REPLACE_OWF
+0x1800b9558: CALG_AES_128
+0x1800b9568: CALG_AES_192
+0x1800b9578: CALG_AES_256
+0x1800b9588: CALG_AES
+0x1800b9598: CALG_SHA_256
+0x1800b95a8: CALG_SHA_384
+0x1800b95b8: CALG_SHA_512
+0x1800b95c8: CALG_ECDH
+0x1800b95d8: CALG_ECMQV
+0x1800b95e8: CALG_ECDSA
+0x1800b95f8: CALG_ECDH_EPHEM
+0x1800b9608: schannel
+0x1800b9618: schannel: TLS 1.3 not supported on Windows prior to 11
+0x1800b9650: USE_STRONG_CRYPTO
+0x1800b9668: SCH_USE_STRONG_CRYPTO
+0x1800b9680: CurrentUser
+0x1800b9690: LocalMachine
+0x1800b96a0: CurrentService
+0x1800b96b0: Services
+0x1800b96c8: CurrentUserGroupPolicy
+0x1800b96e0: LocalMachineGroupPolicy
+0x1800b96f8: LocalMachineEnterprise
+0x1800b9710: schannel: disabled automatic use of client certificate
+0x1800b9748: schannel: enabled automatic use of client certificate
+0x1800b9780: SSL versions not supported
+0x1800b97a0: Unrecognized parameter passed via CURLOPT_SSLVERSION
+0x1800b97d8: schannel: Failed to get certificate location or file for %s
+0x1800b9818: (memory blob)
+0x1800b9828: schannel: certificate format compatibility error  for %s
+0x1800b9868: schannel: Failed to read cert file %s
+0x1800b9890: schannel: Failed to import cert file %s, password is bad
+0x1800b98d0: schannel: Failed to import cert file %s, last error is 0x%lx
+0x1800b9910: schannel: Failed to get certificate from file %s, last error is 0x%lx
+0x1800b9960: schannel: Failed to open cert store %lx %s, last error is 0x%lx
+0x1800b99a0: schannel: unable to allocate memory
+0x1800b99c8: TLS_AES_256_GCM_SHA384
+0x1800b99e0: TLS_AES_128_GCM_SHA256
+0x1800b99f8: TLS_CHACHA20_POLY1305_SHA256
+0x1800b9a18: TLS_AES_128_CCM_8_SHA256
+0x1800b9a38: TLS_AES_128_CCM_SHA256
+0x1800b9a50: schannel: Unknown TLS 1.3 cipher: %.*s
+0x1800b9a78: schannel: All available TLS 1.3 ciphers were disabled
+0x1800b9b30: Microsoft Unified Security Protocol Provider
+0x1800b9b60: schannel: WARNING: This version of Schannel may negotiate a less-secure TLS version than TLS 1.3 because the user set an algorithm cipher list.
+0x1800b9bf0: schannel: This version of Schannel does not support setting an algorithm cipher list and TLS 1.3 cipher list at the same time
+0x1800b9c70: schannel: Failed setting algorithm cipher list
+0x1800b9ca0: schannel: AcquireCredentialsHandle failed: %s
+0x1800b9cd0: schannel: Windows version is old and may not be able to connect to some servers due to lack of SNI, algorithms, etc.
+0x1800b9d48: wine_get_version
+0x1800b9d70: schannel: this version of Windows is too old to support certificate verification via CA bundle file.
+0x1800b9dd8: schannel: using IP address, SNI is not supported by OS.
+0x1800b9e10: Error setting ALPN
+0x1800b9e28: ALPN: curl offers %s
+0x1800b9e40: schannel: initial InitializeSecurityContext failed: %s
+0x1800b9e78: schannel: SNI or certificate check failed: %s
+0x1800b9eb0: schannel: failed to send initial handshake data: sent %zd of %lu bytes
+0x1800b9ef8: schannel: unable to re-allocate memory
+0x1800b9f20: schannel: failed to receive handshake, SSL/TLS connection failed
+0x1800b9f70: schannel: failed to send next handshake data: sent %zd of %lu bytes
+0x1800b9fb8: schannel: next InitializeSecurityContext failed: %s
+0x1800b9ff0: schannel: %s
+0x1800ba000: SSL: public key does not match pinned public key
+0x1800ba038: schannel: failed to setup sequence detection
+0x1800ba068: schannel: failed to setup replay detection
+0x1800ba098: schannel: failed to setup confidentiality
+0x1800ba0c8: schannel: failed to setup memory allocation
+0x1800ba0f8: schannel: failed to setup stream orientation
+0x1800ba128: schannel: failed to retrieve ALPN result
+0x1800ba158: schannel: server selected an ALPN protocol too late
+0x1800ba190: schannel: failed to retrieve remote cert context
+0x1800ba1c8: SSL/TLS connection timeout
+0x1800ba1e8: select/poll on SSL/TLS socket, errno: %d
+0x1800ba218: schannel: timed out sending data (bytes sent: %zd)
+0x1800ba250: schannel: enough decrypted data is already available
+0x1800ba288: schannel: an unrecoverable error occurred in a prior call
+0x1800ba2c8: schannel: server indicated shutdown in a prior call
+0x1800ba300: schannel: recv returned CURLE_RECV_ERROR
+0x1800ba330: schannel: recv returned error %d
+0x1800ba358: schannel: remote party requests renegotiation
+0x1800ba388: schannel: cannot renegotiate, an error is pending
+0x1800ba3c0: schannel: renegotiating SSL/TLS connection
+0x1800ba3f0: schannel: renegotiation failed
+0x1800ba410: schannel: SSL/TLS connection renegotiated
+0x1800ba440: schannel: server close notification received (close_notify)
+0x1800ba480: schannel: failed to decrypt data, need more data
+0x1800ba4b8: schannel: failed to read data from server: %s
+0x1800ba4e8: schannel: server closed abruptly (missing close_notify)
+0x1800ba520: schannel: shutting down SSL/TLS connection with %s port %d
+0x1800ba560: schannel: ApplyControlToken failure: %s
+0x1800ba588: schannel: failed to send close msg: %s (bytes written: %zd)
+0x1800ba5c8: schannel: error sending close msg: %d
+0x1800ba5f0: SSL shutdown, error %d
+0x1800ba608: Schannel
+0x1800ba618: schannel: Failed to read remote certificate context: %s
+0x1800ba650: SSL: failed retrieving public key from server certificate
+0x1800ba690: tls:schannel:cert:share
+0x1800ba6b0: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=
+0x1800ba700: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
+0x1800ba754: ?456789:;<=
+0x1800ba78c:  !"#$%&'()*+,-./01230123456789
+0x1800ba7b0: 0123456789abcdef
+0x1800ba7c8: 0123456789ABCDEF
+0x1800ba880: /MATCH:
+0x1800ba88c: /FIND:
+0x1800ba898: lookup word is missing
+0x1800ba8b0: default
+0x1800ba8c0: CLIENT libcurl 8.10.1-DEV
+0x1800ba8db: MATCH %s %s %s
+0x1800ba8f8: Failed sending DICT request
+0x1800ba918: /DEFINE:
+0x1800ba928: /LOOKUP:
+0x1800ba938: CLIENT libcurl 8.10.1-DEV
+0x1800ba953: DEFINE %s %s
+0x1800ba968: CLIENT libcurl 8.10.1-DEV
+0x1800bac10: BINARY
+0x1800bac28: SUPPRESS GO AHEAD
+0x1800bac44: STATUS
+0x1800bac50: TIMING MARK
+0x1800bac74: NAOCRD
+0x1800bac7c: NAOHTS
+0x1800bac84: NAOHTD
+0x1800bac8c: NAOFFD
+0x1800bac94: NAOVTS
+0x1800bac9c: NAOVTD
+0x1800baca4: NAOLFD
+0x1800bacb0: EXTEND ASCII
+0x1800bacc0: LOGOUT
+0x1800bacc8: BYTE MACRO
+0x1800bacd8: DE TERMINAL
+0x1800bace4: SUPDUP
+0x1800bacf0: SUPDUP OUTPUT
+0x1800bad00: SEND LOCATION
+0x1800bad10: TERM TYPE
+0x1800bad20: END OF RECORD
+0x1800bad30: TACACS UID
+0x1800bad40: OUTPUT MARKING
+0x1800bad50: TTYLOC
+0x1800bad58: 3270 REGIME
+0x1800bad64: X3 PAD
+0x1800bad78: TERM SPEED
+0x1800bad90: LINEMODE
+0x1800bada0: XDISPLOC
+0x1800badb0: OLD-ENVIRON
+0x1800badc0: AUTHENTICATION
+0x1800badd0: ENCRYPT
+0x1800badd8: NEW-ENVIRON
+0x1800bae4c: telnet
+0x1800bae58: %s IAC %s
+0x1800bae68: %s IAC %d
+0x1800bae80: %s %s %s
+0x1800bae90: %s %s %d
+0x1800baea0: %s %d %d
+0x1800baeb0: Sending data failed (%d)
+0x1800baee0: %s IAC SB 
+0x1800baef0: (terminated by 
+0x1800baf08: , not IAC SE) 
+0x1800baf18: (Empty suboption?)
+0x1800baf30: %s (unsupported)
+0x1800baf48: %d (unknown)
+0x1800baf58: Width: %d ; Height: %d
+0x1800baf80:  INFO/REPLY
+0x1800bafb0: USER,%s
+0x1800bafc0: NEW_ENV
+0x1800bafd0: Syntax error in telnet option: %s
+0x1800baff8: Unknown telnet option %s
+0x1800bb018: %c%c%c%c%s%c%c
+0x1800bb028: %c%c%c%c
+0x1800bb040: %c%.*s%c%s
+0x1800bb058: In SUBOPTION processing, RCVD
+0x1800bb080: WSACreateEvent failed (%d)
+0x1800bb0a0: WSAEnumNetworkEvents failed (%d)
+0x1800bb0c8: Time-out
+0x1800bb0d8: WSACloseEvent failed (%d)
+0x1800bb1a0: set timeouts for state %d; Total % lld, retry %d maxtry %d
+0x1800bb1e0: Malformed ACK packet, rejecting
+0x1800bb200: got option=(%s) value=(%s)
+0x1800bb220: blksize
+0x1800bb228: invalid blocksize value in OACK packet
+0x1800bb250: blksize is larger than max supported
+0x1800bb278: %s (%d)
+0x1800bb280: blksize is smaller than min supported
+0x1800bb2a8: server requested blksize larger than allocated
+0x1800bb2d8: %s (%ld)
+0x1800bb2e8: requested
+0x1800bb2f8: blksize parsed from OACK
+0x1800bb318: %s (%d) %s (%d)
+0x1800bb330: tsize parsed from OACK
+0x1800bb348: invalid tsize -:%s:- value in OACK packet
+0x1800bb378: Connected for transmit
+0x1800bb390: Connected for receive
+0x1800bb3b0: netascii
+0x1800bb3c0: TFTP filename too long
+0x1800bb3d8: %s%c%s%c
+0x1800bb3f0: timeout
+0x1800bb3f8: TFTP buffer too small for options
+0x1800bb420: tftp_send_first: internal error
+0x1800bb440: Received last DATA packet block %d again.
+0x1800bb470: Received unexpected DATA packet block %d, expecting block %d
+0x1800bb4b0: Timeout waiting for block %d ACK. Retries = %d
+0x1800bb4e0: tftp_rx: internal error
+0x1800bb4f8: Received ACK for block %d, expecting %d
+0x1800bb520: tftp_tx: giving up waiting for block %d ack
+0x1800bb550: Timeout waiting for block %d ACK.  Retries = %d
+0x1800bb580: tftp_tx: internal error, event: %i
+0x1800bb5a8: TFTP finished
+0x1800bb5b8: Internal state machine error
+0x1800bb5d8: bind() failed; %s
+0x1800bb5f0: Received too short packet
+0x1800bb610: TFTP error: %s
+0x1800bb620: Internal error: Unexpected packet
+0x1800bb644: ;mode=
+0x1800bb798: Microsoft Corporation.
+0x1800bb7b0: LDAP local: LDAP Vendor = %s ; LDAP Version = %d
+0x1800bb7e8: LDAP local: %s
+0x1800bb7f8: Bad LDAP URL: %s
+0x1800bb810: encrypted
+0x1800bb820: cleartext
+0x1800bb830: LDAP local: trying to establish %s connection
+0x1800bb860: LDAP local: explicit TLS not supported
+0x1800bb888: LDAP local: Cannot connect to %s:%u
+0x1800bb8b0: LDAP local: bind via ldap_win_bind %s
+0x1800bb8d8: LDAP remote: %s
+0x1800bb8f0: ;binary
+0x1800bb8f8: There are more than %d entries
+0x1800bb920: onetree
+0x1800bb938: subtree
+0x1800bba88: gopher
+0x1800bba90: gophers
+0x1800bba98: Failed sending Gopher request
+0x1800bbc48: CAPABILITY
+0x1800bbc6c: SELECT
+0x1800bbc78: EXAMINE
+0x1800bbc80: SEARCH
+0x1800bbc88: EXPUNGE
+0x1800bbca0: GETQUOTAROOT
+0x1800bbcb8: Unexpected continuation response
+0x1800bbce0: STARTTLS
+0x1800bbcf0: LOGIN %s %s
+0x1800bbd00: AUTHENTICATE %s %s
+0x1800bbd18: AUTHENTICATE %s
+0x1800bbd28: No known authentication mechanisms supported
+0x1800bbd58: LIST "%s" *
+0x1800bbd68: Cannot SELECT without a mailbox.
+0x1800bbd90: SELECT %s
+0x1800bbda0: UID FETCH %s BODY[%s]<%s>
+0x1800bbdc0: UID FETCH %s BODY[%s]
+0x1800bbdd8: FETCH %s BODY[%s]<%s>
+0x1800bbdf0: FETCH %s BODY[%s]
+0x1800bbe08: Cannot FETCH without a UID.
+0x1800bbe28: Cannot APPEND without a mailbox.
+0x1800bbe50: Mime-Version
+0x1800bbe60: Mime-Version: 1.0
+0x1800bbe78: Cannot APPEND with unknown input file size
+0x1800bbea8: APPEND %s (\Seen) {%lld}
+0x1800bbec8: Cannot SEARCH without a query string.
+0x1800bbef0: SEARCH %s
+0x1800bbf00: PREAUTH connection, already authenticated
+0x1800bbf30: Got unexpected imap-server response
+0x1800bbf60: STARTTLS not available.
+0x1800bbf78: STARTTLS denied
+0x1800bbf88: Authentication cancelled
+0x1800bbfa8: Access denied. %c
+0x1800bbfc0: OK [UIDVALIDITY 
+0x1800bbfd8: Mailbox UIDVALIDITY has changed
+0x1800bbff8: Select failed
+0x1800bc008: Found %lld bytes to download
+0x1800bc028: Written %zu bytes, %llu bytes are left for transfer
+0x1800bc060: Failed to parse FETCH response.
+0x1800bc080: %c%03d
+0x1800bc090: () {%*]\"
+0x1800bc0a0: AUTH=+LOGIN
+0x1800bc0b0: UIDVALIDITY
+0x1800bc0c0: MAILINDEX
+0x1800bc0d0: SECTION
+0x1800bc0d8: PARTIAL
+0x1800bc408: USER %s
+0x1800bc418: APOP %s %s
+0x1800bc428: AUTH %s %s
+0x1800bc438: AUTH %s
+0x1800bc440: Got unexpected pop3-server response
+0x1800bc468: STLS not supported.
+0x1800bc480: Authentication failed: %d
+0x1800bc4a0: PASS %s
+0x1800bc720: SERVERGREET
+0x1800bc740: UPGRADETLS
+0x1800bc750: COMMAND
+0x1800bc770: POSTDATA
+0x1800bc780: cr-smtp-eob
+0x1800bc790: state change from %s to %s
+0x1800bc7b0: EHLO %s
+0x1800bc7b8: HELO %s
+0x1800bc7c0:  SMTPUTF8
+0x1800bc7d0: VRFY %s%s%s%s
+0x1800bc7e8: %s %s%s
+0x1800bc7f8: <%s@%s>
+0x1800bc80c:  SIZE=
+0x1800bc814:  AUTH=
+0x1800bc820: MAIL FROM:%s%s%s%s%s%s
+0x1800bc838: RCPT TO:<%s@%s>
+0x1800bc848: RCPT TO:<%s>
+0x1800bc858: Got unexpected smtp-server response: %d
+0x1800bc880: STARTTLS denied, code %d
+0x1800bc8a0: Remote access denied: %d
+0x1800bc8c0: STARTTLS not supported.
+0x1800bc8d8: Unexpectedly short EHLO response
+0x1800bc900: Command failed: %d
+0x1800bc918: MAIL failed: %d
+0x1800bc928: RCPT failed: %d
+0x1800bc938: RCPT failed: %d (last error)
+0x1800bc958: DATA failed: %d
+0x1800bc968: smtp_done(status=%d, premature=%d) -> %d
+0x1800bc998: smtp_perform(), start
+0x1800bc9b0: smtp_perform() -> %d, connected=%d, done=%d
+0x1800bc9e0: smtp_do() -> %d, done=%d
+0x1800bca00: smtp_disconnect(), finished
+0x1800bca20: smtp_doing() -> %d, done=%d
+0x1800bca40: smtp_regular_transfer() -> %d, done=%d
+0x1800bca68: smtp_setup_connection() -> %d
+0x1800bcd48: WAIT220
+0x1800bcd78: NAMEFMT
+0x1800bcd88: RETR_PREQUOTE
+0x1800bcd98: STOR_PREQUOTE
+0x1800bcda8: POSTQUOTE
+0x1800bcdd0: LIST_TYPE
+0x1800bcde0: RETR_TYPE
+0x1800bcdf0: STOR_TYPE
+0x1800bce08: RETR_SIZE
+0x1800bce18: STOR_SIZE
+0x1800bce30: RETR_REST
+0x1800bce68: ftp-lineconv
+0x1800bce80: [%s] -> [%s]
+0x1800bce90: [%s] closing DATA connection
+0x1800bceb0: Error accept()ing server connect
+0x1800bced8: Connection accepted from server
+0x1800bcef8: Checking for server connect
+0x1800bcf18: Accept timeout occurred while waiting server connect
+0x1800bcf50: There is negative response in cache while serv connect
+0x1800bcf88: Error while waiting for server connect
+0x1800bcfb0: Ready to accept data connection from server
+0x1800bcfe0: Ctrl conn has data while waiting for data conn
+0x1800bd010: Got 226 before data activity
+0x1800bd030: FTP code: %03d
+0x1800bd040: InitiateTransfer()
+0x1800bd058: Preparing for accepting server on data port
+0x1800bd088: AllowServerConnect() -> %d
+0x1800bd0a8: We got a 421 - timeout
+0x1800bd0c0: getFTPResponse start
+0x1800bd0d8: FTP response timeout
+0x1800bd0f0: FTP response aborted due to select/poll error: %d
+0x1800bd128: getFTPResponse -> result=%d, nread=%zd, ftpcode=%d
+0x1800bd160: [%s] ftp_domore_getsock()
+0x1800bd17c: CWD %s
+0x1800bd188: getsockname() failed: %s
+0x1800bd1a8: failed to resolve the address provided to PORT: %s
+0x1800bd1e0: socket failure: %s
+0x1800bd1f8: [%s] ftp_state_use_port(), opened socket
+0x1800bd228: bind(port=%hu) on non-local address failed: %s
+0x1800bd258: bind(port=%hu) failed: %s
+0x1800bd278: bind() failed, we ran out of ports
+0x1800bd2a0: [%s] ftp_state_use_port(), socket bound to port %d
+0x1800bd2d8: [%s] ftp_state_use_port(), listening on %d
+0x1800bd308: %s |%d|%s|%hu|
+0x1800bd318: Failure sending EPRT command: %s
+0x1800bd33c: ,%d,%d
+0x1800bd348: Failure sending PORT command: %s
+0x1800bd370: Connect data stream passively
+0x1800bd398: PRET %s
+0x1800bd3a0: PRET STOR %s
+0x1800bd3b0: PRET RETR %s
+0x1800bd3c0: REST %d
+0x1800bd3c8: SIZE %s
+0x1800bd3d0: MDTM %s
+0x1800bd3d8: Failed to read data
+0x1800bd3f0: APPE %s
+0x1800bd3f8: STOR %s
+0x1800bd400: RETR %s
+0x1800bd408: Failed EPSV attempt, exiting
+0x1800bd428: Failed EPSV attempt. Disabling EPSV
+0x1800bd450: Illegal port number in EPSV reply
+0x1800bd478: Weirdly formatted EPSV reply
+0x1800bd498: Couldn't interpret the 227-response
+0x1800bd4c0: Skip %u.%u.%u.%u for data connection, reuse %s instead
+0x1800bd4f8: %u.%u.%u.%u
+0x1800bd508: Bad PASV/EPSV response: %03d
+0x1800bd528: cannot resolve proxy host %s:%hu
+0x1800bd550: cannot resolve new host %s:%hu
+0x1800bd570: disabling EPRT usage
+0x1800bd588: Failed to do PORT
+0x1800bd5a0: Connect data stream actively
+0x1800bd5c0: %04d%02d%02d %02d:%02d:%02d GMT
+0x1800bd5e0: Last-Modified: %s, %02d %s %4d %02d:%02d:%02d GMT
+0x1800bd618: unsupported MDTM reply format
+0x1800bd640: MDTM failed: file does not exist or permission problem, continuing
+0x1800bd688: Skipping time comparison
+0x1800bd6a8: Couldn't set desired mode
+0x1800bd6c8: Got a %03d response code instead of the assumed 200
+0x1800bd700: [%s] ftp_state_retr()
+0x1800bd718: ftp server does not support SIZE
+0x1800bd740: Offset (%lld) was beyond file size (%lld)
+0x1800bd770: File already completely downloaded
+0x1800bd798: Instructs server to resume from offset %lld
+0x1800bd7c8: REST %lld
+0x1800bd7d8: The file does not exist
+0x1800bd7f0: Accept-ranges: bytes
+0x1800bd808: Couldn't use REST
+0x1800bd820: Failed FTP upload: %0d
+0x1800bd838: Data conn was not available immediately
+0x1800bd860:  bytes
+0x1800bd868: Maxdownload = %lld
+0x1800bd880: Getting file with size: %lld
+0x1800bd8a0: RETR response: %03d
+0x1800bd8b8: PBSZ %d
+0x1800bd8c0: ACCT %s
+0x1800bd8c8: ACCT requested but none available
+0x1800bd8f0: Access denied: %03d
+0x1800bd908: ACCT rejected by server: %03d
+0x1800bd928: Got a %03d ftp-server response when 220 was expected
+0x1800bd960: unsupported parameter to CURLOPT_FTPSSLAUTH: %d
+0x1800bd990: PROT %c
+0x1800bd998: Failed to clear the command channel (CCC)
+0x1800bd9c8: Entry path is '%s'
+0x1800bd9e0: Failed to figure out path
+0x1800bda00: [%s] protocol connect phase DONE
+0x1800bda24: OS/400
+0x1800bda30: SITE NAMEFMT 1
+0x1800bda40: QUOT command failed with %03d
+0x1800bda60: MKD %s
+0x1800bda68: Server denied you to change to the given directory
+0x1800bdaa0: Failed to MKD dir: %03d
+0x1800bdab8: PRET command not accepted: %03d
+0x1800bdad8: Remembering we are in dir "%s"
+0x1800bdb00: Failure sending ABOR command: %s
+0x1800bdb28: control connection looks dead
+0x1800bdb48: partial download completed, closing connection
+0x1800bdb78: Exceeded storage allocation
+0x1800bdb98: server did not report OK, got %d
+0x1800bdbc0: Uploaded unaligned file size (%lld out of %lld bytes)
+0x1800bdbf8: Received only partial file: %lld bytes
+0x1800bdc20: No data was received
+0x1800bdc38: [%s] done, result=%d
+0x1800bdc50: QUOT string not accepted: %s
+0x1800bdc70: TYPE %c
+0x1800bdc78: Connecting to %s (%s) port %d
+0x1800bdc98: [%s] DO-MORE phase ends with %d
+0x1800bdcb8: [%s] DO phase starts
+0x1800bdcd0: [FTP] [%s] perform, DATA connection established
+0x1800bdd00: [%s] perform, awaiting DATA connect
+0x1800bdd28: [%s] DO phase is complete1
+0x1800bdd48: Wildcard - Parsing started
+0x1800bdd68: Wildcard - START of "%s"
+0x1800bdd88: Wildcard - "%s" skipped by user
+0x1800bdda8: Failure sending QUIT command: %s
+0x1800bddd0: path contains control characters
+0x1800bddf8: Uploading to a URL without a filename
+0x1800bde20: Request has same path as previous transfer
+0x1800bde50: [%s] DO phase failed
+0x1800bde68: [%s] DO phase is complete2
+0x1800bde88: [%s] setup connection -> %d
+0x1800bdf48: Accept-ranges: bytes
+0x1800bdf60: Couldn't open file %s
+0x1800bdf78: cannot open %s for writing
+0x1800bdf98: cannot get the size of %s
+0x1800bdfb8: cannot get the size of file.
+0x1800bdfd8: failed to resume file:// transfer
+0x1800be000: Directory listing not yet implemented on this platform.
+0x1800be0e0: The CSeq of this request %ld did not match the response %ld
+0x1800be120: Got an RTP Receive with a CSeq of %ld
+0x1800be148: Got invalid RTSP request
+0x1800be168: OPTIONS
+0x1800be170: DESCRIBE
+0x1800be180: ANNOUNCE
+0x1800be1a0: TEARDOWN
+0x1800be1b0: GET_PARAMETER
+0x1800be1c0: SET_PARAMETER
+0x1800be1d0: RECORD
+0x1800be1d8: Got invalid RTSP request: RTSPREQ_LAST
+0x1800be200: Refusing to issue an RTSP request [%s] without a session ID.
+0x1800be240: Transport
+0x1800be250: Transport: %s
+0x1800be260: Refusing to issue an RTSP SETUP without a Transport: header.
+0x1800be2a0: Accept: application/sdp
+0x1800be2c0: Range: %s
+0x1800be2d8: CSeq cannot be set as a custom header.
+0x1800be300: Session
+0x1800be308: Session ID cannot be set as a custom header.
+0x1800be338: %s %s RTSP/1.0
+0x1800be348: CSeq: %ld
+0x1800be358: Session: %s
+0x1800be368: %s%s%s%s%s%s%s%s
+0x1800be380: Content-Type: text/parameters
+0x1800be3a0: Content-Type: application/sdp
+0x1800be3c0: Failed sending RTSP request
+0x1800be3e0: Cannot write a 0 size RTP packet.
+0x1800be408: Cannot pause RTP
+0x1800be420: Failed writing RTP data
+0x1800be440: Unable to read the CSeq header: [%s]
+0x1800be468: Session:
+0x1800be478: Got a blank Session ID
+0x1800be490: Got RTSP Session ID Line [%s], but wanted ID [%s]
+0x1800be4c8: Transport:
+0x1800be4d8: interleaved=
+0x1800be4f0: Unable to read the interleaved parameter from Transport header: [%s]
+0x1800be68c: NT LM 0.12
+0x1800be698: x86_64-pc-win32
+0x1800be6c0: SMB upload needs to know the size up front
+0x1800be6f0: Invalid input packet
+0x1800be708: missing share in URL path for SMB
+0x1800be7d0: Client ID length mismatched: [%zu]
+0x1800be7f8: Using client id '%s'
+0x1800be810: Username is too large: [%zu]
+0x1800be830: Password is too large: [%zu]
+0x1800be858: Expected %02x%02x but got %02x%02x
+0x1800be880: Too long MQTT topic
+0x1800be898: No MQTT topic found. Forgot to URL encode it?
+0x1800be8c8: Got DISCONNECT
+0x1800be8d8: Remaining length: %zu bytes
+0x1800be8f8: EEEE AAAAGAIN
+0x1800be908: server disconnected
+0x1800be920: Error %d sending MQTT CONNECT request
+0x1800be948: mqtt_doing: state [%d]
+0x1800be960: Connection disconnected
+0x1800be978: State not handled yet
+0x1800be990: 0123456789abcdef
+0x1800be9e4: /:#?!@{}[]\$'"^`*<>=;,+&()%
+0x1800bea30: 127.0.0.1/
+0x1800bea40: /\:*?"<>|
+0x1800bea88: file://%s%s%s
+0x1800bea98: %.*s%%25%s]
+0x1800beac0: %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s
+0x1800beae4: macdef
+0x1800beaf0: machine
+0x1800beb00: password
+0x1800beb18: USERPROFILE
+0x1800beb28: %s%s.netrc
+0x1800beb38: %s%s_netrc
+0x1800beb78: hds-collect
+0x1800beb88: header_collect pushed(type=%x, len=%zu) -> %d
+0x1800bebb8: HTTP-PROXY
+0x1800bebc8: %s%s%s:%d
+0x1800bebd8: connect
+0x1800bebe0: installing subfilter for HTTP/1.1
+0x1800bec08: CONNECT tunnel: HTTP/1.%d negotiated
+0x1800bec30: CONNECT tunnel: unsupported ALPN(%d) negotiated
+0x1800bec60: H1-PROXY
+0x1800bec70: %s cannot be done over CONNECT
+0x1800bec90: allocate connect buffer
+0x1800beca8: new tunnel state 'init'
+0x1800becc0: new tunnel state 'connect'
+0x1800bece0: new tunnel state 'receive'
+0x1800bed00: new tunnel state 'response'
+0x1800bed20: new tunnel state 'established'
+0x1800bed40: CONNECT phase completed
+0x1800bed58: new tunnel state 'failed'
+0x1800bed78: Establish HTTP proxy tunnel to %s
+0x1800beda0: Failed sending CONNECT to proxy
+0x1800bedc0: CONNECT: fwd auth header '%s'
+0x1800bede0: Ignoring Content-Length in CONNECT %03d response
+0x1800bee18: Ignoring Transfer-Encoding in CONNECT %03d response
+0x1800bee50: CONNECT responded chunked
+0x1800bee70: HTTP/1.
+0x1800bee78: Proxy CONNECT connection closed
+0x1800bee98: Proxy CONNECT aborted
+0x1800beeb0: chunk reading DONE
+0x1800beec8: CONNECT response too large
+0x1800beee8: Ignore %lld bytes of response-body
+0x1800bef10: Ignore chunked response-body
+0x1800bef30: CONNECT: no content-length or chunked
+0x1800bef58: Proxy CONNECT aborted due to timeout
+0x1800bef80: CONNECT start
+0x1800bef90: CONNECT send
+0x1800befa0: CONNECT receive
+0x1800befb0: CONNECT response
+0x1800befc8: CONNECT need to close+open
+0x1800befe8: Connect me again please
+0x1800bf000: CONNECT tunnel failed, response %d
+0x1800bf028: CONNECT tunnel established, response %d
+0x1800bf050: HAPROXY
+0x1800bf058: PROXY UNKNOWN
+0x1800bf078: PROXY %s %s %s %i %i
+0x1800bf090: HTTPS-CONNECT
+0x1800bf0a0: connect+handshake %s: %dms, 1st data: %dms
+0x1800bf0d0: using HTTP/3
+0x1800bf0e0: using HTTP/2
+0x1800bf0f0: using HTTP/1.x
+0x1800bf100: hard timeout of %dms reached, starting h21
+0x1800bf130: soft timeout of %dms reached, h3 has not seen any data, starting h21
+0x1800bf178: connect, init
+0x1800bf190: connect, check h21
+0x1800bf1a8: connect, all failed
+0x1800bf1c0: connect -> %d, done=%d
+0x1800bf1d8: data_pending
+0x1800bf210: SOCKS-PROXYY
+0x1800bf220: connection to proxy closed
+0x1800bf240: Failed to send %s: %s
+0x1800bf258: SOCKS: Failed receiving %s: %s
+0x1800bf280: SOCKS4%s: connecting to HTTP proxy %s port %d
+0x1800bf2b0: SOCKS4 communication to %s:%d
+0x1800bf2d0: SOCKS4 non-blocking resolve of %s
+0x1800bf2f8: Hostname '%s' was found
+0x1800bf310: SOCKS4 connect to IPv4 %s (locally resolved)
+0x1800bf340: SOCKS4 connection to %s not supported
+0x1800bf368: Failed to resolve "%s" for SOCKS4 connect.
+0x1800bf398: Too long SOCKS proxy username
+0x1800bf3b8: SOCKS4: too long hostname
+0x1800bf3d8: SOCKS4 connect request
+0x1800bf3f0: connect request ack
+0x1800bf408: SOCKS4 reply has wrong version, version should be 0.
+0x1800bf440: SOCKS4%s request granted.
+0x1800bf460: cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected or failed.
+0x1800bf4c0: cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because SOCKS server cannot connect to identd on the client.
+0x1800bf550: cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), request rejected because the client program and identd report different user-ids.
+0x1800bf5e0: cannot complete SOCKS4 connection to %d.%d.%d.%d:%d. (%d), Unknown.
+0x1800bf628: SOCKS5: connecting to HTTP proxy %s port %d
+0x1800bf660: SOCKS5: the destination hostname is too long to be resolved remotely by the proxy.
+0x1800bf6b8: warning: unsupported value passed to CURLOPT_SOCKS5_AUTH: %u
+0x1800bf6f8: initial SOCKS5 request
+0x1800bf710: initial SOCKS5 response
+0x1800bf728: Received invalid version in initial SOCKS5 response.
+0x1800bf760: Unable to negotiate SOCKS5 GSS-API context.
+0x1800bf790: SOCKS5 GSSAPI per-message authentication is not supported.
+0x1800bf7d0: No authentication method was acceptable.
+0x1800bf800: Undocumented SOCKS5 mode attempted to be used by server.
+0x1800bf840: Excessive username length for proxy auth
+0x1800bf870: Excessive password length for proxy auth
+0x1800bf8a0: SOCKS5 sub-negotiation request
+0x1800bf8c0: SOCKS5 sub-negotiation response
+0x1800bf8e0: User was rejected by the SOCKS5 server (%d %d).
+0x1800bf910: SOCKS5: hostname '%s' found
+0x1800bf930: Failed to resolve "%s" for SOCKS5 connect.
+0x1800bf960: SOCKS5 connect to %s:%d (locally resolved)
+0x1800bf990: SOCKS5 connect to [%s]:%d (locally resolved)
+0x1800bf9c0: SOCKS5 connection to %s not supported
+0x1800bf9e8: SOCKS5 connect to %s:%d (remotely resolved)
+0x1800bfa18: SOCKS5 GSS-API protection not yet implemented.
+0x1800bfa48: SOCKS5 connect request
+0x1800bfa60: SOCKS5 connect request ack
+0x1800bfa80: SOCKS5 reply has wrong version, version should be 5.
+0x1800bfab8: cannot complete SOCKS5 connection to %s. (%d)
+0x1800bfae8: SOCKS5 reply has wrong address type.
+0x1800bfb10: SOCKS5 connect request address
+0x1800bfb30: SOCKS5 request granted.
+0x1800bfb48: unknown proxytype option given
+0x1800bfb68: cw-out
+0x1800bfb78: header
+0x1800bfb80: cw_out, wrote %zu %s bytes -> %zu
+0x1800bfba8: Write callback asked for PAUSE when not supported
+0x1800bfbe0: cw_out, PAUSE requested by client
+0x1800bfc08: client returned ERROR on write of %zu bytes
+0x1800bfc38: Failure writing output to destination, passed %zu returned %zd
+0x1800bfc80: cw-out is%spaused
+0x1800bfc98: cw-out done
+0x1800bfca8: %d.%d.%d.%d
+0x1800bfcb8: WDigest
+0x1800bfcc0: DIGEST-MD5 handshake failure (empty challenge message)
+0x1800bfcf8: SSPI: could not get auth info
+0x1800bfd18: schannel: InitializeSecurityContext failed: %s
+0x1800bfd58: digest_sspi: MakeSignature failed, error 0x%08lx
+0x1800bfd90: RtlVerifyVersionInfo
+0x1800bfda8: security.dll
+0x1800bfdb8: secur32.dll
+0x1800bfdc8: InitSecurityInterfaceA
+0x1800bfe70: chunk hex-length longer than %d
+0x1800bfe90: chunk hex-length char not a hex digit: 0x%x
+0x1800bfec0: chunk hex-length not valid: '%s'
+0x1800bfee8: http_chunked, chunk start of %lld bytes
+0x1800bff10: http_chunked, write %zu body bytes, %lld bytes in chunk remain
+0x1800bff50: http_chunk, response complete
+0x1800bff70: http_chunk error, expected 0x0a, seeing 0x%ux
+0x1800bffa8: Too long hexadecimal number
+0x1800bffc8: Illegal or missing hexadecimal sequence
+0x1800bfff0: Malformed encoding found
+0x1800c0010: Error writing data to client
+0x1800c0030: Bad content-encoding found
+0x1800c0050: Failed reading the chunked-encoded stream
+0x1800c0080: %s in chunked-encoding
+0x1800c0098: Leftovers after chunking: %zu bytes
+0x1800c00c0: transfer closed with outstanding read data remaining
+0x1800c00f8: http_chunk, added last, empty chunk
+0x1800c0128: operation aborted by trailing headers callback
+0x1800c0158: Malformatted trailing header, skipping trailer
+0x1800c0188: http_chunk, added last chunk with trailers from client -> %d
+0x1800c01d0: http_chunk, made chunk of %zu bytes -> %d
+0x1800c0200: %.*s: %.*s
+0x1800c0220: NTLM handshake failure (empty type-2 message)
+0x1800c0250: NTLM handshake failure (type-3 message): Status=%lx
+0x1800c0288: SPNEGO handshake failure (empty challenge message)
+0x1800c02c0: InitializeSecurityContext failed: %s
+0x1800c02e8: CompleteAuthToken failed: %s
+0x1800c0310: X-%s-Date
+0x1800c0320: x-%s-date:%s
+0x1800c0338: host:%s
+0x1800c0340: %s: %s
+0x1800c0350: x-%s-content-sha256
+0x1800c0368: UNSIGNED-PAYLOAD
+0x1800c0380: x-%s-content-sha256: %s
+0x1800c0398: aws-sigv4: too many query pairs in URL
+0x1800c03c8: aws:amz
+0x1800c03d0: %64[^:]:%64[^:]:%64[^:]:%64s
+0x1800c03f0: first aws-sigv4 provider cannot be empty
+0x1800c0420: aws-sigv4: service missing in parameters and hostname
+0x1800c0458: aws-sigv4: service too long in hostname
+0x1800c0480: aws_sigv4: picked service %s from host
+0x1800c04a8: aws-sigv4: region missing in parameters and hostname
+0x1800c04e0: aws-sigv4: region too long in hostname
+0x1800c0508: aws_sigv4: picked region %s from host
+0x1800c0538: %Y%m%dT%H%M%SZ
+0x1800c0560: %s4_request
+0x1800c0570: %s/%s/%s/%s
+0x1800c0580: %s4-HMAC-SHA256
+0x1800c05b0: Authorization: %s4-HMAC-SHA256 Credential=%s/%s, SignedHeaders=%s, Signature=%s
+0x1800c0620: xdigit
+0x1800c0658: -----BEGIN CERTIFICATE-----
+0x1800c0679: -----END CERTIFICATE-----
+0x1800c0698: schannel: CA file '%s' is not correctly formatted
+0x1800c06d0: schannel: failed to extract certificate from CA file '%s': %s
+0x1800c0710: schannel: unexpected content type '%lu' when extracting certificate from CA file '%s'
+0x1800c0770: schannel: failed to add certificate from CA file '%s' to certificate store: %s
+0x1800c07c0: schannel: did not add any certificates from CA file '%s'
+0x1800c0800: schannel: added %d certificate(s) from CA file '%s'
+0x1800c0838: schannel: invalid path name for CA file '%s': %s
+0x1800c0870: schannel: failed to open CA file '%s': %s
+0x1800c08a0: schannel: failed to determine size of CA file '%s': %s
+0x1800c08d8: schannel: CA file exceeds max size of %u bytes
+0x1800c0908: schannel: failed to read from CA file '%s': %s
+0x1800c0938: schannel: Null certificate context.
+0x1800c0960: schannel: Null certificate info.
+0x1800c0988: 2.5.29.17
+0x1800c0998: schannel: CertFindExtension() returned no extension.
+0x1800c09d0: schannel: CryptDecodeObjectEx() returned no alternate name information.
+0x1800c0a18: schannel: Empty DNS name.
+0x1800c0a38: schannel: Not enough memory to list all hostnames.
+0x1800c0a70: schannel: CertGetNameString() returned no certificate name information
+0x1800c0ac0: schannel: CertGetNameString() returned certificate name information of unexpected size
+0x1800c0b20: schannel: connection hostname (%s) validated against certificate name (%s)
+0x1800c0b70: schannel: connection hostname (%s) did not match against certificate name (%s)
+0x1800c0bc0: schannel: CertGetNameString() failed to match connection hostname (%s) against server certificate names
+0x1800c0c28: schannel: server certificate name verification failed
+0x1800c0c60: schannel: reusing certificate store from cache
+0x1800c0c90: schannel: failed to create certificate store: %s
+0x1800c0cc8: schannel: failed to create certificate chain engine: %s
+0x1800c0d00: schannel: CertGetCertificateChain failed: %s
+0x1800c0d30: schannel: CertGetCertificateChain trust error CERT_TRUST_IS_REVOKED
+0x1800c0d80: schannel: CertGetCertificateChain trust error CERT_TRUST_IS_PARTIAL_CHAIN
+0x1800c0dd0: schannel: CertGetCertificateChain trust error CERT_TRUST_IS_UNTRUSTED_ROOT
+0x1800c0e20: schannel: CertGetCertificateChain trust error CERT_TRUST_IS_NOT_TIME_VALID
+0x1800c0e70: schannel: CertGetCertificateChain trust error CERT_TRUST_REVOCATION_STATUS_UNKNOWN
+0x1800c0ec8: schannel: CertGetCertificateChain error mask: 0x%08lx
+0x1800c1248: 1.2.840.10040.4.1
+0x1800c1260: 1.2.840.10040.4.3
+0x1800c1278: dsa-with-sha1
+0x1800c1288: 1.2.840.10045.2.1
+0x1800c12a0: ecPublicKey
+0x1800c12b0: 1.2.840.10045.3.0.1
+0x1800c12c8: c2pnb163v1
+0x1800c12d8: 1.2.840.10045.4.1
+0x1800c12f0: ecdsa-with-SHA1
+0x1800c1300: 1.2.840.10045.4.3.1
+0x1800c1318: ecdsa-with-SHA224
+0x1800c1330: 1.2.840.10045.4.3.2
+0x1800c1348: ecdsa-with-SHA256
+0x1800c1360: 1.2.840.10045.4.3.3
+0x1800c1378: ecdsa-with-SHA384
+0x1800c1390: 1.2.840.10045.4.3.4
+0x1800c13a8: ecdsa-with-SHA512
+0x1800c13c0: 1.2.840.10046.2.1
+0x1800c13d8: dhpublicnumber
+0x1800c13e8: 1.2.840.113549.1.1.1
+0x1800c1400: rsaEncryption
+0x1800c1410: 1.2.840.113549.1.1.2
+0x1800c1428: md2WithRSAEncryption
+0x1800c1440: 1.2.840.113549.1.1.4
+0x1800c1458: md5WithRSAEncryption
+0x1800c1470: 1.2.840.113549.1.1.5
+0x1800c1488: sha1WithRSAEncryption
+0x1800c14a0: 1.2.840.113549.1.1.10
+0x1800c14b8: RSASSA-PSS
+0x1800c14c8: 1.2.840.113549.1.1.14
+0x1800c14e0: sha224WithRSAEncryption
+0x1800c14f8: 1.2.840.113549.1.1.11
+0x1800c1510: sha256WithRSAEncryption
+0x1800c1528: 1.2.840.113549.1.1.12
+0x1800c1540: sha384WithRSAEncryption
+0x1800c1558: 1.2.840.113549.1.1.13
+0x1800c1570: sha512WithRSAEncryption
+0x1800c1588: 1.2.840.113549.2.2
+0x1800c15a0: 1.2.840.113549.2.5
+0x1800c15b8: 1.3.14.3.2.26
+0x1800c15d0: 2.5.4.3
+0x1800c15e0: 2.5.4.4
+0x1800c15f0: 2.5.4.5
+0x1800c15f8: serialNumber
+0x1800c1608: 2.5.4.6
+0x1800c1618: 2.5.4.7
+0x1800c1628: 2.5.4.8
+0x1800c1638: 2.5.4.9
+0x1800c1640: streetAddress
+0x1800c1650: 2.5.4.10
+0x1800c1660: 2.5.4.11
+0x1800c1670: 2.5.4.12
+0x1800c1688: 2.5.4.13
+0x1800c1698: description
+0x1800c16a8: 2.5.4.17
+0x1800c16b8: postalCode
+0x1800c16c8: 2.5.4.41
+0x1800c16e0: 2.5.4.42
+0x1800c16f0: givenName
+0x1800c1700: 2.5.4.43
+0x1800c1710: initials
+0x1800c1720: 2.5.4.44
+0x1800c1730: generationQualifier
+0x1800c1748: 2.5.4.45
+0x1800c1758: X500UniqueIdentifier
+0x1800c1770: 2.5.4.46
+0x1800c1780: dnQualifier
+0x1800c1790: 2.5.4.65
+0x1800c17a0: pseudonym
+0x1800c17b0: 1.2.840.113549.1.9.1
+0x1800c17c8: emailAddress
+0x1800c17d8: 2.5.4.72
+0x1800c17f0: subjectAltName
+0x1800c1800: 2.5.29.18
+0x1800c1810: issuerAltName
+0x1800c1820: 2.5.29.19
+0x1800c1830: basicConstraints
+0x1800c1848: 2.16.840.1.101.3.4.2.4
+0x1800c1860: sha224
+0x1800c1868: 2.16.840.1.101.3.4.2.1
+0x1800c1880: sha256
+0x1800c1888: 2.16.840.1.101.3.4.2.2
+0x1800c18a0: sha384
+0x1800c18a8: 2.16.840.1.101.3.4.2.3
+0x1800c18c0: sha512
+0x1800c18c8: 1.2.840.113549.1.9.2
+0x1800c18e0: unstructuredName
+0x1800c1920: %.4s-%.2s-%.2s %.2s:%.2s:%c%c%s%.*s%s%.*s
+0x1800c1950: %u%.2s-%.2s-%.2s %.2s:%.2s:%.2s %.*s
+0x1800c1978:    %s: %s
+0x1800c1988:    ECC Public Key (%zu bits)
+0x1800c19b0: ECC Public Key
+0x1800c19c0:    RSA Public Key (%zu bits)
+0x1800c19e0: RSA Public Key
+0x1800c19f0: rsa(n)
+0x1800c19f8: rsa(e)
+0x1800c1a00: dsa(p)
+0x1800c1a08: dsa(q)
+0x1800c1a10: dsa(g)
+0x1800c1a18: dsa(pub_key)
+0x1800c1a38: dh(pub_key)
+0x1800c1a48: Subject
+0x1800c1a50: Issuer
+0x1800c1a58: Version
+0x1800c1a60: Serial Number
+0x1800c1a70: Signature Algorithm
+0x1800c1a88: Start Date
+0x1800c1a98: Expire Date
+0x1800c1aa8: Public Key Algorithm
+0x1800c1ac0: Signature
+0x1800c1ad0: -----BEGIN CERTIFICATE-----
+0x1800c1af0: -----END CERTIFICATE-----
+0x1800c1b18: Failed extracting certificate chain
+0x1800c1b40: server response timeout
+0x1800c1b58: select/poll error
+0x1800c1b70: response reading failed (errno: %d)
+0x1800c1cd0: CRAM-MD5
+0x1800c1ce0: DIGEST-MD5
+0x1800c1cec: GSSAPI
+0x1800c1cf8: EXTERNAL
+0x1800c1d08: XOAUTH2
+0x1800c1d10: OAUTHBEARER
+0x1800c1d20: SCRAM-SHA-1
+0x1800c1d30: SCRAM-SHA-256
+0x1800c1d48: Unsupported SASL authentication mechanism
+0x1800c1dc0: KGS!@#$%://
+0x1800c1dd0: %s %s%s%s%s HTTP/1.%d
+0x1800c1de8: SSPI error: %s failed: %s
+0x1800c1e10: Kerberos
+0x1800c1e20: AcquireCredentialsHandle
+0x1800c1e40: Failed to acquire credentials.
+0x1800c1e60: InitializeSecurityContext
+0x1800c1e80: Failed to initialise security context.
+0x1800c1ea8: Failed to send SSPI authentication request.
+0x1800c1ed8: Failed to send SSPI authentication token.
+0x1800c1f08: Failed to receive SSPI authentication response.
+0x1800c1f38: User was rejected by the SOCKS5 server (%u %u).
+0x1800c1f68: Invalid SSPI authentication response type (%u %u).
+0x1800c1fa0: Failed to receive SSPI authentication token.
+0x1800c1fd0: QueryCredentialAttributes
+0x1800c1ff0: Failed to determine username.
+0x1800c2010: SOCKS5 server authenticated user %s with GSS-API.
+0x1800c2048: integrity
+0x1800c2058: confidentiality
+0x1800c2068: SOCKS5 server supports GSS-API %s data protection.
+0x1800c20a0: QueryContextAttributes
+0x1800c20b8: Failed to query security context attributes.
+0x1800c20e8: EncryptMessage
+0x1800c20f8: Failed to send SSPI encryption request.
+0x1800c2120: Failed to send SSPI encryption type.
+0x1800c2148: Failed to receive SSPI encryption response.
+0x1800c2178: Invalid SSPI encryption response type (%u %u).
+0x1800c21a8: Failed to receive SSPI encryption type.
+0x1800c21d0: DecryptMessage
+0x1800c21e0: Invalid SSPI encryption response length (%lu).
+0x1800c2210: out GSS-API data
+0x1800c2228:  GSS-API integrity
+0x1800c2240:  GSS-API confidentiality
+0x1800c2260: SOCKS5 access with%s protection granted.
+0x1800c22c0: %s %02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x
+0x1800c2308: n,a=%s,
+0x1800c2310: host=%s
+0x1800c2318: auth=Bearer %s
+0x1800c2330: n,a=%s,
+0x1800c2338: host=%s
+0x1800c2340: port=%ld
+0x1800c2349: auth=Bearer %s
+0x1800c2360: user=%s
+0x1800c2368: auth=Bearer %s
+0x1800c2380: GSSAPI handshake failure (empty challenge message)
+0x1800c23b8: GSSAPI handshake failure (empty security message)
+0x1800c23f0: GSSAPI handshake failure (invalid security data)
+0x1800c2428: GSSAPI handshake failure (invalid security layer)
+0x1800c25e8: SleepConditionVariableCS
+0x1800c2608: WakeAllConditionVariable
+0x1800c2640: bad allocation
+0x1800c2650: (unknown)
+0x1800c3ffe: &r(p*,.D0p2T4
+0x1800c401d: "p<,>P0pDTF
+0x1800c4de7: j j"j$j&j(j*j,j.j0j2j4j6j8j:j<j>j@
+0x1800c5e5b: < <"<$<&<(<*<,<.n0-
+0x1800c67ab: *,(p,D.
+0x1800c7e2f: ^p`6b,d
+0x1800c7e47: v4xpz.|.~.
+0x1800c8055: rptHvDt
+0x1800c847c: & &$&&&
+0x1800ceed5: HCen|I
+0x1800cf0a2: *?1wC4
+0x1800cf168: tXuZ|j
+0x1800cf2fe: 8(Pb?Z#
+0x1800cf6cc: LQB]ud
+0x1800cf74a: &A"W['
+0x1800cf794: $Fqa/L
+0x1800cf803: ]V]PY8
+0x1800cf8e1: .2Q^+\
+0x1800cf99d: rkO'GbM
+0x1800d01ca: C[$IK!~},G
+0x1800d03e2: )d Tn1 `l
+0x1800d04c8: @@i$?5
+0x1800d0733: 2qTz1b
+0x1800d0aa6: 1gqA>k#.
+0x1800d0ad4: GsCMs 
+0x1800d0d41: #iuk*7
+0x1800d0ee2: %y^@\q
+0x1800d0fbd: ]ecV+S
+0x1800d1299: 4?jsl0
+0x1800d1437: 8s96E6s>I
+0x1800d153c: EczN91La
+0x1800d1590: jGDDO8
+0x1800d16e0: E/MQaL
+0x1800d1734: sXP!qh=
+0x1800d1b7c: N_-wm>

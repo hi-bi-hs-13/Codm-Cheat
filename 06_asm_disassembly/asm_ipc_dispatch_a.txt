@@ -1,0 +1,114 @@
+; region ipc_dispatch_a 0x18002ab00-0x18002ad00
+0x00018002ab00  add      byte ptr [rax - 0x73], cl
+0x00018002ab03  call     0x1800a7764
+0x00018002ab0a  test     eax, eax
+0x00018002ab0c  jne      0x18002ab19
+0x00018002ab0e  mov      byte ptr [rip + 0xa9804], al
+0x00018002ab14  jmp      0x18002aa10
+0x00018002ab19  lea      rdx, [rip + 0x85718]
+0x00018002ab20  lea      rcx, [rbp + 0x40]
+0x00018002ab24  call     0x1800a7764
+0x00018002ab29  test     eax, eax
+0x00018002ab2b  jne      0x18002ab39
+0x00018002ab2d  mov      byte ptr [rip + 0xa8c1f], 1
+0x00018002ab34  jmp      0x18002aa10
+0x00018002ab39  lea      rdx, [rip + 0x85708]
+0x00018002ab40  lea      rcx, [rbp + 0x40]
+0x00018002ab44  call     0x1800a7764
+0x00018002ab49  test     eax, eax
+0x00018002ab4b  jne      0x18002ab58
+0x00018002ab4d  mov      byte ptr [rip + 0xa8c00], al
+0x00018002ab53  jmp      0x18002aa10
+0x00018002ab58  lea      rdx, [rip + 0x856f9]
+0x00018002ab5f  lea      rcx, [rbp + 0x40]
+0x00018002ab63  call     0x1800a7764
+0x00018002ab68  test     eax, eax
+0x00018002ab6a  jne      0x18002ab78
+0x00018002ab6c  mov      byte ptr [rip + 0xa97a7], 1
+0x00018002ab73  jmp      0x18002aa10
+0x00018002ab78  lea      rdx, [rip + 0x856e9]
+0x00018002ab7f  lea      rcx, [rbp + 0x40]
+0x00018002ab83  call     0x1800a7764
+0x00018002ab88  test     eax, eax
+0x00018002ab8a  jne      0x18002ab97
+0x00018002ab8c  mov      byte ptr [rip + 0xa9788], al
+0x00018002ab92  jmp      0x18002aa10
+0x00018002ab97  lea      rdx, [rip + 0x856da]
+0x00018002ab9e  lea      rcx, [rbp + 0x40]
+0x00018002aba2  call     0x1800a7764
+0x00018002aba7  test     eax, eax
+0x00018002aba9  jne      0x18002abb7
+0x00018002abab  mov      byte ptr [rip + 0xa9769], 1
+0x00018002abb2  jmp      0x18002aa10
+0x00018002abb7  lea      rdx, [rip + 0x856ca]
+0x00018002abbe  lea      rcx, [rbp + 0x40]
+0x00018002abc2  call     0x1800a7764
+0x00018002abc7  test     eax, eax
+0x00018002abc9  jne      0x18002abd6
+0x00018002abcb  mov      byte ptr [rip + 0xa974a], al
+0x00018002abd1  jmp      0x18002aa10
+0x00018002abd6  lea      rdx, [rip + 0x856c3]
+0x00018002abdd  lea      rcx, [rbp + 0x40]
+0x00018002abe1  call     0x1800a7764
+0x00018002abe6  test     eax, eax
+0x00018002abe8  jne      0x18002abf6
+0x00018002abea  mov      byte ptr [rip + 0xa972b], 1
+0x00018002abf1  jmp      0x18002aa10
+0x00018002abf6  lea      rdx, [rip + 0x856bb]
+0x00018002abfd  lea      rcx, [rbp + 0x40]
+0x00018002ac01  call     0x1800a7764
+0x00018002ac06  test     eax, eax
+0x00018002ac08  jne      0x18002ac15
+0x00018002ac0a  mov      byte ptr [rip + 0xa970c], al
+0x00018002ac10  jmp      0x18002aa10
+0x00018002ac15  lea      rdx, [rip + 0x856b4]
+0x00018002ac1c  lea      rcx, [rbp + 0x40]
+0x00018002ac20  call     0x1800a7764
+0x00018002ac25  test     eax, eax
+0x00018002ac27  jne      0x18002ac35
+0x00018002ac29  mov      byte ptr [rip + 0xa96ed], 1
+0x00018002ac30  jmp      0x18002aa10
+0x00018002ac35  lea      rdx, [rip + 0x856a4]
+0x00018002ac3c  lea      rcx, [rbp + 0x40]
+0x00018002ac40  call     0x1800a7764
+0x00018002ac45  test     eax, eax
+0x00018002ac47  jne      0x18002ac54
+0x00018002ac49  mov      byte ptr [rip + 0xa96ce], al
+0x00018002ac4f  jmp      0x18002aa10
+0x00018002ac54  lea      rdx, [rip + 0x85695]
+0x00018002ac5b  lea      rcx, [rbp + 0x40]
+0x00018002ac5f  call     0x1800a7764
+0x00018002ac64  test     eax, eax
+0x00018002ac66  je       0x18002b3f9
+0x00018002ac6c  lea      rdx, [rip + 0x85695]
+0x00018002ac73  lea      rcx, [rbp + 0x40]
+0x00018002ac77  call     0x1800a7764
+0x00018002ac7c  test     eax, eax
+0x00018002ac7e  je       0x18002b3f9
+0x00018002ac84  lea      rdx, [rip + 0x8568d]
+0x00018002ac8b  lea      rcx, [rbp + 0x40]
+0x00018002ac8f  call     0x1800a7764
+0x00018002ac94  test     eax, eax
+0x00018002ac96  je       0x18002b3ec
+0x00018002ac9c  lea      rdx, [rip + 0x8568d]
+0x00018002aca3  lea      rcx, [rbp + 0x40]
+0x00018002aca7  call     0x1800a7764
+0x00018002acac  test     eax, eax
+0x00018002acae  je       0x18002b3ec
+0x00018002acb4  lea      rdx, [rip + 0x85685]
+0x00018002acbb  lea      rcx, [rbp + 0x40]
+0x00018002acbf  call     0x1800a7764
+0x00018002acc4  test     eax, eax
+0x00018002acc6  jne      0x18002acd8
+0x00018002acc8  mov      eax, 1
+0x00018002accd  xchg     byte ptr [rip + 0xa964c], al
+0x00018002acd3  jmp      0x18002aa10
+0x00018002acd8  lea      rdx, [rip + 0x85671]
+0x00018002acdf  lea      rcx, [rbp + 0x40]
+0x00018002ace3  call     0x1800a7764
+0x00018002ace8  test     eax, eax
+0x00018002acea  jne      0x18002acf9
+0x00018002acec  mov      eax, edi
+0x00018002acee  xchg     byte ptr [rip + 0xa962b], al
+0x00018002acf4  jmp      0x18002aa10
+0x00018002acf9  lea      rdx, [rip + 0x85660]

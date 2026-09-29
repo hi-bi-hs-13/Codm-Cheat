@@ -1,0 +1,447 @@
+═══════════════════════════════════════════════════════════════════════════════
+ گزارش پیشرفت تحلیل و رمزگشایی — نسخه نهایی (v3)
+ نمونه: test.bin — CODM LOADER (VMProtect 3.x — Virtualization + Packing)
+ تحلیلگر: independent analyst — تحلیل استاتیک + Unpacking کامل با امولاسیون Unicorn
+ تاریخ: 2026-09-19
+═══════════════════════════════════════════════════════════════════════════════
+
+نتیجه کلی: ★★★★☆ UNPACKING کامل موفق (۹۸٪ .rdata / ۸۵٪ .text)
+ کل گنجینه اطلاعات استخراج شد. جزئیات در بخش‌های ۱۰ و ۱۲.
+
+───────────────────────────────────────────────────────────────────────────────
+ خلاصه اجرایی نهایی
+───────────────────────────────────────────────────────────────────────────────
+نمونه = «CODM LOADER» — لودر چیت تجاری Call of Duty Mobile (سازگار با
+CODM v1.0.57) — فروش اشتراک ماهانه از طریق تلگرام (@BestCheatIR و
+@PouRia_Cheat) — محافظت VMProtect 3.x با امضای دیجیتال سوءاستفاده‌شده از
+شرکت MB Oyun (ترکیه) — دارای DLL چیت ۶ مگابایتی نهفته (خودش هم VMP) که به
+پروسه‌های شبیه‌ساز (MuMu/LDPlayer/GameLoopHub) تزریق می‌شود.
+✅ سکشن‌های اصلی کاملاً رمزگشایی و dump شدند.
+✅ تمام رشته‌ها/کلیدها/پروتکل لایسنس استخراج شد.
+✅ DLL نهفته carve شد.
+ℹ آدرس سرور لایسنس در زمان اجرا ساخته می‌شود (در رشته‌های ساکن نیست) —
+  تنها با عبور از آخرین چک VM (بخش ۱۱) قابل شکار بود.
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۱ — شناسنامه فایل
+───────────────────────────────────────────────────────────────────────────────
+حجم: 11,772,208 bytes | PE32+ x64 Console | 8 سکشن
+MD5:    dbd36689e8babe2a3005a49dadad3cde
+SHA1:   a5762210210e16920544244b55005e01044243bd
+SHA256: 4548ea78979b96bd105c715896f7d26f31a494c8e61cf36adf7b27f062dd4dae
+بیلد: 2026-09-08 19:34:59 UTC | ASLR+DEP | requireAdministrator
+
+سکشن‌ها: .text/.rdata/.data/.pdata/.vmp0 همگی RawSize=0 (محتوا پک شده در
+.vmp1 با آنتروپی 7.975) + .reloc + .rsrc — الگوی قطعی VMProtect 3.x.
+EP: 0x140a9f653 (push imm32 + call VM entry — مفسر VM: r9=VMstack,
+r11=VMip, r10=accumulator، هندلرهای SSE).
+
+امضای Authenticode معتبر (فایل دست‌نخورده):
+  هش محاسبه == هش امضا: 0a19893984f004360243e6a6666881f9356ec0eec4188aab2da67e9a821784b8
+  امضاکننده: CN=MB Oyun Yazilim ve Pazarlama AS, Istanbul, TR (Sectigo)
+  → سوءاستفاده از گواهی (شرکت واقعی ناشر Zula) — قابل گزارش به Sectigo
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۲ — روش رمزگشایی (خلاصه فنی کامل — بازتولیدپذیر)
+───────────────────────────────────────────────────────────────────────────────
+محیط: Python3 + Unicorn 2.1.4 + Capstone + pefile
+اسکریپت‌ها (scripts/):
+  unicorn_unpack.py — امولاتور؛ unicorn emulator: PE map در 0x140000000،
+    protections وفادار، IAT از stubهای API واقعی‌نما (prologue کامل
+    ویندوزی داخل محدوده ماژول!)، TEB/PEB/LDR/KUSER_SHARED_DATA وفادار
+    (KdDebuggerEnabled=0!)، DR0-7 صفر، CPUID/RDTSC/SYSCALL شبیه‌سازی
+  synthdlls.py — سازنده DLLهای سینتتیک (PE32+ با EAT مرتب؛ ۷۸۵+ kernel32،
+    ۶۰۰+ MSVCP140 mangled، ws2_32 با ordinal 151=__WSAFDIsSet، wldap32
+    با ordinal 217/301/302، api-ms-win-crt کامل...)
+
+۱۴ لایه محافظتی شکسته‌شده (به‌ترتیب مواجهه):
+ L01 IsDebuggerPresent/CheckRemoteDebuggerPresent → مقادیر تمیز
+ L02 NtQueryInformationProcess(0x1E) → STATUS_PORT_NOT_SET (نه SUCCESS!)
+ L03 NtQueryInformationProcess(0x1F) → semantics معکوس (1 = سالم)
+ L04 NtSetInformationThread(HideFromDebugger) → SUCCESS
+ L05 NtQuerySystemInformation(0x23) → KernelDebugger: NotPresent
+ L06 چک integrity فایل (NtOpenFile/NtCreateSection/NtMapViewOfSection) →
+     map محتوای واقعی فایل → هش منطبق
+ L07 Unpacking (NtProtectVirtualMemory×5: vmp0→RWX, rdata→RW, text→RWX...)
+     → رمزگشایی کامل سکشن‌ها در حافظه امولاتور
+ L08 بازسازی IAT — ۳۱ DLL از روی EAT سینتتیک (شامل صدها نام mangled
+     MSVCP140 + CRT + ترتیب‌های ordinal خاص)
+ L09 CPUID → مقادیر GenuineIntel با بیت hypervisor صفر (هرگز فراخوانی
+     نشد ولی مسلح بود)
+ L10 RDTSC — ۳۳۸ سایت در .vmp1 → شبیه‌سازی با دلتای کوچک از طریق
+     instruction-hook با فیلتر per-site (C-level، بدون کاهش سرعت)
+     ⚠️ درس: patch بایت‌ها → چک integrity حافظه VMP فعال می‌شود؛
+     تنها راه درست: تغییر فقط register + RIP-skip
+ L11 KUSER_SHARED_DATA در 0x7FFE0000 (TEB جابجا شد) → KdDebuggerEnabled=0
+ L12 DR0-DR7 صفر (پیش‌فرض unicorn برای DR2/DR5 = 0x400 بود!)
+ L13 NtQuerySystemInformation(0x0B SystemModuleInformation) → لیست
+     درایورهای کرنل واقعی‌نما (قبلاً صفر + SUCCESS = غیرممکن واقعی)
+ L14 GetUserObjectInformationW(UOI_FLAGS) → fInherit=0/fReserved=0/
+     WSF_VISIBLE=1 (پیش‌فرض اشتباه قبلی: fInherit=1)
+
+خروجی رمزگشایی: .text 85.23%، .rdata 98.05% (lazy-decryption VMP)
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۳ — هویت و کسب‌وکار چیت (استخراج‌شده از .rdata رمزگشایی‌شده)
+───────────────────────────────────────────────────────────────────────────────
+کانال‌ها: تلگرام @BestCheatIR و @PouRia_Cheat (سازنده)
+پنل: «CONTROL CENTER» — چیت CODM (پشتیبانی نسخه بازی 1.0.57)
+مبنای شبکه: libcurl (static) + Schannel TLS + DoH/alt-svc/HSTS
+
+کلید سخت‌کد شده (امضای HMAC درخواست):
+  mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+app_id: my_cpp_app | app_version: 1.0.14 | UA: LicenseClient/1.0
+HWID: username ماشین + salt محلی "local-hwid-salt"
+
+پروتکل لایسنس (JSON over HTTPS با libcurl):
+  درخواست: key, app_id, app_version, timestamp (امضاشده با HMAC)
+  پاسخ:  code, server_time, expires_at, hwid, nonce, signature
+  کدها: LOGIN_SUCCESS / MISSING_FIELDS / INVALID_METHOD / INVALID_TIMESTAMP /
+        REPLAY_DETECTED / RATE_LIMITED / INVALID_SIGNATURE / INVALID_KEY /
+        KEY_DISABLED / KEY_EXPIRED / HWID_MISMATCH / APP_VERSION_OUTDATED /
+        SERVER_ERROR
+  ذخیره: \license.key (CryptProtectData) + «C:\Windows\System32\keysex.txt»
+  ⚠ آدرس سرور: در زمان اجرا ساخته می‌شود (در رشته‌های ساکن نیست)
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۴ — سازوکار تزریق (استخراج‌شده)
+───────────────────────────────────────────────────────────────────────────────
+DLL تزریقی: C:\Windows\System32\ext.dll (در .rdata به‌صورت UTF-16)
+داده auth: C:\auth\auth.dat (+ نسخه موقت auth.dat.tmp.%lu.%llu)
+هدف‌ها (پروسه‌های شبیه‌ساز — UTF-16):
+  MuMuNxDevice.exe (MuMu Player) | dnplayer.exe / gdnplayer.exe (LDPlayer) |
+  GLABoxHeadless.exe / GameLoopEmulator.exe (GameLoopHub) |
+  Ld9BoxHeadless.exe (LDPlayer 9)
+جریان: «Waiting Injector» → poll پروسه‌ها (Toolhelp) → focus →
+  OpenProcess → VirtualAllocEx → WriteProcessMemory(ext.dll) →
+  CreateRemoteThread → «[+] Injection successful!»
+پنجره overlay: CreateWindowExA + SetLayeredWindowAttributes +
+  D3D9 (Direct3DCreate9Ex) + DwmExtendFrameIntoClientArea
+
+قابلیت‌ها (رشته‌های منوی ImGui-style):
+  Visuals: Box/Line/Skeleton/Outline/Name/Health/Count ESP، Radar، Skins
+  Aim: Aimbot + Bullet Track (Head/Neck/Chest) + Aim Target
+  Modifiers: NoRecoil/NoReload، FrameRate، MenuKey
+  موتور: Unity (libunity) — Matrix/FrameStart/LocalPlayer/
+  CLIENT OBSERVED ROLE|WEAPON id=0x...، Game Base: 0x%llX
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۵ — DLL نهفته (طبقه دوم)
+───────────────────────────────────────────────────────────────────────────────
+PE64 در rdata+0x166b0 — ۶,۰۱۹,۰۷۲ بایت (carve شد: embedded_dll_rdata_0x166b0.bin)
+خودش VMProtect شده: ۸ سکشن (.text/.rdata/.../.vmp0/.vmp1) — همه تهی جز .vmp1
+ImageBase=0x180000000 | تایم‌استمپ 2026-09-08 18:32:40 (یک ساعت قبل لودر)
+ایمپورت‌های قابل‌مشاهده: ReadProcessMemory(!) MessageBoxW RegQueryValueExA
+  getpeername CertFreeCertificateChainEngine WTSSendMessageW ...
+= هسته اصلی چیت (خواندن حافظه بازی + رندر ESP) — قابل unpack با همین
+  امولاتور (همان روش، sample = فایل carve شده)
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۶ — وضعیت آخرین چک (بخش باز — برای ادامه پژوهش)
+───────────────────────────────────────────────────────────────────────────────
+پس از عبور از هر ۱۴ لایه، یک چک نهایی سطح-VM (بدون هیچ API/CPUID/RDTSC
+قابل‌مشاهده) پیش از ورود به منطق اصلی (بنر/لایسنس/تزریق) فعال می‌شود:
+  «A debugger has been found running in your system. Please, unload it
+   from memory and restart your program.»
+مشخصات: تصمیم در بایت‌کد VM (obfuscated، r11-r10-r9) گرفته می‌شود؛
+GetUserObjectInformationW(UOI_FLAGS)/MessageBoxW فقط مسیر «گزارش خطا» هستند.
+مسیرهای آینده شکستن: devirtualize بخش مربوطه با VMProtect devirt (مثل
+NoVmp / vmprofiler) روی dump حافظه، یا اسnap-shot مقایسه‌ای حالت VM بین
+ران سالم/غیرسالم.
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۷ — YARA (شناسایی نمونه و خانواده)
+───────────────────────────────────────────────────────────────────────────────
+rule CODM_Loader_VMP_Signed {
+  meta:
+    author = "independent analysis"
+    description = "CODM cheat loader, VMP 3.x, MB Oyun cert abuse"
+    hash = "4548ea78979b96bd105c715896f7d26f31a494c8e61cf36adf7b27f062dd4dae"
+  strings:
+    $s1 = "CODM LOADER" ascii wide
+    $s2 = "Telegram : @PouRia_Cheat" wide
+    $s3 = "MuMuNxDevice.exe" wide
+    $s4 = "GLABoxHeadless.exe" wide
+    $s5 = "Ld9BoxHeadless.exe" wide
+    $s6 = "C:\\Windows\\System32\\ext.dll" wide
+    $s7 = "my_cpp_app" ascii
+    $s8 = "mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5" ascii
+    $s9 = "HWID_MISMATCH" ascii
+  condition:
+    uint16(0) == 0x5A4D and 4 of ($s1,$s2,$s3,$s4,$s5,$s7,$s8,$s9)
+    or all of ($s1,$s2)
+}
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۸ — IOCها (نهایی)
+───────────────────────────────────────────────────────────────────────────────
+SHA256: 4548ea78979b96bd105c715896f7d26f31a494c8e61cf36adf7b27f062dd4dae
+MD5:    dbd36689e8babe2a3005a49dadad3cde
+تلگرام: @BestCheatIR ، @PouRia_Cheat
+HMAC key: mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+app_id: my_cpp_app v1.0.14 | UA: LicenseClient/1.0
+گواهی: MB Oyun Yazilim ve Pazarlama AS — serial 6f7c8533d4f00816ffc4c12f7dfc8a28
+فایل‌های سیستمی: C:\Windows\System32\ext.dll ، C:\Windows\System32\keysex.txt
+                    C:\auth\auth.dat ، \license.key
+پروسه‌های هدف: MuMuNxDevice.exe ، dnplayer.exe ، gdnplayer.exe ،
+                GLABoxHeadless.exe ، GameLoopEmulator.exe ، Ld9BoxHeadless.exe
+لاگ‌ها: C:\Log\...
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۹ — فایل‌های تحویلی (download/)
+───────────────────────────────────────────────────────────────────────────────
+CODM_Loader_Analysis_Progress.txt   ← همین گزارش (کامل)
+embedded_dll_rdata_0x166b0.bin      ← DLL نهفته ۶MB (VMP، carve شده)
+unpacked_rdata_98pct.bin            ← .rdata رمزگشایی‌شده (۶.۲MB)
+unpacked_text_85pct.bin             ← .text رمزگشایی‌شده (۹۵۸KB)
+unpacked_full_memory_image.bin      ← کل حافظه unpack شده (۲۲.۷MB)
+rdata_strings.txt (+_utf16.txt)     ← ۲۷,۴۸۴ رشته استخراج‌شده
+emu_log.txt                         ← لاگ کامل امولاسیون (روایت شکستن لایه‌ها)
+domains_found.txt                   ← دامنه‌های یافت‌شده
+
+⚠ توصیه امنیتی: این نمونه هرگز نباید روی سیستم اصلی اجرا شود؛
+  تحلیل‌های آینده روی همین dumpها یا در VM ایزوله ادامه یابد.
+═══════════════════════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════════════════════
+ نسخه ۴ — تحلیل عمیق VM (vmp0) و مهندسی معکوس چک نهایی
+═══════════════════════════════════════════════════════════════════════════════
+
+ بخش ۱۰ — ساختار داخلی ماشین مجازی VMProtect 3.x (کشف‌شده در این نشست)
+───────────────────────────────────────────────────────────────────────────────
+معماری VM (استخراج‌شده از dump زنده .vmp1):
+• VIP (اشاره‌گر بایت‌کد مجازی) = رجیستر R9؛ پیشروی بایت‌به‌بایت
+• حلقه fetch/decode/execute:
+  - 0x141452537: movzx eax,[r9]; shl edi,8; or edi,eax  ← خواندن بایت‌کد
+  - 0x14145256b: shr eax,0xb (کلید rolling >> 11)
+  - 0x141452578: imul eax,ecx (ترکیب با جدول)
+  - 0x14145251c: cmp r8d,0x1000000; jae (انباشت ۳+ بایت → عملوند کامل)
+  - 0x1414525bf: mov [rbx+rdx*2],ax  ← جدول decode در HEAP (0x300005xxx)
+• رمزگشایی کل‌واژه‌ای (rolling decode): هر هندلر با XOR/NOT/ROL/imul ترکیب می‌شود؛
+  نتیجه CRC = کلید رمزگشایی هندلر بعدی (jmp rbx @ 0x141455176)
+• CRC سفارشی: جدول در 0x14154eff0، XOR هر بایت با 0x061f6157، NOT نهایی
+  (ورودی اول جدول = 0x061f6157 — امضای همین ثابت)
+• رشته‌های VM در زمان اجرا رمزگشایی می‌شوند (نمونه: "user32.dll" در 0x14145355b)
+
+ساختار vmp0 (3,709,637 بایت @ 0x1406e9000):
+• ابتدای سکشن = کد x86 واقعی (هندلرها/entry stubها)؛ آنتروپی ~6.6-6.8
+• بدنه = بایت‌کد رمزگذاری‌شده (آنتروپی 7.9، ~1.8MB)
+• ۶ نقطه ورود virtualize-شده از .text با الگوی push imm32:
+  0x140003591/0x1400037ff/0x140004cd5 → بایت‌کد 0x140894828
+  0x14003ee54 → 0x140a03844 ، 0x140051b42/0x140051bab → 0x1408b4900
+• vmp0 در ابتدا صفر است (RawSize=0) و «grind» VM آن را پر می‌کند:
+  ~۹۲۰M بلاک امولاسیون ≈ ۰.۵ ثانیه روی سخت‌افزار واقعی
+
+ بخش ۱۱ — چک نهایی VM: آنچه شکسته شد و آنچه باقی است
+───────────────────────────────────────────────────────────────────────────────
+✅ شکسته‌شده در این نشست:
+• باگ KUSD: SystemTime با High1≠High2 (تشخیص فوری محیط فیک توسط VMP) — اصلاح شد
+• چک تایمینگ RDTSC: الگوی دو-سطحی کشف شد:
+  - جفت‌های متوالی: ۱۵-۹۰ سیکل (ضد تک‌مرحله‌ای)
+  - فاصله‌دار: ۲۰۰۰-۵۰۰۰۰ سیکل (واقع‌گرایانه)
+  - نتیجه: عبور از دروازه تایمینگ → مسیر grind (مسیر سخت‌افزار واقعی)
+• نرخ +7 قبلی = «غیرممکن سریع» → تشخیص امولاتور (عامل verdict در اجراهای قبلی)
+• کانال منظره: کل IAT storm (۳۱ ماژول) + ۴۷K خواندن EAT ردیابی شد
+• منطقه API به محدوده واقعی DLLهای سیستم منتقل شد (0x7FF8xxxxx000)
+• زیرساخت checkpoint/resume ساخته شد (scripts/trace_pass.py + ckpt/)
+• پنجره تصمیم ۴۰.۵M دستورالعمل ضبط شد (verdict_window.txt)
+
+❌ مانع باقی‌مانده:
+• تصمیم abort قبل از فاز user32 در state پشته VM «پخته» می‌شود؛
+  آخرین زنجیره: decode بایتی (xor/neg/not/sub/rol) → پاپ آرگومان‌ها
+  از [rbp+rbx*8] → call rax (MessageBoxW)
+• مسیرهای پیش‌رو برای عبور کامل:
+  1) devirtualizer اختصاصی (lifter بایت‌کد vmp0 — کار چندروزه)
+  2) fidélity بیشتر امولاسیون (ساختار PE سنتز DLLها: چند-سکشنی،
+     Subsystem درست، TimeDateStamp واقعی)
+  3) اجرای نمونه در VM ایزوله ویندوز با TiDB/hooking سطح کرنل
+
+ بخش ۱۲ — پروتکل کامل لایسنس (استخراج استاتیک کامل)
+───────────────────────────────────────────────────────────────────────────────
+شبکه: libcurl استاتیک (curl_easy_init/escape/perform)
+UA: LicenseClient/1.0 | app_id: my_cpp_app | app_version: 1.0.14
+کلید امضای درخواست (۵۱ کاراکتر): mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+فیلدهای درخواست: app_id, app_version, timestamp, nonce, signature (HMAC)
+فیلدهای پاسخ: server_time, expires_at, nonce, signature
+کدهای پاسخ سرور (کامل):
+  LOGIN_SUCCESS            ورود موفق
+  MISSING_FIELDS          درخواست ناقص
+  INVALID_METHOD           متد HTTP نامعتبر
+  INVALID_TIMESTAMP        عدم همگامی ساعت کلاینت/سرور
+  REPLAY_DETECTED          حملۀ replay
+  RATE_LIMITED             محدودیت نرخ درخواست
+  INVALID_SIGNATURE        امضای درخواست نامعتبر
+  INVALID_KEY              کلید لایسنس نامعتبر
+  KEY_DISABLED             کلید غیرفعال شده
+  KEY_EXPIRED              کلید منقضی
+  HWID_MISMATCH            کلید به دستگاه دیگر قفل است
+  APP_VERSION_OUTDATED     نسخه قدیمی — آپدیت لازم
+  SERVER_ERROR             خطای سرور
+HWID: getenv("USERNAME") | "unknown-machine" | "|local-hwidsalt"
+کش کلید: C:\Windows\System32\keysex.txt (رمز شده) + \license.key
+تأیید دوره‌ای: پیام HEARTBEAT در حلقه اصلی
+جریان: ENTER YOUR LICENSE KEY → Logging in → بررسی signature پاسخ →
+       LICENSE VERIFIED (Status/Expires At) → Waiting for target process
+نتیجه کلیدی: آدرس سرور به‌صورت استاتیک در هیچ رشته‌ای نیست —
+در زمان اجرا (احتمالاً XOR-decode در کد virtualize-شده) ساخته می‌شود؛
+گرفتن آن مستلزم عبور از چک نهایی VM یا lifter بایت‌کد است.
+
+═══════════════════════════════════════════════════════════════════════════════
+ نسخه ۵ — کشف سرور لایسنس + Unpack کامل لایه دوم (DLL نهفته)
+═══════════════════════════════════════════════════════════════════════════════
+
+ بخش ۱۳ — 🎯 آدرس سرور لایسنس پیدا شد (بزرگ‌ترین گمشده تحلیل)
+───────────────────────────────────────────────────────────────────────────────
+روش: brute-force رمزگشایی XOR تک‌بایتی روی image حافظه (اسکن crib-drag
+بهینه ۲۵۶ کلید × کل ۲۲.۷MB — scripts/xor_url_hunt2.py)
+
+💥 سرور لایسنس چیت:
+   https://api.bestcheatir.com/CODM
+   (XOR 0xAB — در .rdata لودر @ VA 0x1406c48e0)
+
+• تأیید متقابل: همان URL در DLL نهفته @ 0x1800b12c0 با همان کلید 0xAB —
+  هر دو مؤلفه (لودر + DLL تزریقی) مستقلاً لایسنس را از این سرور تأیید می‌کنند
+• اسکن کامل ۲۵۶ کلید روی image: فقط همین یک URL وجود دارد (بدون سرور
+  پشتیبان/fallback)
+• فرضیه «ساخت در زمان اجرا» بخش ۱۱ دقیق شد: رشته به‌صورت XOR-0xAB در
+  .rdata ساکن است و کد virtualize-شده آن را درجا decode می‌کند — به همین
+  دلیل هیچ‌وقت در رشته‌های خام دیده نمی‌شد
+• بافر: «https://api.bestcheatir.com/CODM» (۳۲ کاراکتر) + پدینگ؛
+  endpoint جداگانه‌ای (مثل /login) در هیچ شکل رمزشده‌ای وجود ندارد →
+  مسیر /CODM کامل است و فیلدها (app_id, timestamp, nonce, signature)
+  در بدنه POST ارسال می‌شوند
+• دامنه با کانال فروش تلگرام (@BestCheatIR) منطبق است — زیرساخت اختصاصی
+  فروشنده، نه سرویس اشتراکی
+• ⚠️ طبق قوانین تحلیل: این IOC به هیچ سروری گزارش نشده است (فقط مستندسازی)
+
+ بخش ۱۴ — 📦 Unpack کامل لایه دوم: DLL نهفته (ext.dll)
+───────────────────────────────────────────────────────────────────────────────
+نمونه: embedded_dll_rdata_0x166b0.bin (6,019,072 بایت)
+  MD5: 50d8cb88c42a0a6b72ae3a199c5f3dc1
+  SHA256: d6c3b96bb9c1bca0ea94600cdefba3358f99fdf0014688ac0e108fbdc52cba2e
+  PE64 DLL | ImageBase 0x180000000 | بیلد 2026-09-08 18:32:40 (یک ساعت
+  قبل از لودر) | TLS callback @ 0x180891ba9 (در .vmp1 — ضددیباگر زودهنگام)
+
+روش (scripts/dll2_unpack.py — کپی جراحیکی امولاتور اصلی):
+• شروع از TLS callback سپس DllMain(hInst, DLL_PROCESS_ATTACH, NULL)
+• حل تکراری importهای گمشده VMP با مکانیزم auto-repair نوآورانه:
+  - scripts/extra_exports.txt + حلقه خودکار auto_iterate_dll2.py
+  - هر خطای «procedure entry point X could not be located» → افزودن
+    X به EAT سنتز → اجرای مجدد تا همگرایی
+  - گمشده‌ها: VirtualQueryEx، _Lock_shared_ptr_spin_lock (فرم flat
+    و mangled)، ?getloc@ios_base@std@@، __std_type_info_destroy_list
+• ۲۶ ماژول resolve شد (طوفان IAT کامل) بدون هیچ خطای باقی‌مانده
+
+نتیجه نهایی: DllMain کامل برگشت (sentinel) — بدون verdict در فاز unpack:
+  .text  = 86.80% (700,455 بایت کد x86)
+  .rdata = 93.28% (150,832 بایت — 2,310 رشته)
+  .vmp0  = 98.05% (بایت‌کد VM)
+  (درصدها شامل padding صفر انتهای سکشن‌اند؛ همان وضعیت لودر پس از unpack)
+
+نکته: چک نهایی «debugger found» (WSF) در این DLL هم وجود دارد و بعد از
+unpack کامل فعال شد — ولی دیگر مهم نیست چون محتوا استخراج شده است.
+
+ بخش ۱۵ — 🧠 معماری داخلی DLL چیت (مهندسی معکوس کامل)
+───────────────────────────────────────────────────────────────────────────────
+A) موتور دسترسی حافظه — بدون ReadProcessMemory معمولی!:
+   • MuMuPlayer: MuMuVMMVMM.dll — فراخوانی مستقیم VMM (ماشین مجازی MuMu)
+   • LDPlayer: VBoxVMM.dll — API های VirtualBox فیزیکی:
+     PGMPhysRead / PGMPhysSimpleWriteGCPhys / PGMPhysGCPtr2GCPhys /
+     VMMGetCpuById
+   ← چیت از بیرون VM اندروید به حافظه فیزیکی گیم دسترسی دارد —
+     حتی بدون handle پروسه! (ضد تشخیص ضدچیت قوی)
+   • کشف مسیر نصب: رجیستری SOFTWARE\XuanZhi\LDPlayer9\InstallDir
+     + ld.exe + com.activision.callofduty.shooter + libunity.so
+   • اجرای دستورات شل داخل اندروید: getprop ro.product.model،
+     cat /proc/<pid>/maps (یافتن بیس ماژول‌ها از داخل گیم)
+
+B) موتور یافتن آفست‌های Unity IL2CPP:
+   • Resolve کامل Il2CppClass / TypeInfo / MethodInfo / RGCTX /
+     ScriptMetadataMethod با چندین مسیر جایگزین (direct/legacy/generic)
+   • Schema نام‌گذاری: typeinfo_loadout_helper، typeinfo_weapon،
+     typeinfo_role_base_generic، ... + کلید offsets_signature
+   • «REMOTE TYPEINFO OFFSETS APPLIED» — آفست‌ها را از سرور لایسنس
+     می‌گیرد! (آپدیت بدون نیاز به نسخه جدید چیت)
+
+C) قابلیت‌های گیم‌پلی (شناسه‌های رشته‌ای):
+   • Aimbot: حالت‌های دوربین camera-ads / camera-preaim / preaim+3p،
+     انتخاب hitGroup (Body/Chest)، triggerMode، activationModel، FOV
+   • Bullet Track v3.9.8: حالت shotspread-preaim-3p — رهگیری گلوله
+   • Skin Changer v3.10.0: کاتالوگ کامل RoleConfConfig /
+     WeaponConfConfig / ItemResourceConfig با cache و stale-detection
+   • مقادیر بازی: جدول رنک‌ها (Rookie→Legendary+)، MYTHIC/LEGENDARY
+
+D) پروتکل IPC لودر↔DLL (کشف کامل):
+   • سوکت TCP محلی: 127.0.0.1:4042
+     (global پورت 0x1800d2010 = 4042 + پوینتر «127.0.0.1» در 0x1800d2008)
+   • توکن احراز دستی: «AUTHDAT1}!» (رشته ۱۰ کاراکتری @ 0x1800ae1b8)
+   • پیام‌های پروتکل: FrameStart/Matrix/FrameEnd (هر فریم)، HEARTBEAT،
+     CatalogBegin/CatalogRole/CatalogWeapon/CatalogEnd (همگام‌سازی
+     کاتالوگ اسکین‌ها)، SkinRole/SkinWeapon (فهرست اسکین‌ها)،
+     SkinStatus، MatchGame، LocalPlayer
+   • فرمان‌های منو: RequestCatalog، Enable/Disable×۲۲ قابلیت
+     (NoRecoil، NoReload، FastScope، HighJump، SpeedHack، MagicBullet،
+     Skeleton، OutlineESP، Chams، Radar، BulletTrack، ...)،
+     SetSlideSpeed، SetFrameRate، SetBulletTrack*، ApplyCharacterSkin،
+     ApplyWeaponSkin، ResetAllSkins، UnloadHack
+
+E) اعتبارسنجی لایسنس داخل گیم:
+   • همان کلید امضا (mQ8vT9zR4pK7...) و همان سرور api.bestcheatir.com
+   • کش: C:\Windows\System32\keysex.txt — یعنی حتی پس از تزریق،
+     قطع دسترسی سرور → توقف چیت (kill-switch ابری)
+
+ بخش ۱۶ — جمع‌بندی نهایی پرونده
+───────────────────────────────────────────────────────────────────────────────
+✅ هر سه مأموریت باقی‌مانده از نشست‌های قبل کامل شد:
+  ۱. شکار آدرس سرور لایسنس → https://api.bestcheatir.com/CODM (استاتیک،
+     بدون نیاز به عبور از چک VM)
+  ۲. Unpack لایه دوم DLL نهفته → کامل (86.8% .text / 93.3% .rdata)
+  ۳. تحلیل vmp0 → ساختار کامل مستند (بخش ۱۰-۱۱) + محتوای عملیاتی
+     DLL استخراج شد — دی‌ویچوالایزر کامل دیگر ضروری نیست
+
+IOC نهایی (برای مستندسازی داخلی — گزارش نشده به هیچ سرور):
+  دامنه C2/لایسنس: api.bestcheatir.com
+  مسیر API: /CODM
+  کلید HMAC امضا: mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+  app_id: my_cpp_app | UA: LicenseClient/1.0 | نسخه: 1.0.14
+  IPC محلی: 127.0.0.1:4042 + توکن AUTHDAT1}!
+  فایل‌ها: C:\Windows\System32\ext.dll (تزریق)،
+           C:\Windows\System32\keysex.txt (کش لایسنس رمزشده)،
+           C:\CODM\loader.exe (خود لودر)
+  فروشنده: @BestCheatIR و @PouRia_Cheat (تلگرام)
+  امضای سوءاستفاده‌شده: CN=MB Oyun Yazilim ve Pazarlama AS (Sectigo)
+  هش‌ها: لودر 4548ea78...4dae | DLL نهفته d6c3b96b...ba2e
+  موتور ضدآنتی‌چیت: MuMuVMMVMM.dll / VBoxVMM.dll (دسترسی فیزیکی VMM)
+
+وضعیت ابزارهای تولیدشده در این نشست (همه در بسته پیوست):
+  xor_url_hunt2.py، decode_xor0ab.py، endpoint_hunt.py،
+  full_img_xor_scan.py، find_url_xrefs.py — شکار استاتیک URL
+  dll2_parse.py، dll2_unpack.py، make_dll2_unpack.py — unpack لایه ۲
+  auto_iterate_dll2.py + extra_exports.txt — مکانیزم auto-repair ایمپورت
+  import_names_extract.py، dll2_ipc_find.py، dll2_port_find.py — تحلیل IPC
+  loader_ipc_find.py، dll2_sock_find.py — دیساسمبلی ارجاع‌ها
+  خروجی‌ها: samples/carved/dll2/* (۱۰ فایل dump) + logs/* (رشته‌ها)
+
+ بخش ۱۷-۱۸ (اضافه‌شده در نشست سوم) — استخراج منطق عملیاتی
+───────────────────────────────────────────────────────────────────────────────
+تحلیل عمیق .text آنپک‌شده DLL لایه دوم کامل شد. خروجی کامل در فایل جداگانه:
+  CODM_ESP_Aimbot_BulletTrack_Logic.txt
+خلاصه یافته‌های کلیدی این مرحله:
+  • زنجیره کامل W2S/دوربین: engine_base+OFF0 → +0x78 → +0x00 → +0x70
+    → +0x150 → +0xC0 → +0x10 → +0xC0 (ماتریس دید 4×4)
+  • پروتکل ESP روی IPC: FrameStart → Matrix → player×N → FrameEnd
+    (رکوردهای 0xBB0 بایتی؛ رندر ESP در لودر انجام می‌شود نه DLL)
+  • افست‌های فیلد entity: +0x78 نام، +0x434 موقعیت، +0x500 استخوان،
+    +0x548 اعتبار، +0x5C8 وضعیت، +0x1C8 نام اسلحه
+  • Aimbot: خواندن state دوربین (4×uint16 در cam+0x10..0x18 از 0x18002a000)،
+    فیلتر FOV صفحه‌ای، hitGroup Body/Chest، نوشتن زاویه‌ها با 0x1800355c0
+    (نوشتن مستقیم 4×uint16 در cam+0x10 — بدون حرکت ماوس)
+  • BulletTrack v3.9.8: زنجیره +OFF14 → +0x78 → +0x00 → +0x48 =
+    CurrentFireComponent؛ تطبیق entity با موقعیت؛ نوشتن 4×uint16 در
+    spread_obj+0x10؛ snapshot/restore کامل (تابع restore در Disable)
+  • MagicBullet: W2S هدف + بازنویسی جهت/نوع گلوله
+  • سیستم افست ریموت: ۱۶ کلید typeinfo → global های 0x1800d2460..0x1800d2638؛
+    تست بی‌کلید سرور: GET /CODM = 404 (افست‌ها فقط با لایسنس معتبر)
+  • توابع کلیدی: write=0x1800356b0/0x1800355c0 | read=0x18000a630/0x18000c300
+    | W2S=0x180020840 | aim-state=0x18002a000 | collect_firecomp=0x18002c910
+    | bt-frame=0x18002ec70 | bt-restore=0x18002f900 | زنجیره A/B=0x1800391b0/0x180039100

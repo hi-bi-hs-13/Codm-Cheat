@@ -1,0 +1,112 @@
+═══════════════════════════════════════════════════════════════════════════════
+  CHEAT OFFSETS REFERENCE — BestCheatIR CODM ext.dll (typeinfo protocol)
+  Compiled: 2026-09-26 | Values: real vendor capture 2026-09-26 21:25
+  (== Sep-23 capture, 16/16 identical — verified twice)
+═══════════════════════════════════════════════════════════════════════════════
+
+  هدف این فایل: اگه روزی حساب اصلی / کلید واقعی در دسترس نبود، بدانی چیت از
+  چه افست‌هایی استفاده می‌کند، هر کدام چه نقشی دارند و چطور مقدار جدید بگیری
+  و به چیت بدهی (همه از طریق سرور فیک — بدون نیاز به پچ).
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۱ — پروتکل (جایی که افست‌ها سفر می‌کنند)
+───────────────────────────────────────────────────────────────────────────────
+  سرور → لودر:  پاسخ POST /CODM-PC/login.php (فرم URL-encoded)
+  کلیدها 16 عدد typeinfo_* + offsets_signature، به‌صورت inline داخل همان
+  پاسخ لاگین (schema="typeinfo-v1"). چیت هیچ endpoint دیگری صدا نمی‌زند
+  (اثبات: requests_log.jsonl — فقط login.php).
+  مقادیر به‌صورت رشته hex مثل "0xE852F08" ارسال می‌شوند (پارسر سخت‌گیر).
+  افست‌ها RVAs داخل libunity هستند: slot = libunity_base + value
+  و *(slot) = پوینتر TypeInfo/کلاس ان کلاس در ران‌تایم.
+  کلیدها با «اسم» مچ می‌شوند نه ترتیب (پارسر: strcmp) → ترتیب ارسال آزاد است.
+
+  امضای پاسخ (کرک‌شده 2026-09-26 — بدون این، DLL پروسه شبیه‌ساز را می‌کشد!):
+    signature = HMAC-SHA256(secret, "true|LOGIN_SUCCESS|server_time|expires_at|hwid|nonce").hex
+    secret    = mQ8vT9zR4pK7xN2cY6sL0aH3dF1wE5uB9jG2nV7qZ4tC8rX6yP1kS5
+    server_time/expiry = رشته "YYYY-MM-DD HH:MM:SS"
+    ⚠ offsets_signature ولیدیت نمی‌شود (مقدار capture قدیمی هم پذیرفته شد)
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۲ — جدول ۱۶ افست (اسم → مقدار فعلی → نقش در چیت)
+───────────────────────────────────────────────────────────────────────────────
+  # | key                                   | value      | نقش (از تحلیل asm)
+  --+---------------------------------------+------------+--------------------------
+   1| typeinfo_engine                       | 0x0E852F08 | ★ ریشه اصلی ESP/دوربین
+    |   → global 0x1800d2460. زنجیره: base+off → +0x78 → +0x70 = p4 (world)
+    |   → +0x150 → +0xC0 = دوربین → +0x10 → mat+0xC0 = ماتریس دید 4x4
+    |   استفاده در: chain_A 0x1800391b0, chain_B 0x180039100, حلقه فریم 0x180025c90
+   2| typeinfo_weapon_fire_component_instant| 0x0E868C18 | ★ ریشه BulletTrack
+    |   → global 0x1800d2638. زنجیره: base+off → +0x78 → +0x00 → +0x48 =
+    |   CurrentFireComponent → +0x48 = weapon → آفست spread
+    |   استفاده در: collect_firecomp 0x18002c910, bullet_track_frame 0x18002ec70
+   3| typeinfo_role                         | 0x0E85E5A8 | کلاس Role (کانفیگ سلاح/رل)
+   4| typeinfo_role_base_character          | 0x0E85E580 | سلسله‌مراتب Role
+   5| typeinfo_role_generic                 | 0x0E851C80 | نسخه generic (کلاس‌های generic
+    |   جداگانه slot دارند — پیام‌های "ok via generic TypeInfo")
+   6| typeinfo_weapon_generic               | 0x0E851930 | کلاس Weapon (generic)
+   7| typeinfo_item_resource_generic        | 0x0E851CC0 | آیتم/منبع (generic)
+   8| typeinfo_character_model_generic      | 0x0E853E68 | مدل کاراکتر (generic)
+   9| typeinfo_item2inventory_generic       | 0x0E855C78 | آیتم اینونتوری (generic)
+  10| typeinfo_role_pack_generic            | 0x0E85E5B0 | RolePack (generic)
+  11| typeinfo_role_base_generic            | 0x0E85DD00 | RoleBase (generic)
+  12| typeinfo_weapon                       | 0x0E854320 | کلاس Weapon
+  13| typeinfo_item_resource                | 0x0E856940 | آیتم/منبع
+  14| typeinfo_character_model              | 0x00000000 | سرور واقعی هم صفر می‌فرستد
+    |   → DLL خودش محلی resolve می‌کند یا رد می‌کند (پس کلید صفر = مجاز!)
+  15| typeinfo_item2inventory               | 0x0E85DC68 | آیتم اینونتوری
+  16| typeinfo_loadout_helper               | 0x0E8524F8 | LoadoutHelper
+  --+---------------------------------------+------------+--------------------------
+  + offsets_signature                    | (رشته 64 hex) | فقط گزارشی — ولیدیت نه
+
+  استفاده واقعی: #1 و #2 حیاتی‌اند (ESP/دوربین و BulletTrack). #3..#16 برای
+  resolve کلاس‌های کانفیگ (Weapon/Role) استفاده می‌شوند؛ غایب بودنشان →
+  "USING COMPILED DEFAULTS" و ادامه با مقادیر داخلی (که الان = مقادیر سرور).
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۳ — چطور افست‌های تازه بگیریم (بیلد جدید بازی)
+───────────────────────────────────────────────────────────────────────────────
+  راه A — شنود از سرور vendor (ساده‌ترین، نیاز به حساب واقعی):
+    1. server.bat → گزینه 2 (forward) + کلید واقعی → offsets_capture_<ts>.json
+    2. ری‌استارت سرور فیک → fake_server.py خودش جدیدترین capture را auto-load
+       می‌کند (این قابلیت 2026-09-26 اضافه شد).
+
+  راه B — بدون هیچ افستی ✅ CONFIRMED WORKING (2026-09-27) + مکانیزم کشف شد:
+    همه 16 کلید را "0x0" بفرست (--zero-offsets در fake_server.py).
+    نتیجه زنده: چیت کامل لود شد، تزریق شد، همه قابلیت‌ها کار می‌کنند و
+    کرشی رخ نداد.
+    مکانیزم (تحلیل RESOLVER_ANALYSIS.md): پارسر commit اتمی دارد — تا هر ۱۶
+    کلید سالم resolve نشوند هیچ global ای overwrite نمی‌شود → default های
+    کامپایل‌شده باقی می‌مانند. پس مود صفر فقط تا وقتی کار می‌کند که defaults
+    با بیلد بازی بخوانند (الان می‌خوانند ✅).
+    روی بیلد جدید بازی: یا راه A، یا راه جدید از تحلیل resolver: خودمان RVA
+    های جدید را با walk ساختار TypeInfo (+0x58→+0x78→+0x10) پیدا و مستقیم
+    در globals 0x1800D2460.. داخل DLL تزریق‌شده بنویسیم (بدون سرور).
+
+  راه C — گرفتن دستی برای بیلد جدید (اگر A و B جواب نداد):
+    1. dump جدید libunity.so (روش قبلی: 400023000000_libunity.so)
+    2. اجرای codm-dumper-src روی dump → script.json جدید
+    3. اسلات typeinfo = آدرس یک pointer-to-klass در data/bss. برای پیداکردن
+       هر کلاس: در IDA کد استفاده‌کننده را پیدا کن (مثلاً زنجیره دوربین =
+       توابع get_* دوربین در GameEngine.GamePlay) و ADRP+LDR اول زنجیره را
+       decode کن — همان RVA اسلات است.
+    4. مقدارها را در fake_server.py (جدول OFFSETS) یا capture جدید بگذار.
+    ⚠ نکته امروز: ساختار کلاس در حافظه انکود/obfuscate است (خواندن klass+0x10
+    اسم نمی‌دهد) — پس scan بر اساس اسم کلاس کار نمی‌کند؛ باید از کد استفاده
+    کنی (راه C) یا از resolution داخلی DLL (راه B).
+
+  ⚠ محدودیت مهم: فقط 16 ریشه از سرور می‌آیند. افست‌های فیلد داخل pawn
+    (+0x548 alive، +0x434 موقعیت، +0x78 اسم، +0x1C8 سلاح، +0x500 استخوان،
+    ماتریس +0xC0 و ...) در خود ext.dll کامپایل شده‌اند و با سرور عوض نمی‌شوند.
+    اگر بیلد جدید آن‌ها را جابه‌جا کند، فقط DLL جدید vendor حلش می‌کند.
+
+───────────────────────────────────────────────────────────────────────────────
+ بخش ۴ — ابزارهای مرتبط (مسیرها)
+───────────────────────────────────────────────────────────────────────────────
+  fake_server.py            — سرور فیک نهایی (auto-load + امضای کرک‌شده)
+  brute_force_sig.py        — کرکر فرمول امضا (اثبات روی 8 capture)
+  typeinfo_decode.py        — خواندن live اسلات‌ها از حافظه بازی (adb root)
+  cheat_chain_verify.py     — تست زنجیره دوربین vendor روی بیلد فعلی
+  offsets_capture_*.json    — capture های واقعی (منبع auto-load)
+  SESSION6_CRASH_SOLVED.md  — شرح کامل ریشه کرش و حل آن
+  01_reports/ESP_Aimbot ... — تحلیل کامل منطق DLL (بخش 17: زنجیره‌ها و global ها)
+═══════════════════════════════════════════════════════════════════════════════
